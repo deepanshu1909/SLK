@@ -1,13 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { Send, Sparkles } from "lucide-react";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
-export const Route = createFileRoute("/dashboard/chat")({
-  head: () => ({ meta: [{ title: "AI Chat — SLK" }] }),
-  component: ChatPage,
-});
 
 const suggested = [
   "Why are Saturdays so booked?",
@@ -20,7 +14,11 @@ const initial = [
   { role: "ai", text: "Hi Camille — your AI business analyst. What would you like to know about your salon today?" },
 ];
 
-function ChatPage() {
+export default function ChatPage() {
+  useEffect(() => {
+    document.title = "AI Chat — SLK";
+  }, []);
+
   const [msgs, setMsgs] = useState(initial);
   const [input, setInput] = useState("");
 

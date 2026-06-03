@@ -1,12 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Megaphone, Mail, MessageSquare, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-export const Route = createFileRoute("/dashboard/campaigns")({
-  head: () => ({ meta: [{ title: "Campaigns — SLK" }] }),
-  component: CampaignsPage,
-});
 
 const campaigns = [
   { name: "Spring Glow-Up", channel: "Email", sent: 1240, opened: "62%", booked: 84, status: "Active" },
@@ -15,7 +10,11 @@ const campaigns = [
   { name: "Summer Hydrafacial Launch", channel: "Social", sent: 0, opened: "—", booked: 0, status: "Draft" },
 ];
 
-function CampaignsPage() {
+export default function CampaignsPage() {
+  useEffect(() => {
+    document.title = "Campaigns — SLK";
+  }, []);
+
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-center justify-between flex-wrap gap-3">

@@ -1,15 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 
-export const Route = createFileRoute("/dashboard/settings")({
-  head: () => ({ meta: [{ title: "Settings — SLK" }] }),
-  component: SettingsPage,
-});
+export default function SettingsPage() {
+  useEffect(() => {
+    document.title = "Settings — SLK";
+  }, []);
 
-function SettingsPage() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div>

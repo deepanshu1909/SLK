@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { BarChart3, Calendar, Heart, Share2, Sparkles, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { agents } from "@/lib/mock-data";
@@ -6,12 +6,10 @@ import { Switch } from "@/components/ui/switch";
 
 const iconMap = { Sparkles, Calendar, Heart, Share2, Star, BarChart3 };
 
-export const Route = createFileRoute("/dashboard/agents")({
-  head: () => ({ meta: [{ title: "AI Agents — SLK" }] }),
-  component: AgentsPage,
-});
-
-function AgentsPage() {
+export default function AgentsPage() {
+  useEffect(() => {
+    document.title = "AI Agents — SLK";
+  }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div>

@@ -1,7 +1,8 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+
 import { pricingTiers } from "@/lib/mock-data";
 import { FadeIn } from "./motion-bits";
 import { motion } from "framer-motion";

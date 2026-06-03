@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight, Calendar, Sparkles, TrendingUp, Users, DollarSign,
@@ -10,11 +10,6 @@ import { revenueData, upcomingAppointments, aiInsights, conversations, funnelDat
 import { Counter } from "@/components/landing/motion-bits";
 import { Badge } from "@/components/ui/badge";
 
-export const Route = createFileRoute("/dashboard/")({
-  head: () => ({ meta: [{ title: "Dashboard — SLK" }] }),
-  component: DashboardHome,
-});
-
 const stats = [
   { label: "Revenue (MTD)", value: 68900, prefix: "$", icon: DollarSign, trend: "+24%" },
   { label: "Bookings", value: 428, icon: Calendar, trend: "+18%" },
@@ -22,7 +17,10 @@ const stats = [
   { label: "Conversion", value: 23, suffix: "%", icon: TrendingUp, trend: "+4.2pp" },
 ];
 
-function DashboardHome() {
+export default function DashboardHome() {
+  useEffect(() => {
+    document.title = "Dashboard — SLK";
+  }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-start justify-between flex-wrap gap-3">

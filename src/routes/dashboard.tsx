@@ -1,4 +1,4 @@
-import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import {
   BarChart3, Bell, Calendar, CreditCard, LayoutDashboard,
   MessageSquare, Search, Settings, Sparkles, Star, Users, Megaphone, Bot,
@@ -18,12 +18,9 @@ const navItems = [
   { to: "/dashboard/settings", label: "Settings", icon: Settings },
 ];
 
-export const Route = createFileRoute("/dashboard")({
-  component: DashboardLayout,
-});
-
-function DashboardLayout() {
-  const path = useRouterState({ select: (s) => s.location.pathname });
+export default function DashboardLayout() {
+  const location = useLocation();
+  const path = location.pathname;
 
   return (
     <div className="min-h-screen flex w-full bg-muted/30">

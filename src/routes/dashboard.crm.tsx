@@ -1,18 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { leads } from "@/lib/mock-data";
 import { Badge } from "@/components/ui/badge";
 import { Plus, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export const Route = createFileRoute("/dashboard/crm")({
-  head: () => ({ meta: [{ title: "CRM — SLK" }] }),
-  component: CRMPage,
-});
+export default function CRMPage() {
+  useEffect(() => {
+    document.title = "CRM — SLK";
+  }, []);
 
-const stages = ["New", "Warm", "Hot", "Booked"];
+  const stages = ["New", "Warm", "Hot", "Booked"];
 
-function CRMPage() {
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-center justify-between flex-wrap gap-3">

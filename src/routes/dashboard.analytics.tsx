@@ -1,16 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import {
   Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer,
   Tooltip, XAxis, YAxis,
 } from "recharts";
 import { revenueData, trafficData } from "@/lib/mock-data";
 
-export const Route = createFileRoute("/dashboard/analytics")({
-  head: () => ({ meta: [{ title: "Analytics — SLK" }] }),
-  component: AnalyticsPage,
-});
-
-function AnalyticsPage() {
+export default function AnalyticsPage() {
+  useEffect(() => {
+    document.title = "Analytics — SLK";
+  }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div>

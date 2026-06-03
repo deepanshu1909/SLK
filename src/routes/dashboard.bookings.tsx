@@ -1,18 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { upcomingAppointments } from "@/lib/mock-data";
 import { Badge } from "@/components/ui/badge";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const Route = createFileRoute("/dashboard/bookings")({
-  head: () => ({ meta: [{ title: "Bookings — SLK" }] }),
-  component: BookingsPage,
-});
-
 const hours = Array.from({ length: 10 }, (_, i) => `${i + 9}:00`);
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-function BookingsPage() {
+export default function BookingsPage() {
+  useEffect(() => {
+    document.title = "Bookings — SLK";
+  }, []);
+
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-center justify-between flex-wrap gap-3">

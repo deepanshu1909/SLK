@@ -1,15 +1,26 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export const Route = createFileRoute("/login")({
-  head: () => ({ meta: [{ title: "Sign in — SLK" }, { name: "description", content: "Sign in to your SLK dashboard." }] }),
-  component: Login,
-});
+export default function Login() {
+  useEffect(() => {
+    document.title = "Sign in — SLK";
+    document.querySelector("meta[name='description']")?.setAttribute(
+      "content",
+      "Sign in to your SLK dashboard."
+    );
+  }, []);
 
-function Login() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/dashboard");
+  };
+
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       <div className="hidden lg:block relative bg-gradient-to-br from-brand via-brand-deep to-foreground overflow-hidden">
@@ -32,7 +43,7 @@ function Login() {
           <h1 className="font-display text-4xl">Welcome back</h1>
           <p className="text-muted-foreground mt-1 text-sm">Sign in to your SLK dashboard.</p>
 
-          <form className="mt-8 space-y-4" onSubmit={(e) => { e.preventDefault(); window.location.href = "/dashboard"; }}>
+          <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
               <Input id="email" type="email" placeholder="you@salon.com" className="h-11 rounded-xl" />

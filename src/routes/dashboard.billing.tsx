@@ -1,14 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pricingTiers } from "@/lib/mock-data";
 
-export const Route = createFileRoute("/dashboard/billing")({
-  head: () => ({ meta: [{ title: "Billing — SLK" }] }),
-  component: BillingPage,
-});
-
-function BillingPage() {
+export default function BillingPage() {
+  useEffect(() => {
+    document.title = "Billing — SLK";
+  }, []);
   return (
     <div className="space-y-8 max-w-[1200px]">
       <div>

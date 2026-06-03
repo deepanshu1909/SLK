@@ -1,13 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { reviews } from "@/lib/mock-data";
 import { Star } from "lucide-react";
 
-export const Route = createFileRoute("/dashboard/reviews")({
-  head: () => ({ meta: [{ title: "Reviews — SLK" }] }),
-  component: ReviewsPage,
-});
-
-function ReviewsPage() {
+export default function ReviewsPage() {
+  useEffect(() => {
+    document.title = "Reviews — SLK";
+  }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div>

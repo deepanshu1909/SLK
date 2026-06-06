@@ -7,7 +7,7 @@ import { revenueData, trafficData } from "@/lib/mock-data";
 
 export default function AnalyticsPage() {
   useEffect(() => {
-    document.title = "Analytics — SLK";
+    document.title = "Analytics — Zarklo";
   }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">

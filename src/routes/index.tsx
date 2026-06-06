@@ -9,7 +9,7 @@ import { CTA, Footer } from "@/components/landing/CTA";
 
 export default function Index() {
   useEffect(() => {
-    document.title = "SLK — Hire an AI team that grows your salon";
+    document.title = "Zarklo — Hire an AI team that grows your salon";
     document.querySelector("meta[name='description']")?.setAttribute(
       "content",
       "Get more bookings, rank higher on Google, and turn one-time guests into regulars with autonomous AI agents built for salons, spas, and barbershops."

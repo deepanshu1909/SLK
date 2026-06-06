@@ -21,10 +21,6 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-muted-foreground mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            New — Loyalty Agent v2 is live
-          </div>
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
             Hire an AI team that <br />

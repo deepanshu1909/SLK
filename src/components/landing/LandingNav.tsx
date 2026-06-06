@@ -27,7 +27,7 @@ export function LandingNav() {
           <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
             <Sparkles className="w-4 h-4 text-white" />
           </span>
-          <span>SLK</span>
+          <span>Zarklo</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">

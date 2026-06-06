@@ -53,7 +53,7 @@ export function Footer() {
               <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
                 <Sparkles className="w-4 h-4 text-white" />
               </span>
-              SLK
+              Zarklo
             </div>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               The AI team for modern salons, spas, and barbershops. Built in California.
@@ -71,7 +71,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} SLK Labs, Inc. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Zarklo Labs, Inc. All rights reserved.</div>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground">Twitter</a>
             <a href="#" className="hover:text-foreground">Instagram</a>

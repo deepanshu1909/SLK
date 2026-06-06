@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CRMPage() {
   useEffect(() => {
-    document.title = "CRM — SLK";
+    document.title = "CRM — Zarklo";
   }, []);
 
   const stages = ["New", "Warm", "Hot", "Booked"];

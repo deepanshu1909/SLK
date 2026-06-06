@@ -63,9 +63,9 @@ export const reviews = [
 ];
 
 export const testimonials = [
-  { quote: "We went from fully manual scheduling to a 6-figure month in 90 days. SLK runs the back office.", author: "Camille Vasquez", role: "Owner, Maison Lumière Salon", growth: "+312% bookings" },
+  { quote: "We went from fully manual scheduling to a 6-figure month in 90 days. Zarklo runs the back office.", author: "Camille Vasquez", role: "Owner, Maison Lumière Salon", growth: "+312% bookings" },
   { quote: "The Discovery Agent put us at the top of Google for our city. Walk-ins doubled.", author: "Marcus Cole", role: "Founder, Cole & Co. Barber", growth: "+1,840 profile views" },
-  { quote: "Our retention used to be 41%. After SLK's loyalty agent, we're sitting at 87%.", author: "Priya Anand", role: "Director, Lotus Spa & Wellness", growth: "87% retention" },
+  { quote: "Our retention used to be 41%. After Zarklo's loyalty agent, we're sitting at 87%.", author: "Priya Anand", role: "Director, Lotus Spa & Wellness", growth: "87% retention" },
 ];
 
 export const agents = [
@@ -109,7 +109,7 @@ export const pricingTiers = [
 
 export const faqs = [
   { q: "How long until I see results?", a: "Most salons see a 20–40% lift in bookings within the first 30 days as the Discovery and Booking agents go live." },
-  { q: "Do I need to change my booking system?", a: "No. SLK integrates with Square, Vagaro, Booksy, Fresha, and Google Calendar out of the box." },
+  { q: "Do I need to change my booking system?", a: "No. Zarklo integrates with Square, Vagaro, Booksy, Fresha, and Google Calendar out of the box." },
   { q: "Will the AI sound like a robot to my clients?", a: "We train each agent on your brand voice, services, and past conversations. Clients consistently can't tell." },
   { q: "Is my client data safe?", a: "Yes. Bank-grade encryption, SOC 2 in progress, and zero data sold or shared. Ever." },
   { q: "Can I cancel anytime?", a: "Yes — monthly plans cancel anytime, no contracts. Yearly plans can be paused." },

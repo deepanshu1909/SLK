@@ -8,7 +8,7 @@ const iconMap = { Sparkles, Calendar, Heart, Share2, Star, BarChart3 };
 
 export default function AgentsPage() {
   useEffect(() => {
-    document.title = "AI Agents — SLK";
+    document.title = "AI Agents — Zarklo";
   }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">

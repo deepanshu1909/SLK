@@ -5,7 +5,7 @@ import { pricingTiers } from "@/lib/mock-data";
 
 export default function BillingPage() {
   useEffect(() => {
-    document.title = "Billing — SLK";
+    document.title = "Billing — Zarklo";
   }, []);
   return (
     <div className="space-y-8 max-w-[1200px]">

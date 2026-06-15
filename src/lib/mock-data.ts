@@ -69,12 +69,12 @@ export const testimonials = [
 ];
 
 export const agents = [
-  { key: "discovery", name: "Discovery Agent", desc: "SEO, Google Business, blog content, and competitor analysis — on autopilot.", metric: "+1,200% profile views", icon: "Sparkles" },
-  { key: "booking", name: "Booking Agent", desc: "An AI concierge that books, reschedules, and qualifies leads 24/7.", metric: "3.1x more bookings", icon: "Calendar" },
-  { key: "loyalty", name: "Loyalty Agent", desc: "Rebooking nudges, birthday offers, and win-back campaigns.", metric: "87% retention", icon: "Heart" },
-  { key: "social", name: "Social Agent", desc: "On-brand posts, captions, and a content calendar that actually ships.", metric: "12 posts/week", icon: "Share2" },
-  { key: "review", name: "Review Agent", desc: "Requests, responses, and 5-star reputation management.", metric: "4.9★ average", icon: "Star" },
-  { key: "analytics", name: "Analytics Agent", desc: "Plain-English insights on revenue, retention, and what to do next.", metric: "Daily insights", icon: "BarChart3" },
+  { key: "discovery", name: "Discovery Agent", desc: "SEO, Google Business optimization, and competitor insights that help you get found locally.", metric: "+1,200% visibility", icon: "Sparkles" },
+  { key: "booking", name: "Booking Machine", desc: "An AI concierge that captures leads, books appointments, and follows up automatically.", metric: "3.1x more bookings", icon: "Calendar" },
+  { key: "crm", name: "CRM Agent", desc: "Manage leads, customers, follow-ups, and conversations from one central dashboard.", metric: "100% lead visibility", icon: "Heart" },
+  { key: "social", name: "Social Agent", desc: "Create and publish on-brand social content that keeps customers engaged.", metric: "12 posts/week", icon: "Share2" },
+  { key: "local", name: "Local Domination", desc: "Rank higher on Google Maps and local search to attract more nearby customers.", metric: "Top local rankings", icon: "Star" },
+  { key: "analytics", name: "Analytics Agent", desc: "Track bookings, revenue, and growth opportunities with AI-powered insights.", metric: "Daily insights", icon: "BarChart3" },
 ] as const;
 
 export const pricingTiers = [

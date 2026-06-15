@@ -71,7 +71,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Zarklo Labs, Inc. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Zarklo.com, Inc. All rights reserved.</div>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground">Twitter</a>
             <a href="#" className="hover:text-foreground">Instagram</a>

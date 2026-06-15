@@ -80,8 +80,8 @@ export const agents = [
 export const pricingTiers = [
   {
     name: "Starter",
-    monthly: 79,
-    yearly: 63,
+    monthly: 120,
+    yearly: 104,
     blurb: "For solo stylists and small chairs.",
     features: ["1 location", "Booking Agent", "Review Agent", "Up to 500 clients", "Email support"],
     cta: "Start free trial",

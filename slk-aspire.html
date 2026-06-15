@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLK Aspire | AI Marketing for Beauty & Wellness</title>
+    <meta
+      name="description"
+      content="A modern AI marketing platform for salons, spas, med spas, and wellness studios. Grow visibility, bookings, and repeat visits on autopilot."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#6C3FC5',
+              ink: '#160F27',
+              lilac: '#F2E9FF',
+              mist: '#F7F4FF',
+              accent: '#A78BFA',
+            },
+            boxShadow: {
+              soft: '0 18px 45px rgba(108, 63, 197, 0.16)',
+              glow: '0 16px 35px rgba(108, 63, 197, 0.28)',
+            },
+            backgroundImage: {
+              'hero-grid': 'linear-gradient(rgba(108,63,197,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(108,63,197,0.08) 1px, transparent 1px)',
+              'brand-radial': 'radial-gradient(circle at top, rgba(167,139,250,0.18), transparent 30%), radial-gradient(circle at bottom right, rgba(108,63,197,0.18), transparent 32%)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #ffffff 0%, #faf7ff 45%, #ffffff 100%);
+      }
+
+      .glass {
+        background: rgba(255,255,255,0.82);
+        border: 1px solid rgba(108,63,197,0.14);
+        box-shadow: 0 14px 28px rgba(22,15,39,0.08);
+        backdrop-filter: blur(18px);
+      }
+
+      .ticker-track {
+        display: inline-flex;
+        gap: 1rem;
+        width: max-content;
+        animation: marquee 28s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .faq-item + .faq-item { border-top: 1px solid rgba(108, 63, 197, 0.12); }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 240ms ease; }
+      .faq-answer.open { max-height: 180px; }
+    </style>
+  </head>
+  <body class="text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-white/70 bg-white/90 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
+        <a href="#top" class="flex items-center gap-3 text-xl font-semibold tracking-tight text-ink">
+          <span class="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-brand via-violet-500 to-fuchsia-500 text-white shadow-soft">S</span>
+          <span>SLK Aspire</span>
+        </a>
+
+        <div class="hidden items-center gap-8 lg:flex">
+          <details class="group relative">
+            <summary class="list-none cursor-pointer rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-lilac hover:text-brand">AI Agents</summary>
+            <div class="absolute left-0 top-10 w-72 rounded-3xl border border-violet-100 bg-white p-3 shadow-soft">
+              <a href="#agents" class="block rounded-2xl px-3 py-3 text-sm text-slate-700 hover:bg-lilac hover:text-brand">Visibility Agent — rank higher on Google</a>
+              <a href="#agents" class="block rounded-2xl px-3 py-3 text-sm text-slate-700 hover:bg-lilac hover:text-brand">Convert Agent — convert more inquiries</a>
+              <a href="#agents" class="block rounded-2xl px-3 py-3 text-sm text-slate-700 hover:bg-lilac hover:text-brand">Retain Agent — keep clients returning</a>
+            </div>
+          </details>
+          <a href="#pricing" class="text-sm font-medium text-slate-700 transition hover:text-brand">Pricing</a>
+          <a href="#customers" class="text-sm font-medium text-slate-700 transition hover:text-brand">Customers</a>
+          <a href="#resources" class="text-sm font-medium text-slate-700 transition hover:text-brand">Resources</a>
+        </div>
+
+        <a href="#contact" class="rounded-full bg-gradient-to-r from-brand to-violet-500 px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:shadow-soft">Get Started Today</a>
+      </nav>
+    </header>
+
+    <main id="top" class="mx-auto flex max-w-7xl flex-col gap-20 px-4 pb-16 md:px-6 lg:px-8">
+      <section class="grid items-center gap-10 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:pt-12">
+        <div data-aos="fade-up">
+          <span class="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-lilac px-4 py-2 text-sm font-semibold text-brand shadow-sm">AI Marketing Services for Beauty & Wellness</span>
+          <h1 class="mt-6 max-w-xl text-4xl font-black tracking-tight text-ink md:text-5xl lg:text-6xl">Bring More Guests In. Fill More Chairs. Grow With Service-Driven AI.</h1>
+          <p class="mt-6 max-w-xl text-lg text-slate-600 md:text-xl">Our AI marketing services help salons, spas, med spas, and wellness studios attract local demand, respond faster, and turn interest into booked appointments — without adding more staff or agency overhead.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#contact" class="rounded-full bg-gradient-to-r from-brand to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5">Explore Our Services</a>
+            <a href="#agents" class="rounded-full border border-violet-200 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-brand hover:text-brand">See Our Growth Services</a>
+          </div>
+
+          <div class="mt-10 rounded-3xl border border-violet-100 bg-white p-4 shadow-soft">
+            <div class="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-violet-500">What owners are saying</div>
+            <div class="overflow-hidden rounded-2xl border border-violet-100 bg-mist p-3">
+              <div class="ticker-track" id="tickerTrack">
+                <div class="flex gap-3">
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“We booked 18 extra appointments in the first month. The system works while we sleep.” — Maya, Studio Glow</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“Our Google profile started showing up more often and our waitlist finally feels under control.” — Elena, Urban Serenity Spa</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“The AI follow-up made our no-show rate drop and our rebooking rate climb.” — Jordan, Luxe Med Spa</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“It feels like having an expert marketing team without the overhead.” — Priya, Bloom Wellness</article>
+                </div>
+                <div class="flex gap-3" aria-hidden="true">
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“We booked 18 extra appointments in the first month. The system works while we sleep.” — Maya, Studio Glow</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“Our Google profile started showing up more often and our waitlist finally feels under control.” — Elena, Urban Serenity Spa</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“The AI follow-up made our no-show rate drop and our rebooking rate climb.” — Jordan, Luxe Med Spa</article>
+                  <article class="min-w-[280px] rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm">“It feels like having an expert marketing team without the overhead.” — Priya, Bloom Wellness</article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="rounded-[32px] border border-violet-100 bg-white p-4 shadow-soft md:p-6">
+          <div class="rounded-[28px] bg-brand-radial border border-violet-100 p-5 shadow-soft md:p-6">
+            <div class="rounded-[28px] border border-white/70 bg-white/90 p-5 shadow-soft md:p-6">
+              <div class="flex items-center justify-between rounded-2xl border border-violet-100 bg-mist p-4">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-violet-500">Live growth snapshot</p>
+                  <h2 class="mt-2 text-2xl font-bold text-ink">This week’s impact</h2>
+                </div>
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">+28% bookings</span>
+              </div>
+
+              <div class="mt-5 grid gap-4 md:grid-cols-2">
+                <article class="rounded-3xl border border-violet-100 bg-white p-4 shadow-sm">
+                  <div class="flex items-center justify-between text-sm text-slate-500"><span>Discoverability</span><span class="text-emerald-600">↑ 43%</span></div>
+                  <div class="mt-3 h-2 rounded-full bg-violet-100"><div class="h-2 w-2/3 rounded-full bg-gradient-to-r from-brand to-violet-400"></div></div>
+                  <p class="mt-3 text-sm text-slate-600">More Google visibility, richer profiles, and stronger local presence.</p>
+                </article>
+                <article class="rounded-3xl border border-violet-100 bg-white p-4 shadow-sm">
+                  <div class="flex items-center justify-between text-sm text-slate-500"><span>Conversion</span><span class="text-emerald-600">↑ 31%</span></div>
+                  <div class="mt-3 h-2 rounded-full bg-violet-100"><div class="h-2 w-3/4 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400"></div></div>
+                  <p class="mt-3 text-sm text-slate-600">Faster replies, better lead qualification, and calmer front desk workflows.</p>
+                </article>
+                <article class="rounded-3xl border border-violet-100 bg-white p-4 shadow-sm md:col-span-2">
+                  <div class="flex items-center justify-between text-sm text-slate-500"><span>Monthly rebookings</span><span class="text-emerald-600">+19%</span></div>
+                  <div class="mt-4 flex items-end gap-2"><div class="h-10 w-1/6 rounded-full bg-violet-200"></div><div class="h-14 w-1/6 rounded-full bg-violet-300"></div><div class="h-16 w-1/6 rounded-full bg-brand"></div><div class="h-18 w-1/6 rounded-full bg-violet-500"></div><div class="h-20 w-1/6 rounded-full bg-fuchsia-400"></div></div>
+                  <p class="mt-3 text-sm text-slate-600">AI reminders, loyalty nudges, and tailored offers keep clients coming back.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agents" class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Our Services</p>
+          <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">Three growth services. One smarter way to scale bookings.</h2>
+          <p class="mt-4 text-slate-600">Each service is designed to strengthen your local presence, improve conversion, and keep clients returning — with expert guidance behind every AI-powered touchpoint.</p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">🔎</div>
+            <h3 class="text-xl font-bold text-ink">Visibility Service</h3>
+            <p class="mt-3 text-slate-600">Boosts your local presence with stronger Google visibility, improved profile signals, and SEO-focused marketing that helps more ideal clients find you.</p>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">💬</div>
+            <h3 class="text-xl font-bold text-ink">Conversion Service</h3>
+            <p class="mt-3 text-slate-600">Responds faster, qualifies every inquiry, and turns interest into confirmed appointments with message flows designed for beauty and wellness clients.</p>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">💜</div>
+            <h3 class="text-xl font-bold text-ink">Retention Service</h3>
+            <p class="mt-3 text-slate-600">Keeps clients engaged with rebooking reminders, loyalty follow-up, and personalized offers that encourage repeat visits and long-term loyalty.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Impact at a glance</p>
+          <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">Why salons, spas, and wellness studios switch to SLK Aspire</h2>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-violet-100 bg-white p-6 text-center shadow-soft">
+            <div class="text-4xl font-black text-brand md:text-5xl">1,000+</div>
+            <p class="mt-2 text-slate-600">Businesses served</p>
+          </article>
+          <article class="rounded-[28px] border border-violet-100 bg-white p-6 text-center shadow-soft">
+            <div class="text-4xl font-black text-brand md:text-5xl">120,000+</div>
+            <p class="mt-2 text-slate-600">Appointments booked</p>
+          </article>
+          <article class="rounded-[28px] border border-violet-100 bg-white p-6 text-center shadow-soft">
+            <div class="text-4xl font-black text-brand md:text-5xl">$10M+</div>
+            <p class="mt-2 text-slate-600">In client revenue generated</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="customers" class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Social proof</p>
+            <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">Trusted by 1,000+ salons, spas & wellness studios</h2>
+          </div>
+          <p class="max-w-xl text-slate-600">Owners use SLK Aspire to simplify marketing, improve visibility, and turn online interest into real appointments.</p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.25em] text-violet-500">Case study</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">40% revenue increase</h3>
+            <p class="mt-3 text-slate-600">“In six months, our monthly revenue jumped and we doubled the number of bookings we used to get on busy Saturdays.”</p>
+            <div class="mt-4 rounded-2xl bg-white p-3 text-sm font-semibold text-brand">2+ extra bookings per day</div>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.25em] text-violet-500">Case study</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">$100k+ in first year</h3>
+            <p class="mt-3 text-slate-600">“The visibility engine helped us become the top local option within the first year of using the platform.”</p>
+            <div class="mt-4 rounded-2xl bg-white p-3 text-sm font-semibold text-brand">#1 on Google for key services</div>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.25em] text-violet-500">Case study</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">10x ROI</h3>
+            <p class="mt-3 text-slate-600">“The blend of AI and expert guidance gives us better leads, more retention, and far more visibility than ads alone.”</p>
+            <div class="mt-4 rounded-2xl bg-white p-3 text-sm font-semibold text-brand">60% more profile visibility</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Growth calculator</p>
+            <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">See how much more you could be earning</h2>
+          </div>
+          <p class="max-w-xl text-slate-600">Choose your typical monthly client volume and see the estimated lift from stronger discovery, booking conversion, and repeat visits.</p>
+        </div>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-brand to-violet-500 p-6 text-white shadow-soft">
+            <p class="text-sm uppercase tracking-[0.25em] text-violet-100">Monthly clients</p>
+            <label for="clientRange" class="mt-5 block text-sm text-violet-100">How many clients do you see monthly?</label>
+            <select id="clientRange" class="mt-3 w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none ring-0 placeholder:text-violet-100">
+              <option value="120" class="text-slate-800">120 clients</option>
+              <option value="180" class="text-slate-800">180 clients</option>
+              <option value="260" class="text-slate-800">260 clients</option>
+              <option value="400" class="text-slate-800">400+ clients</option>
+            </select>
+            <p class="mt-4 text-sm text-violet-100">The result below reflects a conservative lift from better visibility and follow-up automation.</p>
+          </article>
+
+          <article class="rounded-3xl border border-violet-100 bg-mist p-6 shadow-soft">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl border border-violet-100 bg-white p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Estimated new bookings</p>
+                <p id="bookingsEstimate" class="mt-3 text-4xl font-black text-brand">+12</p>
+                <p class="mt-1 text-sm text-slate-600">per month</p>
+              </div>
+              <div class="rounded-3xl border border-violet-100 bg-white p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Estimated extra revenue</p>
+                <p id="revenueEstimate" class="mt-3 text-4xl font-black text-brand">$4,800</p>
+                <p class="mt-1 text-sm text-slate-600">additional monthly revenue</p>
+              </div>
+            </div>
+            <div class="mt-4 rounded-3xl border border-violet-100 bg-white p-5 shadow-sm">
+              <p class="text-sm text-slate-500">What changes with better marketing</p>
+              <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                <li>• More high-intent leads from local search and review signals</li>
+                <li>• Faster responses that improve booking conversion</li>
+                <li>• Automated rebook reminders that lift repeat visits</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="resources" class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Free tools</p>
+            <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">Free tools to kickstart your growth</h2>
+          </div>
+          <p class="max-w-xl text-slate-600">Start with simple, practical tools that make it easier to understand demand, improve your online presence, and attract better-fit clients.</p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">📍</div>
+            <h3 class="text-xl font-bold text-ink">Local Demand Tracker</h3>
+            <p class="mt-3 text-slate-600">Spot what your neighborhood is searching for and uncover the services and treatments that are trending right now.</p>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">🧪</div>
+            <h3 class="text-xl font-bold text-ink">Website Health Grader</h3>
+            <p class="mt-3 text-slate-600">Audit your site speed, messaging, and conversion points to uncover quick wins that improve your booking funnel.</p>
+          </article>
+          <article class="rounded-3xl border border-violet-100 bg-gradient-to-b from-white to-mist p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-brand">📈</div>
+            <h3 class="text-xl font-bold text-ink">Google Profile Optimizer</h3>
+            <p class="mt-3 text-slate-600">Refine your local listing with smarter keywords, stronger offers, and clearer messaging that helps clients choose you.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="rounded-[32px] border border-violet-100 bg-white p-6 shadow-soft md:p-8" data-aos="fade-up">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.25em] text-violet-500">Frequently asked questions</p>
+          <h2 class="mt-3 text-3xl font-black text-ink md:text-4xl">Everything you need to know before you get started</h2>
+        </div>
+
+        <div class="mt-8 space-y-0 rounded-3xl border border-violet-100 bg-white shadow-sm">
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">What does the platform actually do?<span>+</span></button>
+            <div class="faq-answer text-slate-600">It combines AI-powered visibility, conversion, and retention tools to help beauty and wellness businesses attract more leads, fill appointments, and keep clients returning.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">Is it easy to set up?<span>+</span></button>
+            <div class="faq-answer text-slate-600">Yes. Most teams get started in a few days with guided onboarding, clear setup steps, and no technical expertise required.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">How fast can we expect results?<span>+</span></button>
+            <div class="faq-answer text-slate-600">Many businesses begin seeing stronger visibility and more inquiries within the first few weeks, with traction building steadily over the first 30–90 days.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">Do you require contracts?<span>+</span></button>
+            <div class="faq-answer text-slate-600">No long-term contracts are required. You can start with a flexible plan and scale as your needs grow.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">Can it work with our current booking and CRM tools?<span>+</span></button>
+            <div class="faq-answer text-slate-600">Yes. The platform is designed to integrate with standard scheduling, CRM, and client management systems used by local service businesses.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">How does the AI actually get more bookings?<span>+</span></button>
+            <div class="faq-answer text-slate-600">It improves your local online presence, responds faster to inquiries, and follows up consistently with the right message at the right time.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">Do you offer a mobile experience?<span>+</span></button>
+            <div class="faq-answer text-slate-600">Yes. Your dashboard and client communication tools are built to work smoothly across desktop and mobile devices.</div>
+          </article>
+          <article class="faq-item px-5 py-4 md:px-6">
+            <button class="faq-button flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink" type="button">What kind of support do you provide?<span>+</span></button>
+            <div class="faq-answer text-slate-600">You get onboarding guidance, implementation support, and practical help from a team that understands local beauty and wellness businesses.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="rounded-[32px] border border-violet-100 bg-gradient-to-br from-brand to-violet-500 p-6 text-white shadow-soft md:p-8" data-aos="fade-up">
+        <div class="grid gap-6 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-violet-100">Ready to grow?</p>
+            <h2 class="mt-3 text-3xl font-black md:text-4xl">Launch your AI marketing team in less than a week.</h2>
+            <p class="mt-4 max-w-xl text-violet-100">From local visibility to repeat bookings, SLK Aspire makes it easier to scale the marketing side of your business without adding more complexity.</p>
+          </div>
+          <div class="rounded-3xl border border-white/20 bg-white/10 p-5 shadow-soft backdrop-blur-xl">
+            <h3 class="text-xl font-semibold">Start with a free discovery call</h3>
+            <p class="mt-2 text-sm text-violet-100">Share your current booking volume, goals, and growth blockers. We will map out the fastest path to stronger local growth.</p>
+            <a href="mailto:hello@slkaspire.com" class="mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand">hello@slkaspire.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-violet-100 bg-white/95">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr_0.9fr_0.9fr] lg:px-8">
+        <div>
+          <a href="#top" class="flex items-center gap-3 text-xl font-semibold text-ink">
+            <span class="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-brand via-violet-500 to-fuchsia-500 text-white shadow-soft">S</span>
+            <span>SLK Aspire</span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm text-slate-600">A purposeful AI marketing platform for beauty and wellness businesses that want more visible, recurring growth.</p>
+          <p class="mt-4 text-sm text-slate-600">hello@slkaspire.com<br />+1 (415) 555-0178</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-500">Services</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700"><li><a href="#agents" class="hover:text-brand">AI Agents</a></li><li><a href="#pricing" class="hover:text-brand">Pricing</a></li><li><a href="#customers" class="hover:text-brand">Customers</a></li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-500">Agents</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700"><li>Visibility Agent</li><li>Convert Agent</li><li>Retain Agent</li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-500">Resources</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700"><li><a href="#resources" class="hover:text-brand">Free tools</a></li><li><a href="#contact" class="hover:text-brand">Book a demo</a></li><li><a href="#faq" class="hover:text-brand">FAQ</a></li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-500">Solutions</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700"><li>Salons</li><li>Spa & med spas</li><li>Wellness centers</li></ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-500">Company</h4>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700"><li>About</li><li>Careers</li><li>Contact</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-violet-100 py-4 text-center text-xs text-slate-500">© <span id="year"></span> SLK Aspire. All rights reserved.</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 650, once: true, easing: 'ease-out-cubic' });
+
+      const clientRange = document.getElementById('clientRange');
+      const bookingsEstimate = document.getElementById('bookingsEstimate');
+      const revenueEstimate = document.getElementById('revenueEstimate');
+      const year = document.getElementById('year');
+
+      if (year) year.textContent = new Date().getFullYear();
+
+      const estimateMap = {
+        120: { bookings: '+12', revenue: '$4,800' },
+        180: { bookings: '+19', revenue: '$7,600' },
+        260: { bookings: '+28', revenue: '$11,200' },
+        400: { bookings: '+41', revenue: '$16,500' },
+      };
+
+      function updateEstimate() {
+        const value = clientRange?.value || '120';
+        const data = estimateMap[value] || estimateMap['120'];
+        bookingsEstimate.textContent = data.bookings;
+        revenueEstimate.textContent = data.revenue;
+      }
+
+      clientRange?.addEventListener('change', updateEstimate);
+      updateEstimate();
+
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const button = item.querySelector('.faq-button');
+        const answer = item.querySelector('.faq-answer');
+        button?.addEventListener('click', () => {
+          const isOpen = answer.classList.contains('open');
+          document.querySelectorAll('.faq-answer').forEach((panel) => panel.classList.remove('open'));
+          if (!isOpen) answer.classList.add('open');
+        });
+      });
+    </script>
+  </body>
+</html>

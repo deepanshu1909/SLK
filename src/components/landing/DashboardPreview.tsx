@@ -22,7 +22,7 @@ export function DashboardPreview() {
             <div className="w-2.5 h-2.5 rounded-full bg-amber-400/70" />
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/70" />
           </div>
-          <div className="text-[11px] text-muted-foreground ml-3">zarklo.com / dashboard</div>
+          <div className="text-[11px] text-muted-foreground ml-3">zarkloai.com / dashboard</div>
         </div>
 
         <div className="grid lg:grid-cols-[200px_1fr] min-h-[440px]">

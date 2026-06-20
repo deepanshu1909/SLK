@@ -57,7 +57,7 @@ export function LandingNav() {
           <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
             <Sparkles className="w-4 h-4 text-white" />
           </span>
-          <span>Zarklo</span>
+          <span>ZarkloAi</span>
         </Link>
 
         {/* Desktop Navigation */}

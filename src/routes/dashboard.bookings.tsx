@@ -9,7 +9,7 @@ const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export default function BookingsPage() {
   useEffect(() => {
-    document.title = "Bookings — Zarklo";
+    document.title = "Bookings — ZarkloAi";
   }, []);
 
   return (

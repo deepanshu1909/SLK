@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 export default function ReviewsPage() {
   useEffect(() => {
-    document.title = "Reviews — Zarklo";
+    document.title = "Reviews — ZarkloAi";
   }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">

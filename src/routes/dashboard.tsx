@@ -30,7 +30,7 @@ export default function DashboardLayout() {
           <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
             <Sparkles className="w-4 h-4 text-white" />
           </span>
-          Zarklo
+          ZarkloAi
         </Link>
 
         <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">

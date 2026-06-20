@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 
 export default function SettingsPage() {
   useEffect(() => {
-    document.title = "Settings — Zarklo";
+    document.title = "Settings — ZarkloAi";
   }, []);
 
   return (

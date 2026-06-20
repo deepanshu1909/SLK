@@ -7,10 +7,10 @@ import { Label } from "@/components/ui/label";
 
 export default function Login() {
   useEffect(() => {
-    document.title = "Sign in — Zarklo";
+    document.title = "Sign in — ZarkloAi";
     document.querySelector("meta[name='description']")?.setAttribute(
       "content",
-      "Sign in to your Zarklo dashboard."
+      "Sign in to your ZarkloAi dashboard."
     );
   }, []);
 
@@ -29,7 +29,7 @@ export default function Login() {
         <div className="relative h-full p-12 flex flex-col justify-between text-white">
           <Link to="/" className="flex items-center gap-2 font-display text-2xl">
             <span className="grid place-items-center w-8 h-8 rounded-xl bg-white/15"><Sparkles className="w-4 h-4" /></span>
-            Zarklo
+            ZarkloAi
           </Link>
           <div>
             <p className="font-display text-4xl leading-tight">"We went from manual scheduling to a 6-figure month in 90 days."</p>
@@ -41,7 +41,7 @@ export default function Login() {
       <div className="flex items-center justify-center p-8">
         <div className="w-full max-w-sm">
           <h1 className="font-display text-4xl">Welcome back</h1>
-          <p className="text-muted-foreground mt-1 text-sm">Sign in to your Zarklo dashboard.</p>
+          <p className="text-muted-foreground mt-1 text-sm">Sign in to your ZarkloAi dashboard.</p>
 
           <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-1.5">

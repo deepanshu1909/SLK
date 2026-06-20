@@ -25,9 +25,7 @@ export function Pricing() {
               Simple, <span className="italic text-gradient-brand">honest pricing</span>
             </h2>
 
-            <p className="mt-5 text-lg text-black">
-              14-day free trial on every plan. Cancel anytime.
-            </p>
+            
 
             <div className="mt-8 inline-flex items-center gap-1 p-1 rounded-full glass border">
               <button

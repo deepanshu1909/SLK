@@ -16,7 +16,7 @@ const initial = [
 
 export default function ChatPage() {
   useEffect(() => {
-    document.title = "AI Chat — Zarklo";
+    document.title = "AI Chat — ZarkloAi";
   }, []);
 
   const [msgs, setMsgs] = useState(initial);

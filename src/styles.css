@@ -169,10 +169,10 @@
   .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-elevated { box-shadow: var(--shadow-elevated); }
   .glass {
-    background: oklch(1 0 0 / 0.6);
+    background: oklch(0.15 0.02 260 / 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid oklch(1 0 0 / 0.5);
+    border: 1px solid oklch(1 0 0 / 0.1);
   }
   .glass-dark {
     background: oklch(0.18 0.03 275 / 0.6);

@@ -10,7 +10,7 @@ export function FAQ() {
           <div className="text-center mb-12">
             <div className="text-xs uppercase tracking-[0.2em] text-brand mb-4">FAQ</div>
             <h2 className="font-display text-5xl md:text-6xl tracking-tight leading-[1]">
-              Questions, <span className="italic text-gradient-brand">answered.</span>
+              Questions, <span className="italic text-white">answered.</span>
             </h2>
           </div>
         </FadeIn>

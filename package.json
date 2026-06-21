@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lp": "node scripts/generate-lp.mjs",
+    "lp:sync": "node scripts/sync-client-lps.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

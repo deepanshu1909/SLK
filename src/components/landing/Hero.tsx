@@ -24,7 +24,7 @@ export function Hero() {
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
             Hire an AI team that <br />
-            <span className="text-gradient-brand italic">grows your salon</span>
+            <span className="italic text-white">grows your salon</span>
           </h1>
 
           <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -60,7 +60,7 @@ export function Hero() {
             { v: 42, suf: "M+", label: "Revenue generated", prefix: "$" },
           ].map((m) => (
             <div key={m.label} className="text-center">
-              <div className="font-display text-4xl md:text-5xl text-gradient-brand">
+              <div className="font-display text-4xl md:text-5xl text-white">
                 <Counter to={m.v} suffix={m.suf} prefix={m.prefix} />
               </div>
               <div className="text-xs md:text-sm text-muted-foreground mt-1">{m.label}</div>

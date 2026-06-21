@@ -49,7 +49,7 @@ export function TestimonialsSection() {
 
             <h2 className="font-display text-5xl md:text-6xl tracking-tight leading-[1]">
               Every great case study starts with{" "}
-              <span className="italic text-gradient-brand">
+              <span className="italic text-white">
                 the first success story.
               </span>
             </h2>

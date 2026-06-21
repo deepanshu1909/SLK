@@ -63,18 +63,22 @@ export const reviews = [
 ];
 
 export const testimonials = [
-  { quote: "We went from fully manual scheduling to a 6-figure month in 90 days. ZarkloAi runs the back office.", author: "Camille Vasquez", role: "Owner, Maison Lumière Salon", growth: "+312% bookings" },
+  { quote: "We went from fully manual scheduling to a 6-figure month in 90 days. ZarkloAI runs the back office.", author: "Camille Vasquez", role: "Owner, Maison Lumière Salon", growth: "+312% bookings" },
   { quote: "The Discovery Agent put us at the top of Google for our city. Walk-ins doubled.", author: "Marcus Cole", role: "Founder, Cole & Co. Barber", growth: "+1,840 profile views" },
-  { quote: "Our retention used to be 41%. After ZarkloAi's loyalty agent, we're sitting at 87%.", author: "Priya Anand", role: "Director, Lotus Spa & Wellness", growth: "87% retention" },
+  { quote: "Our retention used to be 41%. After ZarkloAI's loyalty agent, we're sitting at 87%.", author: "Priya Anand", role: "Director, Lotus Spa & Wellness", growth: "87% retention" },
 ];
 
+export const services = [
+  { key: "guaranteed-bookings", name: "Guaranteed bookings", desc: "100% more bookings. Guaranteed.", icon: "ShieldCheck" },
+  { key: "ai-agents", name: "AI Agents", desc: "Works 24/7 to get you customers on autopilot.", icon: "Bot" },
+  { key: "local-domination", name: "Local Domination", desc: "Show up first when customers search locally.", icon: "MapPin" },
+  { key: "booking-machine", name: "Booking Machine", desc: "Turn your website into a 24/7 booking engine.", icon: "Calendar" },
+] as const;
+
 export const agents = [
-  { key: "discovery", name: "Discovery Agent", desc: "SEO, Google Business optimization, and competitor insights that help you get found locally.", metric: "+1,200% visibility", icon: "Sparkles" },
-  { key: "booking", name: "Booking Machine", desc: "An AI concierge that captures leads, books appointments, and follows up automatically.", metric: "3.1x more bookings", icon: "Calendar" },
-  { key: "crm", name: "CRM Agent", desc: "Manage leads, customers, follow-ups, and conversations from one central dashboard.", metric: "100% lead visibility", icon: "Heart" },
-  { key: "social", name: "Social Agent", desc: "Create and publish on-brand social content that keeps customers engaged.", metric: "12 posts/week", icon: "Share2" },
-  { key: "local", name: "Local Domination", desc: "Rank higher on Google Maps and local search to attract more nearby customers.", metric: "Top local rankings", icon: "Star" },
-  { key: "analytics", name: "Analytics Agent", desc: "Track bookings, revenue, and growth opportunities with AI-powered insights.", metric: "Daily insights", icon: "BarChart3" },
+  { key: "discovery", name: "Discovery Agent", desc: "For guaranteed ranking and bookings.", metric: "Guaranteed visibility", icon: "Sparkles" },
+  { key: "loyalty", name: "Loyalty Agent", desc: "Bring happy clients back again and again.", metric: "Higher retention", icon: "Heart" },
+  { key: "win", name: "Win Agent", desc: "Turn every enquiry into a confirmed appointment.", metric: "More confirmed bookings", icon: "Target" },
 ] as const;
 
 export const pricingTiers = [
@@ -92,7 +96,7 @@ export const pricingTiers = [
     monthly: 199,
     yearly: 159,
     blurb: "For salons ready to scale.",
-    features: ["3 locations", "All 6 AI Agents", "SEO + Social Agent", "Up to 5,000 clients", "Priority support", "Custom integrations"],
+    features: ["3 locations", "All 3 AI Agents", "SEO + Social Agent", "Up to 5,000 clients", "Priority support", "Custom integrations"],
     cta: "Start free trial",
     popular: true,
   },
@@ -109,7 +113,7 @@ export const pricingTiers = [
 
 export const faqs = [
   { q: "How long until I see results?", a: "Most salons see a 20–40% lift in bookings within the first 30 days as the Discovery and Booking agents go live." },
-  { q: "Do I need to change my booking system?", a: "No. ZarkloAi integrates with Square, Vagaro, Booksy, Fresha, and Google Calendar out of the box." },
+  { q: "Do I need to change my booking system?", a: "No. ZarkloAI integrates with Square, Vagaro, Booksy, Fresha, and Google Calendar out of the box." },
   { q: "Will the AI sound like a robot to my clients?", a: "We train each agent on your brand voice, services, and past conversations. Clients consistently can't tell." },
   { q: "Is my client data safe?", a: "Yes. Bank-grade encryption, SOC 2 in progress, and zero data sold or shared. Ever." },
   { q: "Can I cancel anytime?", a: "Yes — monthly plans cancel anytime, no contracts. Yearly plans can be paused." },

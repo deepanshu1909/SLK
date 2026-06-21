@@ -6,7 +6,7 @@ export function CTA() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-brand via-brand-deep to-foreground p-14 md:p-20 text-center">
+        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-brand via-brand-deep to-background border border-white/10 p-14 md:p-20 text-center">
           <div aria-hidden className="absolute inset-0 grid-bg opacity-20" />
           <div aria-hidden className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-white/10 blur-3xl animate-blob" />
 
@@ -24,9 +24,9 @@ export function CTA() {
                   <Sparkles className="w-4 h-4 mr-1" /> Hire AI Team <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>
-              <a href="#pricing">
+              <a href="#agents">
                 <Button size="lg" variant="ghost" className="rounded-full h-12 px-6 text-base text-white hover:bg-white/10 hover:text-white">
-                  See pricing
+                  See the agents
                 </Button>
               </a>
             </div>
@@ -39,21 +39,21 @@ export function CTA() {
 
 export function Footer() {
   const cols = [
-    { title: "Product", links: ["Features", "AI Agents", "Pricing", "Integrations", "Changelog"] },
+    { title: "Product", links: ["Services", "AI Agents", "Integrations", "Changelog"] },
     { title: "Company", links: ["About", "Customers", "Careers", "Press", "Contact"] },
     { title: "Resources", links: ["Blog", "Help center", "Guides", "Academy", "Status"] },
     { title: "Legal", links: ["Privacy", "Terms", "DPA", "Security"] },
   ];
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="border-t border-white/10 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
           <div className="col-span-2">
-            <div className="flex items-center gap-2 font-display text-2xl">
+            <div className="flex items-center gap-2 font-display text-2xl text-foreground">
               <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
                 <Sparkles className="w-4 h-4 text-white" />
               </span>
-              ZarkloAi
+              ZarkloAI
             </div>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               The AI team for modern salons, spas, and barbershops. Built in California.
@@ -64,18 +64,18 @@ export function Footer() {
               <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3">{c.title}</div>
               <ul className="space-y-2">
                 {c.links.map((l) => (
-                  <li key={l}><a href="#" className="text-sm hover:text-brand transition-colors">{l}</a></li>
+                  <li key={l}><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">{l}</a></li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} ZarkloAi.com, Inc. All rights reserved.</div>
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
+          <div>© {new Date().getFullYear()} ZarkloAI.com, Inc. All rights reserved.</div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-foreground">Twitter</a>
-            <a href="#" className="hover:text-foreground">Instagram</a>
-            <a href="#" className="hover:text-foreground">LinkedIn</a>
+            <a href="#" className="hover:text-white">Twitter</a>
+            <a href="#" className="hover:text-white">Instagram</a>
+            <a href="#" className="hover:text-white">LinkedIn</a>
           </div>
         </div>
       </div>

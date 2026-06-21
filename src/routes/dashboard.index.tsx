@@ -19,7 +19,7 @@ const stats = [
 
 export default function DashboardHome() {
   useEffect(() => {
-    document.title = "Dashboard — ZarkloAi";
+    document.title = "Dashboard — ZarkloAI";
   }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">

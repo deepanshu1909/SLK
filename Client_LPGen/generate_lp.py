@@ -39,8 +39,7 @@ MAX_TEXT_CHARS = 8000
 
 TEMPLATES_DIR = Path(__file__).parent / "templates"
 DEFAULT_OUTPUT_DIR = Path(__file__).parent / "output"
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PUBLIC_DIR = PROJECT_ROOT / "public"
+SITES_DIR = Path(__file__).parent / "sites"
 MANIFEST_PATH = Path(__file__).parent / "deployed-pages.json"
 SITE_ORIGIN = "https://zarklo.com"
 RESERVED_SLUGS = frozenset({
@@ -1327,13 +1326,13 @@ def deploy_landing_page(
     website: str | None,
     instagram: str | None,
 ) -> dict[str, Any]:
-    dest = PUBLIC_DIR / slug / "index.html"
+    dest = SITES_DIR / slug / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(html_path, dest)
     entry = update_manifest_entry(slug, content, website, instagram)
-    print(f"  Deployed → public/{slug}/index.html")
-    print(f"  Live URL → {SITE_ORIGIN}/{slug}")
-    print(f"  After git push + Vercel deploy, share that link with your client.")
+    print(f"  Published → Client_LPGen/sites/{slug}/index.html")
+    print(f"  Local URL → http://localhost:5173/{slug}")
+    print(f"  Live URL → {SITE_ORIGIN}/{slug} (after git push)")
     return entry
 
 
@@ -1392,7 +1391,7 @@ def main() -> None:
         "--deploy",
         "-d",
         action="store_true",
-        help="Publish to public/{slug}/ for zarklo.com (git push + Vercel deploy to go live)",
+        help="Publish to Client_LPGen/sites/{slug}/ for localhost + zarklo.com",
     )
     args = parser.parse_args()
     generate(args.website, args.instagram, args.output, args.slug, args.deploy)

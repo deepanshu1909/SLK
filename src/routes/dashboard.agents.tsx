@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import { BarChart3, Calendar, Heart, Share2, Sparkles, Star } from "lucide-react";
+import { Heart, Sparkles, Target } from "lucide-react";
 import { motion } from "framer-motion";
 import { agents } from "@/lib/mock-data";
 import { Switch } from "@/components/ui/switch";
 
-const iconMap = { Sparkles, Calendar, Heart, Share2, Star, BarChart3 };
+const iconMap = { Sparkles, Heart, Target };
 
 export default function AgentsPage() {
   useEffect(() => {
-    document.title = "AI Agents — ZarkloAi";
+    document.title = "AI Agents — ZarkloAI";
   }, []);
   return (
     <div className="space-y-6 max-w-[1400px]">
@@ -29,8 +29,8 @@ export default function AgentsPage() {
               className="rounded-2xl bg-card border p-6 shadow-card relative overflow-hidden"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-11 h-11 rounded-xl bg-gradient-brand-soft border border-brand/20 grid place-items-center">
-                  <Icon className="w-5 h-5 text-brand-deep" />
+                <div className="w-11 h-11 rounded-xl bg-gradient-brand border border-white/10 grid place-items-center">
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
                 <Switch defaultChecked />
               </div>
@@ -40,7 +40,7 @@ export default function AgentsPage() {
               <div className="mt-4 pt-4 border-t flex items-center justify-between">
                 <div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Performance</div>
-                  <div className="text-sm font-medium text-gradient-brand">{a.metric}</div>
+                  <div className="text-sm font-medium text-white">{a.metric}</div>
                 </div>
                 <button className="text-xs text-brand hover:underline">Configure →</button>
               </div>

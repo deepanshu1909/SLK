@@ -12,7 +12,7 @@ const campaigns = [
 
 export default function CampaignsPage() {
   useEffect(() => {
-    document.title = "Campaigns — ZarkloAi";
+    document.title = "Campaigns — ZarkloAI";
   }, []);
 
   return (

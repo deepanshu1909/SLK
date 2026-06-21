@@ -38,7 +38,22 @@ Or pass links directly:
 | **Structured data** | JSON-LD `@graph`: WebSite, LocalBusiness/HairSalon, WebPage, BreadcrumbList |
 | **Mobile** | Responsive nav, gallery lightbox, scroll animations |
 
-Output: `output/{business-name}.html` — send the file or host it anywhere.
+## Folder layout
+
+All client pages live in **`Client_LPGen/sites/`** — not in `public/`.
+
+```
+Client_LPGen/
+├── sites/                 ← published pages (zarklo.com/{slug})
+│   ├── mk-hair-salon/
+│   │   └── index.html
+│   └── one-salon-nyc/
+│       └── index.html
+├── output/                ← raw generated copies ({slug}.html)
+├── generate_lp.py
+├── templates/landing_page.html
+└── deployed-pages.json    ← list of all published slugs
+```
 
 ---
 
@@ -55,29 +70,28 @@ npm run lp -- -w https://onesalonnyc.com/ -i https://instagram.com/onesalon.nyc/
 ```
 
 This writes:
-- `Client_LPGen/output/one-salon.html` (local copy)
-- `public/one-salon/index.html` (goes live on deploy)
+- `Client_LPGen/output/one-salon.html` (backup copy)
+- `Client_LPGen/sites/one-salon/index.html` (served at localhost + zarklo.com)
 
 Then push to git — Vercel auto-deploys:
 
 ```bash
-git add public/ Client_LPGen/
+git add Client_LPGen/
 git commit -m "Add client LP: one-salon"
 git push
 ```
 
-**Live URL:** `https://zarklo.com/one-salon`
+**Local:** `http://localhost:5173/one-salon`  
+**Live:** `https://zarklo.com/one-salon`
 
 ### Sync existing output files
 
-Already have HTML in `output/`? Deploy them all:
+Already have HTML in `output/`? Publish them all to `sites/`:
 
 ```bash
 npm run lp:sync
-git add public/ Client_LPGen/deployed-pages.json && git push
+git add Client_LPGen/ && git push
 ```
-
-Deployed pages are tracked in `Client_LPGen/deployed-pages.json`.
 
 ---
 
@@ -111,9 +125,11 @@ See `output/` for sample pages.
 Client_LPGen/
 ├── create-lp.sh           ← start here (interactive)
 ├── generate_lp.py         ← scraper + color engine + SEO
+├── sites/                 ← published pages → zarklo.com/{slug}
+├── output/                ← raw HTML backups
 ├── templates/
 │   └── landing_page.html  ← single design template
-├── output/                ← generated HTML files
+├── deployed-pages.json
 └── requirements.txt
 ```
 

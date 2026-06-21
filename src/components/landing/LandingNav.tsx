@@ -3,16 +3,14 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionValueEvent,
 } from "framer-motion";
 import { Menu, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
+  { label: "Services", href: "#features" },
   { label: "Agents", href: "#agents" },
-  { label: "Pricing", href: "#pricing" },
   { label: "Testimonials", href: "#testimonials" },
 ];
 
@@ -22,21 +20,16 @@ export function LandingNav() {
   const bg = useTransform(
     scrollY,
     [0, 80],
-    ["rgba(255,255,255,0)", "rgba(255,255,255,0.75)"]
+    ["rgba(5,8,22,0)", "rgba(5,8,22,0.92)"]
   );
 
   const border = useTransform(
     scrollY,
     [0, 80],
-    ["rgba(255,255,255,0)", "rgba(0,0,0,0.06)"]
+    ["rgba(255,255,255,0)", "rgba(255,255,255,0.08)"]
   );
 
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 80);
-  });
 
   return (
     <motion.header
@@ -47,49 +40,32 @@ export function LandingNav() {
       className="fixed top-0 inset-x-0 z-50 border-b backdrop-blur-xl backdrop-saturate-150"
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link
           to="/"
-          className={`flex items-center gap-2 font-display text-2xl tracking-tight transition-colors duration-300 ${
-            scrolled ? "text-black" : "text-white"
-          }`}
+          className="flex items-center gap-2 font-display text-2xl tracking-tight text-white transition-colors duration-300"
         >
           <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
             <Sparkles className="w-4 h-4 text-white" />
           </span>
-          <span>ZarkloAi</span>
+          <span>ZarkloAI</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          className={`hidden md:flex items-center gap-8 text-sm transition-colors duration-300 ${
-            scrolled ? "text-black" : "text-white"
-          }`}
-        >
+        <nav className="hidden md:flex items-center gap-8 text-sm text-white/90 transition-colors duration-300">
           {navLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className={`transition-colors duration-300 ${
-                scrolled
-                  ? "hover:text-black/70"
-                  : "hover:text-white/70"
-              }`}
+              className="transition-colors duration-300 hover:text-white"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/login"
-            className={`text-sm transition-colors duration-300 ${
-              scrolled
-                ? "text-black hover:text-black/70"
-                : "text-white hover:text-white/70"
-            }`}
+            className="text-sm text-white/90 transition-colors duration-300 hover:text-white"
           >
             Login
           </Link>
@@ -101,25 +77,21 @@ export function LandingNav() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className={`md:hidden p-2 transition-colors duration-300 ${
-            scrolled ? "text-black" : "text-white"
-          }`}
+          className="md:hidden p-2 text-white transition-colors duration-300"
         >
           <Menu className="w-5 h-5" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden border-t bg-background/95 backdrop-blur-xl px-6 py-4 space-y-3">
+        <div className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-6 py-4 space-y-3">
           {navLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="block text-sm text-black"
+              className="block text-sm text-white"
               onClick={() => setOpen(false)}
             >
               {l.label}

@@ -7,7 +7,17 @@
     "websiteUrl": "https://www.kolorstudionyc.com/",
     "instagramUrl": "",
     "liveUrl": "https://zarklo.com/kolor-studio-nyc",
-    "generatedAt": "2026-06-21T13:34:52.912Z"
+    "generatedAt": "2026-06-21T13:47:23.432Z"
+  },
+  {
+    "slug": "mk-hair-salon",
+    "businessName": "MK Hair Salon",
+    "tagline": "MK Hair Salon, located in Midtown Manhattan, offers expert hairstyling for men and women at affordable prices.",
+    "category": "Local Business",
+    "websiteUrl": "https://mksalon.com/",
+    "instagramUrl": "",
+    "liveUrl": "https://zarklo.com/mk-hair-salon",
+    "generatedAt": "2026-06-21T13:47:23.464Z"
   },
   {
     "slug": "one-salon-nyc",
@@ -17,7 +27,7 @@
     "websiteUrl": "https://onesalonnyc.com/",
     "instagramUrl": "",
     "liveUrl": "https://zarklo.com/one-salon-nyc",
-    "generatedAt": "2026-06-21T13:34:52.917Z"
+    "generatedAt": "2026-06-21T13:47:23.465Z"
   },
   {
     "slug": "one-salon",
@@ -27,6 +37,6 @@
     "websiteUrl": "https://onesalonnyc.com/",
     "instagramUrl": "",
     "liveUrl": "https://zarklo.com/one-salon",
-    "generatedAt": "2026-06-21T13:34:52.919Z"
+    "generatedAt": "2026-06-21T13:47:23.469Z"
   }
 ]

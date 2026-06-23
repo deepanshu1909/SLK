@@ -33,13 +33,14 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 )
 REQUEST_TIMEOUT = 20
-MAX_IMAGES = 12
-MAX_EXTRA_PAGES = 3
+MAX_IMAGES = 18
+MAX_EXTRA_PAGES = 5
 MAX_TEXT_CHARS = 8000
 
 TEMPLATES_DIR = Path(__file__).parent / "templates"
 DEFAULT_OUTPUT_DIR = Path(__file__).parent / "output"
 SITES_DIR = Path(__file__).parent / "sites"
+CLIENTS_DIR = Path(__file__).parent / "clients"
 MANIFEST_PATH = Path(__file__).parent / "deployed-pages.json"
 SITE_ORIGIN = "https://zarklo.com"
 RESERVED_SLUGS = frozenset({
@@ -78,6 +79,12 @@ ICON_KEYWORDS = (
     "social", "facebook", "twitter", "linkedin", "pinterest",
     "youtube", "tiktok", "whatsapp", "plus", "minus", "check",
     "star-rating", "payment", "visa", "mastercard", "paypal",
+)
+
+PRODUCT_KEYWORDS = (
+    "shampoo", "conditioner", "product", "bottle", "spray", "serum",
+    "forever-young", "color-protect", "white-widow", "-oz", ".png",
+    "service-box", "merchandise", "retail",
 )
 
 SKIP_PATH_SEGMENTS = (
@@ -461,6 +468,136 @@ def is_logo_asset(url: str, alt: str = "", classes: str = "") -> bool:
     return any(k in combined for k in logo_signals)
 
 
+def is_product_asset(url: str, alt: str = "", extra_keywords: tuple[str, ...] = ()) -> bool:
+    combined = f"{url} {alt}".lower()
+    keywords = PRODUCT_KEYWORDS + extra_keywords
+    return any(k in combined for k in keywords)
+
+
+def load_client_config(slug: str) -> dict[str, Any] | None:
+    path = CLIENTS_DIR / f"{slug}.json"
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        raise SystemExit(f"Invalid client config {path}: {exc}") from exc
+
+
+def list_client_configs() -> list[Path]:
+    if not CLIENTS_DIR.exists():
+        return []
+    return sorted(
+        p for p in CLIENTS_DIR.glob("*.json")
+        if not p.name.startswith("_")
+    )
+
+
+def normalize_url_for_match(url: str) -> str:
+    if not url:
+        return ""
+    parsed = urlparse(url.strip().lower())
+    host = parsed.netloc.removeprefix("www.")
+    path = parsed.path.rstrip("/")
+    return f"{host}{path}"
+
+
+def find_client_config_by_sources(
+    website: str | None = None,
+    instagram: str | None = None,
+) -> tuple[str, dict[str, Any]] | None:
+    """Match a client JSON by website or Instagram URL."""
+    web_key = normalize_url_for_match(website or "")
+    ig_key = normalize_url_for_match(normalize_instagram_url(instagram)) if instagram else ""
+
+    for path in list_client_configs():
+        cfg = load_client_config(path.stem)
+        if not cfg:
+            continue
+        cfg_web = normalize_url_for_match(cfg.get("website") or "")
+        cfg_ig = normalize_url_for_match(
+            normalize_instagram_url(cfg.get("instagram") or "")
+        ) if cfg.get("instagram") else ""
+        if web_key and cfg_web and (web_key == cfg_web or web_key in cfg_web or cfg_web in web_key):
+            return path.stem, cfg
+        if ig_key and cfg_ig and ig_key == cfg_ig:
+            return path.stem, cfg
+    return None
+
+
+def apply_client_config(content: ScrapedContent, cfg: dict[str, Any]) -> ScrapedContent:
+    """Merge manual client config over scraped content."""
+    exclude = tuple(cfg.get("excludePhotoKeywords") or ())
+    min_photos = int(cfg.get("minPhotos") or 0)
+    business = cfg.get("businessName") or content.business_name
+
+    if cfg.get("businessName"):
+        content.business_name = cfg["businessName"]
+    if cfg.get("tagline"):
+        content.tagline = cfg["tagline"]
+    if cfg.get("category"):
+        content.category = cfg["category"]
+    if cfg.get("locations"):
+        content.locations = list(cfg["locations"])
+    if cfg.get("about"):
+        content.about_paragraphs = list(cfg["about"])[:3]
+    if cfg.get("services"):
+        content.services = list(cfg["services"])
+    if cfg.get("bookingUrl"):
+        content.booking_url = cfg["bookingUrl"]
+    if cfg.get("website") and not content.website_url:
+        content.website_url = cfg["website"]
+        content.canonical_url = cfg["website"]
+    if cfg.get("instagram"):
+        content.instagram_url = cfg["instagram"]
+        if not content.instagram_handle:
+            content.instagram_handle = instagram_handle(cfg["instagram"])
+
+    manual_photos: list[dict[str, str]] = []
+    for url in cfg.get("photos") or []:
+        if url and not is_product_asset(url, extra_keywords=exclude):
+            manual_photos.append({"url": url, "alt": f"{business} — portfolio"})
+
+    scraped_photos: list[dict[str, str]] = []
+    for img in content.gallery_images:
+        url = img.get("url", "")
+        alt = img.get("alt", "")
+        if is_product_asset(url, alt, exclude) or is_logo_asset(url, alt):
+            continue
+        scraped_photos.append(img)
+
+    seen: set[str] = set()
+    merged_gallery: list[dict[str, str]] = []
+    for img in manual_photos + scraped_photos:
+        key = urlparse(img["url"]).path.rsplit("/", 1)[-1][:80]
+        if key in seen:
+            continue
+        seen.add(key)
+        merged_gallery.append(img)
+
+    if min_photos and len(merged_gallery) < min_photos:
+        fallback_path = CLIENTS_DIR / "_fallback-photos.json"
+        fallback_urls: list[str] = []
+        if fallback_path.exists():
+            try:
+                fallback_urls = json.loads(fallback_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                pass
+        for url in (cfg.get("photos") or []) + fallback_urls:
+            if not url or is_product_asset(url, extra_keywords=exclude):
+                continue
+            key = urlparse(url).path.rsplit("/", 1)[-1][:80]
+            if key in seen:
+                continue
+            seen.add(key)
+            merged_gallery.append({"url": url, "alt": f"{business} — portfolio"})
+            if len(merged_gallery) >= min_photos:
+                break
+
+    content.gallery_images = merged_gallery[:MAX_IMAGES]
+    return content
+
+
 def is_icon_or_decorative(url: str, alt: str = "", width: int = 0, height: int = 0) -> bool:
     combined = (url + " " + alt).lower()
     if not url or url.startswith("data:"):
@@ -688,10 +825,57 @@ def assign_backgrounds(content: ScrapedContent) -> None:
     photos = [img["url"] for img in content.gallery_images if not is_logo_asset(img["url"])]
     if not photos:
         return
-    content.hero_bg = photos[0]
-    content.about_image = photos[1] if len(photos) > 1 else photos[0]
-    content.about_bg = photos[min(2, len(photos) - 1)]
-    content.cta_bg = photos[min(3, len(photos) - 1)] if len(photos) > 3 else photos[-1]
+    ranked = sorted(photos, key=lambda u: image_quality_score(u), reverse=True)
+    content.hero_bg = ranked[0]
+    content.hero_image = ranked[0]
+    content.about_image = ranked[1] if len(ranked) > 1 else ranked[0]
+    content.about_bg = ranked[min(2, len(ranked) - 1)]
+    content.cta_bg = ranked[min(3, len(ranked) - 1)] if len(ranked) > 3 else ranked[-1]
+
+
+BENTO_LAYOUTS = ("feature", "wide", "tall", "normal", "normal", "tall", "wide", "normal", "normal")
+
+
+def layout_gallery(images: list[dict[str, str]]) -> list[dict[str, str]]:
+    laid_out: list[dict[str, str]] = []
+    for i, img in enumerate(images):
+        item = dict(img)
+        item["layout"] = BENTO_LAYOUTS[i % len(BENTO_LAYOUTS)]
+        laid_out.append(item)
+    return laid_out
+
+
+def enrich_services_with_images(
+    services: list[dict[str, str]], gallery: list[dict[str, str]]
+) -> list[dict[str, str]]:
+    photos = [g["url"] for g in gallery if g.get("url")]
+    enriched: list[dict[str, str]] = []
+    for i, svc in enumerate(services):
+        item = dict(svc)
+        if photos:
+            item["image"] = photos[i % len(photos)]
+        enriched.append(item)
+    return enriched
+
+
+def extract_about_from_subpages(base_url: str, soup: BeautifulSoup) -> list[str]:
+    paragraphs: list[str] = []
+    for page_url in discover_supplementary_pages(soup, base_url):
+        if not any(k in page_url.lower() for k in ("about", "story", "our-story", "team", "who-we")):
+            continue
+        html, _ = fetch_url(page_url)
+        if not html:
+            continue
+        page_soup = BeautifulSoup(html, "lxml")
+        for p in page_soup.select("main p, article p, .about p, .content p, section p"):
+            text = clean_text(p.get_text())
+            if len(text) < 40 or len(text) > 500:
+                continue
+            if text not in paragraphs:
+                paragraphs.append(to_sentence_case(text))
+            if len(paragraphs) >= 3:
+                return paragraphs
+    return paragraphs
 
 
 # ── Scrapers ─────────────────────────────────────────────────────────────────
@@ -769,10 +953,18 @@ def scrape_website(url: str) -> ScrapedContent:
 
     images = crawl_all_images(url, soup, html, json_ld)
     for src in images[:MAX_IMAGES]:
-        data.gallery_images.append({"url": src, "alt": f"{data.business_name} — portfolio"})
+        if is_product_asset(src):
+            continue
+        alt = f"{data.business_name} — portfolio"
+        data.gallery_images.append({"url": src, "alt": alt})
 
     data.booking_url = find_booking_url(soup, url)
     data.about_paragraphs = build_about_paragraphs(description, data.tagline)
+    extra_about = extract_about_from_subpages(url, soup)
+    if extra_about:
+        data.about_paragraphs = (extra_about + [
+            p for p in data.about_paragraphs if p not in extra_about
+        ])[:3]
     data.locations = extract_locations(description)
     data.services = extract_services(description)
     data.category = detect_category(description, data.business_name)
@@ -823,10 +1015,15 @@ def scrape_instagram(url: str) -> ScrapedContent:
     data.tagline = best_tagline(data.description or f"Follow {data.business_name} on Instagram.", data.business_name)
 
     if image:
-        data.profile_image = upgrade_image_url(image)
+        hi = upgrade_image_url(image)
+        data.profile_image = hi
         if not data.logo_url:
-            data.logo_url = data.profile_image
+            data.logo_url = hi
             data.logo_wide = False
+        data.gallery_images.append({
+            "url": hi,
+            "alt": f"{data.business_name} — Instagram",
+        })
 
     data.about_paragraphs = build_about_paragraphs(data.description, data.tagline)
     data.locations = extract_locations(data.description)
@@ -877,6 +1074,17 @@ def merge_content(website: ScrapedContent | None, instagram: ScrapedContent | No
         merged.category = detect_category(merged.description, merged.business_name)
     if merged.description:
         merged.about_paragraphs = build_about_paragraphs(merged.description, merged.tagline)
+
+    # Deduplicate gallery by URL base path
+    seen: set[str] = set()
+    unique_gallery: list[dict[str, str]] = []
+    for img in merged.gallery_images:
+        key = urlparse(img["url"]).path.rsplit("/", 1)[-1][:80]
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_gallery.append(img)
+    merged.gallery_images = unique_gallery[:MAX_IMAGES]
 
     assign_backgrounds(merged)
     merged.stats = build_stats(merged)
@@ -1232,6 +1440,11 @@ def render_landing_page(content: ScrapedContent, colors: dict[str, str]) -> str:
     primary_cta_label = "Book Now" if content.booking_url else (
         "Visit Website" if content.website_url else "Follow on Instagram"
     )
+    gallery_bento = layout_gallery(content.gallery_images)
+    services_enriched = enrich_services_with_images(content.services, content.gallery_images)
+    hero_secondary = content.gallery_images[1]["url"] if len(content.gallery_images) > 1 else ""
+    showcase = content.gallery_images[:4]
+
     return template.render(
         lang="en",
         seo={
@@ -1254,10 +1467,13 @@ def render_landing_page(content: ScrapedContent, colors: dict[str, str]) -> str:
         about_image=content.about_image,
         cta_bg=content.cta_bg,
         about_paragraphs=content.about_paragraphs,
-        services=content.services,
         locations=content.locations,
         stats=content.stats,
         gallery_images=content.gallery_images,
+        gallery_bento=gallery_bento,
+        services=services_enriched,
+        hero_secondary=hero_secondary,
+        showcase_images=showcase,
         website_url=content.website_url,
         instagram_url=content.instagram_url,
         instagram_handle=content.instagram_handle,
@@ -1342,14 +1558,25 @@ def generate(
     output: Path | None,
     slug: str | None = None,
     deploy: bool = False,
+    client_cfg: dict[str, Any] | None = None,
 ) -> Path:
+    if client_cfg:
+        slug = slug or client_cfg.get("slug")
+        website = website or client_cfg.get("website")
+        instagram = instagram or client_cfg.get("instagram")
+        deploy = deploy or bool(client_cfg.get("deploy", True))
+
     if not website and not instagram:
-        raise SystemExit("Provide at least one of --website or --instagram")
+        raise SystemExit("Provide at least one of --website, --instagram, or --client")
 
     print("Scraping sources (universal mode)…")
     website_data = scrape_website(website) if website else None
     instagram_data = scrape_instagram(instagram) if instagram else None
     content = merge_content(website_data, instagram_data)
+
+    if client_cfg:
+        content = apply_client_config(content, client_cfg)
+        print(f"  Client config: {client_cfg.get('slug', slug or '—')}")
 
     print(f"  Business: {content.business_name}")
     for note in content.source_notes:
@@ -1388,13 +1615,71 @@ def main() -> None:
     parser.add_argument("--output", "-o", type=Path, help="Output HTML path (default: output/{business-name}.html)")
     parser.add_argument("--slug", "-s", help="URL slug → zarklo.com/{slug} (required with --deploy)")
     parser.add_argument(
+        "--client", "-c",
+        help="Load Client_LPGen/clients/{slug}.json — merges manual copy/photos and auto-deploys",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Rebuild and deploy every client in Client_LPGen/clients/",
+    )
+    parser.add_argument(
         "--deploy",
         "-d",
         action="store_true",
         help="Publish to Client_LPGen/sites/{slug}/ for localhost + zarklo.com",
     )
+    parser.add_argument(
+        "--no-deploy",
+        action="store_true",
+        help="Only write to output/ — do not publish to sites/",
+    )
     args = parser.parse_args()
-    generate(args.website, args.instagram, args.output, args.slug, args.deploy)
+
+    if args.all:
+        configs = list_client_configs()
+        if not configs:
+            raise SystemExit(f"No client configs in {CLIENTS_DIR}")
+        print(f"Rebuilding {len(configs)} client landing page(s)…\n")
+        for path in configs:
+            slug = path.stem
+            cfg = load_client_config(slug)
+            if not cfg:
+                continue
+            print(f"── {slug} " + "─" * max(0, 50 - len(slug)))
+            generate(
+                args.website,
+                args.instagram,
+                args.output,
+                slug,
+                deploy=True,
+                client_cfg=cfg,
+            )
+            print()
+        return
+
+    client_slug = args.client
+    client_cfg = load_client_config(client_slug) if client_slug else None
+    if args.client and not client_cfg:
+        raise SystemExit(f"No client config: {CLIENTS_DIR / f'{args.client}.json'}")
+
+    if not client_cfg and (args.website or args.instagram):
+        matched = find_client_config_by_sources(args.website, args.instagram)
+        if matched:
+            client_slug, client_cfg = matched
+            print(f"Matched client config: {client_slug}")
+
+    deploy = not args.no_deploy and (
+        args.deploy or bool(client_cfg) or bool(args.website or args.instagram)
+    )
+    generate(
+        args.website,
+        args.instagram,
+        args.output,
+        args.slug or client_slug,
+        deploy,
+        client_cfg,
+    )
 
 
 if __name__ == "__main__":

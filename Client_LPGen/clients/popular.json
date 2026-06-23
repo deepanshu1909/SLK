@@ -1,0 +1,30 @@
+{
+  "slug": "popular",
+  "instagram": "https://www.instagram.com/popular/",
+  "businessName": "Popular",
+  "tagline": "NYC hair culture — bold color, sharp cuts, and looks worth sharing.",
+  "category": "Hair Salon & Studio",
+  "locations": ["New York City", "Manhattan"],
+  "about": [
+    "Popular is a New York hair destination built for people who care about their look — and their Instagram feed.",
+    "From precision bobs to statement color, our stylists create wearable art that turns heads on the street and on social.",
+    "Book through Instagram DMs or visit our profile for the latest openings, trends, and client transformations."
+  ],
+  "services": [
+    { "title": "Trend Cuts", "description": "Sharp, modern cuts shaped to your face and personal style.", "icon": "✦" },
+    { "title": "Statement Color", "description": "Vivid tones, soft pastels, and creative color that lasts.", "icon": "◆" },
+    { "title": "Balayage & Blonde", "description": "Sun-kissed dimension and bright blonde tailored to your skin tone.", "icon": "◇" },
+    { "title": "Editorial Styling", "description": "Red carpet-ready styling for events, shoots, and nights out.", "icon": "○" }
+  ],
+  "photos": [
+    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=85",
+    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=85",
+    "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1600&q=85",
+    "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=85",
+    "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=85",
+    "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&q=85",
+    "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1600&q=85",
+    "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1600&q=85"
+  ],
+  "minPhotos": 8
+}

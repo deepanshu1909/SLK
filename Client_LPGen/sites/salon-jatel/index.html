@@ -1,46 +1,113 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ seo.title }}</title>
-  <meta name="description" content="{{ seo.description }}">
+  <title>Salon Jatel | Hair Salon &amp; Studio</title>
+  <meta name="description" content="We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  {% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}">{% endif %}
-  {% if logo_url %}<link rel="icon" href="{{ logo_url }}" type="image/png">{% endif %}
-  <meta name="theme-color" content="{{ colors.primary }}">
-  <meta name="author" content="{{ business_name }}">
+  <link rel="canonical" href="http://localhost:5173/salon-jatel">
+  <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596229254380-MAXJI0K7FQXJYEGQQYT6/SJ+%282%29.png?format=1500w" type="image/png">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="author" content="Salon Jatel">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ seo.site_name }}">
+  <meta property="og:site_name" content="Salon Jatel">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="{{ seo.title }}">
-  <meta property="og:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta property="og:image" content="{{ hero_bg }}">{% endif %}
-  {% if seo.canonical %}<meta property="og:url" content="{{ seo.canonical }}">{% endif %}
+  <meta property="og:title" content="Salon Jatel | Hair Salon &amp; Studio">
+  <meta property="og:description" content="We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.">
+  <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w">
+  <meta property="og:url" content="http://localhost:5173/salon-jatel">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ seo.title }}">
-  <meta name="twitter:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta name="twitter:image" content="{{ hero_bg }}">{% endif %}
-  <script type="application/ld+json">{{ structured_data | safe }}</script>
+  <meta name="twitter:title" content="Salon Jatel | Hair Salon &amp; Studio">
+  <meta name="twitter:description" content="We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.">
+  <meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:5173/salon-jatel/#website",
+      "url": "http://localhost:5173/salon-jatel",
+      "name": "Salon Jatel",
+      "description": "We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "http://localhost:5173/salon-jatel/#organization"
+      }
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "http://localhost:5173/salon-jatel/#organization",
+      "name": "Salon Jatel",
+      "description": "We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.",
+      "url": "http://localhost:5173/salon-jatel",
+      "image": "https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596229254380-MAXJI0K7FQXJYEGQQYT6/SJ+%282%29.png?format=1500w",
+        "caption": "Salon Jatel logo"
+      },
+      "sameAs": [
+        "https://www.instagram.com/muresalonnyc/",
+        "http://localhost:5173/salon-jatel"
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "New York"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:5173/salon-jatel/#webpage",
+      "url": "http://localhost:5173/salon-jatel",
+      "name": "Salon Jatel | Hair Salon & Studio",
+      "description": "We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.",
+      "isPartOf": {
+        "@id": "http://localhost:5173/salon-jatel/#website"
+      },
+      "about": {
+        "@id": "http://localhost:5173/salon-jatel/#organization"
+      },
+      "inLanguage": "en-US",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:5173/salon-jatel"
+        }
+      ]
+    }
+  ]
+}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: {{ colors.primary }};
-      --primary-dark: {{ colors.primary_dark }};
-      --accent: {{ colors.accent }};
-      --gold: {{ colors.gold }};
-      --bg: {{ colors.background }};
-      --surface: {{ colors.surface }};
-      --text: {{ colors.text }};
-      --text-muted: {{ colors.text_muted }};
-      --logo-badge-bg: {{ colors.logo_badge_bg }};
-      --logo-badge-border: {{ colors.logo_badge_border }};
-      --hero-overlay: {{ colors.hero_overlay }};
-      --about-overlay: {{ colors.about_overlay }};
-      --cta-overlay: {{ colors.cta_overlay }};
-      --header-scrolled-bg: {{ colors.header_scrolled_bg }};
+      --primary: #0f0f0f;
+      --primary-dark: #000000;
+      --accent: #edc5be;
+      --gold: #edc5be;
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #646464;
+      --logo-badge-bg: #0a0a0a;
+      --logo-badge-border: #edc5be;
+      --hero-overlay: linear-gradient(180deg, rgba(0,0,0,0.82) 0%, rgba(15,15,15,0.65) 45%, rgba(0,0,0,0.88) 100%);
+      --about-overlay: rgba(250,248,245,0.95);
+      --cta-overlay: linear-gradient(135deg, rgba(15,15,15,0.90), rgba(0,0,0,0.94));
+      --header-scrolled-bg: rgba(255,255,255,0.97);
       --radius: 20px;
       --radius-sm: 12px;
       --shadow: 0 24px 64px -16px rgba(0,0,0,0.18);
@@ -92,11 +159,11 @@
     @media (min-width: 1024px) { .hero { grid-template-columns: 1.1fr 0.9fr; } }
     .hero-visual { position: relative; min-height: 55vh; }
     @media (min-width: 1024px) { .hero-visual { min-height: 100vh; } }
-    .hero-bg { position: absolute; inset: 0; background-image: url("{{ hero_bg or '' }}"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
-    {% if hero_secondary %}
-    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("{{ hero_secondary }}"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
+    .hero-bg { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
+    
+    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1594779649985-FPU49UH01X4XFXBA61UF/Salon+Jatel+interior+with+chairs?format=1500w"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
     @keyframes crossfade { 0%, 45% { opacity: 0; } 55%, 100% { opacity: 1; } }
-    {% endif %}
+    
     @keyframes kenburns { from { transform: scale(1.05); } to { transform: scale(1.14); } }
     .hero-overlay { position: absolute; inset: 0; background: var(--hero-overlay); }
     .hero-panel { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 7rem 6vw 4rem; background: linear-gradient(135deg, var(--primary-dark) 0%, color-mix(in srgb, var(--primary) 88%, black) 100%); }
@@ -137,11 +204,11 @@
     .about-visual { position: relative; }
     .about-main { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; }
     .about-main img { width: 100%; height: 100%; object-fit: cover; }
-    {% if showcase_images|length > 1 %}
+    
     .about-accent { position: absolute; bottom: -1.5rem; right: -1rem; width: 42%; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow); border: 4px solid var(--surface); aspect-ratio: 1; }
     .about-accent img { width: 100%; height: 100%; object-fit: cover; }
     @media (max-width: 899px) { .about-accent { display: none; } }
-    {% endif %}
+    
     .about-text .section-title { text-align: left; }
     .about-text p { color: var(--text-muted); margin-bottom: 1.1rem; font-size: 1.02rem; line-height: 1.8; }
     .about-text p.lead { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--text); }
@@ -187,7 +254,7 @@
 
     /* CTA */
     .cta-section { position: relative; padding: 7rem 0; text-align: center; color: #fff; overflow: hidden; }
-    .cta-bg { position: absolute; inset: 0; background-image: url("{{ cta_bg or hero_bg or '' }}"); background-size: cover; background-position: center; background-attachment: fixed; }
+    .cta-bg { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595509344852-I9ZS33Y83EVRGS311YSN/white+hair.jpg?format=1500w"); background-size: cover; background-position: center; background-attachment: fixed; }
     .cta-overlay { position: absolute; inset: 0; background: var(--cta-overlay); }
     .cta-section .container { position: relative; z-index: 1; }
     .cta-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 1rem; }
@@ -221,102 +288,106 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        {% if logo_url %}
-        <span class="logo-badge {% if logo_wide %}logo-wide{% else %}logo-round{% endif %}">
-          <img src="{{ logo_url }}" alt="{{ business_name }} logo" width="160" height="40">
+        
+        <span class="logo-badge logo-round">
+          <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596229254380-MAXJI0K7FQXJYEGQQYT6/SJ+%282%29.png?format=1500w" alt="Salon Jatel logo" width="160" height="40">
         </span>
-        {% if not logo_wide %}<span>{{ business_name }}</span>{% endif %}
-        {% else %}
-        <span>{{ business_name }}</span>
-        {% endif %}
+        <span>Salon Jatel</span>
+        
       </a>
       <nav class="nav-desktop">
         <a href="#about" class="nav-link">About</a>
-        {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-        {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#contact" class="nav-link">Contact</a>
-        {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+        <a href="https://www.salonjatel.com/lookbook" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span></button>
     </div>
   </header>
   <nav class="nav-mobile" id="navMobile">
     <a href="#about" class="nav-link">About</a>
-    {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-    {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
     <a href="#contact" class="nav-link">Contact</a>
-    {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+    <a href="https://www.salonjatel.com/lookbook" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
   </nav>
 
   <main id="top">
     <section class="hero">
       <div class="hero-visual">
-        {% if hero_bg %}<div class="hero-bg"></div>{% endif %}
-        {% if hero_secondary %}<div class="hero-bg-secondary"></div>{% endif %}
+        <div class="hero-bg"></div>
+        <div class="hero-bg-secondary"></div>
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-panel">
-        {% if logo_url %}
+        
         <div class="hero-logo">
-          <span class="logo-badge logo-wide"><img src="{{ logo_url }}" alt="{{ business_name }}" width="240" height="52"></span>
+          <span class="logo-badge logo-wide"><img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596229254380-MAXJI0K7FQXJYEGQQYT6/SJ+%282%29.png?format=1500w" alt="Salon Jatel" width="240" height="52"></span>
         </div>
-        {% endif %}
-        {% if category %}<span class="hero-eyebrow">{{ category }}</span>{% endif %}
-        <h1>{{ headline }}</h1>
-        <p class="hero-tagline">{{ tagline }}</p>
+        
+        <span class="hero-eyebrow">Hair Salon &amp; Studio</span>
+        <h1>Salon Jatel</h1>
+        <p class="hero-tagline">We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.</p>
         <div class="hero-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
-          {% endif %}
+          
+          <a href="https://www.salonjatel.com/lookbook" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
+          
+          
+          <a href="https://www.instagram.com/muresalonnyc/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
+          
         </div>
       </div>
     </section>
 
-    {% if stats %}
+    
     <div class="stats-float">
       <div class="container">
         <div class="stats-card reveal">
           <div class="stats-grid">
-            {% for stat in stats %}
-            <div><div class="stat-num">{{ stat.value }}</div><div class="stat-label">{{ stat.label }}</div></div>
-            {% endfor %}
+            
+            <div><div class="stat-num">1</div><div class="stat-label">Locations</div></div>
+            
+            <div><div class="stat-num">13+</div><div class="stat-label">Portfolio</div></div>
+            
+            <div><div class="stat-num">@muresalonnyc</div><div class="stat-label">Instagram</div></div>
+            
+            <div><div class="stat-num">3</div><div class="stat-label">Services</div></div>
+            
           </div>
         </div>
       </div>
     </div>
-    {% endif %}
+    
 
-    {% if about_paragraphs %}
+    
     <section class="section" id="about">
       <div class="container">
         <div class="about-grid reveal">
-          {% if about_image %}
+          
           <div class="about-visual">
-            <figure class="about-main"><img src="{{ about_image }}" alt="About {{ business_name }}" loading="lazy"></figure>
-            {% if showcase_images|length > 1 %}
-            <figure class="about-accent"><img src="{{ showcase_images[1].url }}" alt="{{ showcase_images[1].alt }}" loading="lazy"></figure>
-            {% endif %}
+            <figure class="about-main"><img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1594779649985-FPU49UH01X4XFXBA61UF/Salon+Jatel+interior+with+chairs?format=1500w" alt="About Salon Jatel" loading="lazy"></figure>
+            
+            <figure class="about-accent"><img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1594779649985-FPU49UH01X4XFXBA61UF/Salon+Jatel+interior+with+chairs?format=1500w" alt="Salon Jatel — portfolio" loading="lazy"></figure>
+            
           </div>
-          {% endif %}
+          
           <div class="about-text">
             <p class="section-eyebrow">Our Story</p>
-            <h2 class="section-title">About {{ business_name }}</h2>
-            {% for para in about_paragraphs %}
-            <p class="{% if loop.first %}lead{% endif %}">{{ para }}</p>
-            {% endfor %}
-            {% if locations %}
-            <div class="locations-strip">{% for loc in locations %}<span class="location-pill">{{ loc }}</span>{% endfor %}</div>
-            {% endif %}
+            <h2 class="section-title">About Salon Jatel</h2>
+            
+            <p class="lead">We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.</p>
+            
+            
+            <div class="locations-strip"><span class="location-pill">New York</span></div>
+            
           </div>
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if services %}
+    
     <section class="section services-section" id="services">
       <div class="container">
         <div class="section-header reveal">
@@ -325,64 +396,132 @@
           <p class="section-desc">Expert care, tailored to your unique style.</p>
         </div>
         <div class="services-grid">
-          {% for svc in services %}
+          
           <article class="service-card reveal">
-            {% if svc.image %}<div class="service-card-bg" style="background-image:url('{{ svc.image }}')"></div>{% else %}<div class="service-card-bg" style="background:linear-gradient(135deg,var(--primary),var(--primary-dark))"></div>{% endif %}
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w')"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-body">
-              <div class="service-icon">{{ svc.icon }}</div>
-              <h3>{{ svc.title }}</h3>
-              <p>{{ svc.description }}</p>
+              <div class="service-icon">✦</div>
+              <h3>Premium Service</h3>
+              <p>Expert care delivered with attention to every detail.</p>
             </div>
           </article>
-          {% endfor %}
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1594779649985-FPU49UH01X4XFXBA61UF/Salon+Jatel+interior+with+chairs?format=1500w')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◆</div>
+              <h3>Personalized Experience</h3>
+              <p>Every client receives a tailored experience.</p>
+            </div>
+          </article>
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595509209368-PCQNFG1NCRKMH06KXX93/download+%283%29.jpg?format=1500w')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◇</div>
+              <h3>Expert Team</h3>
+              <p>Skilled professionals passionate about their craft.</p>
+            </div>
+          </article>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if gallery_bento %}
+    
     <section class="section gallery-section" id="gallery">
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Portfolio</p>
           <h2 class="section-title">Our Work</h2>
-          <p class="section-desc">Real results from {{ business_name }}.</p>
+          <p class="section-desc">Real results from Salon Jatel.</p>
         </div>
         <div class="bento" id="galleryGrid">
-          {% for img in gallery_bento %}
-          <figure class="bento-item {{ img.layout }} reveal" data-index="{{ loop.index0 }}">
-            <img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
+          
+          <figure class="bento-item feature reveal" data-index="0">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1696729062332-C6HQVM14QD1C7J84WQ6M/salon%2Bjatel%2Binterior.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
           </figure>
-          {% endfor %}
+          
+          <figure class="bento-item wide reveal" data-index="1">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1594779649985-FPU49UH01X4XFXBA61UF/Salon+Jatel+interior+with+chairs?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="2">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595509209368-PCQNFG1NCRKMH06KXX93/download+%283%29.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="3">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595509344852-I9ZS33Y83EVRGS311YSN/white+hair.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="4">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595473727006-Y5S83H8W4XA2Y6EP0R18/photo%2B%2811%29.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="5">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596824849090-PSFA2YRAPQBHDG63QZJE/Keratin.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="6">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596744130147-LQRO8Z0LQ66OQHJLSA3Y/Salon+Jatel+Chelsea+New+York+Outside+View.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="7">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595473743539-KDJAAVY93A4456M9TFTR/IMG_3772.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="8">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595473892140-V2I3G3W6T4TUHHOBJZSX/long+hair+2.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item feature reveal" data-index="9">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595509243411-ROHJYMW5AC7YLJ52MJD9/download+%284%29.jpg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="10">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1753528458286-DG0NYHVN50GWSN6KQILX/image-asset.jpeg?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="11">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1596229254380-MAXJI0K7FQXJYEGQQYT6/SJ+%282%29.png?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="12">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f0e658706048a38682bbd3b/1595430780829-9HY8MEF7CJTEJ60UNLMY/New+York+Magazine+Short+Hair+Article?format=1500w" alt="Salon Jatel — portfolio" loading="lazy">
+          </figure>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if instagram_url and instagram_handle %}
+    
     <section class="instagram-band reveal">
       <div class="container">
         <h3>Follow us on Instagram</h3>
         <p>See our latest work, behind-the-scenes, and client transformations.</p>
-        <a href="{{ instagram_url }}" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@{{ instagram_handle }}</a>
+        <a href="https://www.instagram.com/muresalonnyc/" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@muresalonnyc</a>
       </div>
     </section>
-    {% endif %}
+    
 
     <section class="cta-section" id="contact">
-      {% if cta_bg or hero_bg %}<div class="cta-bg"></div>{% endif %}
+      <div class="cta-bg"></div>
       <div class="cta-overlay"></div>
       <div class="container reveal">
         <h2>Ready for your transformation?</h2>
-        <p>{{ cta_text }}</p>
+        <p>We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.</p>
         <div class="cta-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-          {% endif %}
+          
+          <a href="https://www.salonjatel.com/lookbook" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
+          
+          
+          <a href="https://www.instagram.com/muresalonnyc/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+          
         </div>
       </div>
     </section>
@@ -392,25 +531,25 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">{{ business_name }}</div>
-          <p class="footer-tagline">{{ tagline[:140] }}{% if tagline|length > 140 %}…{% endif %}</p>
+          <div class="footer-brand">Salon Jatel</div>
+          <p class="footer-tagline">We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <a href="#about">About</a>
-          {% if services %}<a href="#services">Services</a>{% endif %}
-          {% if gallery_bento %}<a href="#gallery">Gallery</a>{% endif %}
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          {% if website_url %}<a href="{{ website_url }}" target="_blank" rel="noopener noreferrer">Website</a>{% endif %}
-          {% if instagram_url %}<a href="{{ instagram_url }}" target="_blank" rel="noopener noreferrer">Instagram</a>{% endif %}
-          {% if booking_url %}<a href="{{ booking_url }}" target="_blank" rel="noopener noreferrer">Book Online</a>{% endif %}
+          <a href="http://localhost:5173/salon-jatel" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://www.instagram.com/muresalonnyc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.salonjatel.com/lookbook" target="_blank" rel="noopener noreferrer">Book Online</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; {{ year }} {{ business_name }}. All rights reserved.</span>
-        {% if instagram_handle %}<span>@{{ instagram_handle }}</span>{% endif %}
+        <span>&copy; 2026 Salon Jatel. All rights reserved.</span>
+        <span>@muresalonnyc</span>
       </div>
     </div>
   </footer>

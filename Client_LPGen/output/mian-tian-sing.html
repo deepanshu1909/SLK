@@ -1,46 +1,113 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ seo.title }}</title>
-  <meta name="description" content="{{ seo.description }}">
+  <title>Mian Tian Sing | Hair Salon &amp; Studio</title>
+  <meta name="description" content="Follow Miantiansinghairsalon on Instagram.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  {% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}">{% endif %}
-  {% if logo_url %}<link rel="icon" href="{{ logo_url }}" type="image/png">{% endif %}
-  <meta name="theme-color" content="{{ colors.primary }}">
-  <meta name="author" content="{{ business_name }}">
+  <link rel="canonical" href="https://www.miantiansingsalon.com/">
+  <link rel="icon" href="https://framerusercontent.com/images/X06UdI07BffqIB4qQnKRplMiYnw.png" type="image/png">
+  <meta name="theme-color" content="#acb7e7">
+  <meta name="author" content="Mian Tian Sing">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ seo.site_name }}">
+  <meta property="og:site_name" content="Mian Tian Sing">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="{{ seo.title }}">
-  <meta property="og:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta property="og:image" content="{{ hero_bg }}">{% endif %}
-  {% if seo.canonical %}<meta property="og:url" content="{{ seo.canonical }}">{% endif %}
+  <meta property="og:title" content="Mian Tian Sing | Hair Salon &amp; Studio">
+  <meta property="og:description" content="Follow Miantiansinghairsalon on Instagram.">
+  <meta property="og:image" content="https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png">
+  <meta property="og:url" content="https://www.miantiansingsalon.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ seo.title }}">
-  <meta name="twitter:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta name="twitter:image" content="{{ hero_bg }}">{% endif %}
-  <script type="application/ld+json">{{ structured_data | safe }}</script>
+  <meta name="twitter:title" content="Mian Tian Sing | Hair Salon &amp; Studio">
+  <meta name="twitter:description" content="Follow Miantiansinghairsalon on Instagram.">
+  <meta name="twitter:image" content="https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.miantiansingsalon.com/#website",
+      "url": "https://www.miantiansingsalon.com/",
+      "name": "Mian Tian Sing",
+      "description": "Follow Miantiansinghairsalon on Instagram.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.miantiansingsalon.com/#organization"
+      }
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "https://www.miantiansingsalon.com/#organization",
+      "name": "Mian Tian Sing",
+      "description": "Follow Miantiansinghairsalon on Instagram.",
+      "url": "https://www.miantiansingsalon.com/",
+      "image": "https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://framerusercontent.com/images/X06UdI07BffqIB4qQnKRplMiYnw.png",
+        "caption": "Mian Tian Sing logo"
+      },
+      "sameAs": [
+        "https://www.instagram.com/miantiansinghairsalon/",
+        "https://www.miantiansingsalon.com/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "New York"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.miantiansingsalon.com/#webpage",
+      "url": "https://www.miantiansingsalon.com/",
+      "name": "Mian Tian Sing | Hair Salon & Studio",
+      "description": "Follow Miantiansinghairsalon on Instagram.",
+      "isPartOf": {
+        "@id": "https://www.miantiansingsalon.com/#website"
+      },
+      "about": {
+        "@id": "https://www.miantiansingsalon.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.miantiansingsalon.com/"
+        }
+      ]
+    }
+  ]
+}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: {{ colors.primary }};
-      --primary-dark: {{ colors.primary_dark }};
-      --accent: {{ colors.accent }};
-      --gold: {{ colors.gold }};
-      --bg: {{ colors.background }};
-      --surface: {{ colors.surface }};
-      --text: {{ colors.text }};
-      --text-muted: {{ colors.text_muted }};
-      --logo-badge-bg: {{ colors.logo_badge_bg }};
-      --logo-badge-border: {{ colors.logo_badge_border }};
-      --hero-overlay: {{ colors.hero_overlay }};
-      --about-overlay: {{ colors.about_overlay }};
-      --cta-overlay: {{ colors.cta_overlay }};
-      --header-scrolled-bg: {{ colors.header_scrolled_bg }};
+      --primary: #acb7e7;
+      --primary-dark: #737b9c;
+      --accent: #1c3cf4;
+      --gold: #c6bca3;
+      --bg: #fafbfe;
+      --surface: #fcfdfe;
+      --text: #1a1a1a;
+      --text-muted: #525669;
+      --logo-badge-bg: #fcfcfe;
+      --logo-badge-border: #eef1fe;
+      --hero-overlay: linear-gradient(180deg, rgba(115,123,156,0.82) 0%, rgba(172,183,231,0.65) 45%, rgba(115,123,156,0.88) 100%);
+      --about-overlay: rgba(250,251,254,0.93);
+      --cta-overlay: linear-gradient(135deg, rgba(172,183,231,0.90), rgba(115,123,156,0.94));
+      --header-scrolled-bg: rgba(252,253,254,0.97);
       --radius: 20px;
       --radius-sm: 12px;
       --shadow: 0 24px 64px -16px rgba(0,0,0,0.18);
@@ -92,11 +159,11 @@
     @media (min-width: 1024px) { .hero { grid-template-columns: 1.1fr 0.9fr; } }
     .hero-visual { position: relative; min-height: 55vh; }
     @media (min-width: 1024px) { .hero-visual { min-height: 100vh; } }
-    .hero-bg { position: absolute; inset: 0; background-image: url("{{ hero_bg or '' }}"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
-    {% if hero_secondary %}
-    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("{{ hero_secondary }}"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
+    .hero-bg { position: absolute; inset: 0; background-image: url("https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
+    
+    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("https://framerusercontent.com/images/q8JouO0rWTW2vugqvvwcQWKJUt0.png?scale-down-to=1024"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
     @keyframes crossfade { 0%, 45% { opacity: 0; } 55%, 100% { opacity: 1; } }
-    {% endif %}
+    
     @keyframes kenburns { from { transform: scale(1.05); } to { transform: scale(1.14); } }
     .hero-overlay { position: absolute; inset: 0; background: var(--hero-overlay); }
     .hero-panel { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 7rem 6vw 4rem; background: linear-gradient(135deg, var(--primary-dark) 0%, color-mix(in srgb, var(--primary) 88%, black) 100%); }
@@ -137,11 +204,11 @@
     .about-visual { position: relative; }
     .about-main { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; }
     .about-main img { width: 100%; height: 100%; object-fit: cover; }
-    {% if showcase_images|length > 1 %}
+    
     .about-accent { position: absolute; bottom: -1.5rem; right: -1rem; width: 42%; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow); border: 4px solid var(--surface); aspect-ratio: 1; }
     .about-accent img { width: 100%; height: 100%; object-fit: cover; }
     @media (max-width: 899px) { .about-accent { display: none; } }
-    {% endif %}
+    
     .about-text .section-title { text-align: left; }
     .about-text p { color: var(--text-muted); margin-bottom: 1.1rem; font-size: 1.02rem; line-height: 1.8; }
     .about-text p.lead { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--text); }
@@ -187,7 +254,7 @@
 
     /* CTA */
     .cta-section { position: relative; padding: 7rem 0; text-align: center; color: #fff; overflow: hidden; }
-    .cta-bg { position: absolute; inset: 0; background-image: url("{{ cta_bg or hero_bg or '' }}"); background-size: cover; background-position: center; background-attachment: fixed; }
+    .cta-bg { position: absolute; inset: 0; background-image: url("https://framerusercontent.com/images/j6BOJvU7TABQcbOFlMT6HcDekqg.png"); background-size: cover; background-position: center; background-attachment: fixed; }
     .cta-overlay { position: absolute; inset: 0; background: var(--cta-overlay); }
     .cta-section .container { position: relative; z-index: 1; }
     .cta-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 1rem; }
@@ -221,102 +288,108 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        {% if logo_url %}
-        <span class="logo-badge {% if logo_wide %}logo-wide{% else %}logo-round{% endif %}">
-          <img src="{{ logo_url }}" alt="{{ business_name }} logo" width="160" height="40">
+        
+        <span class="logo-badge logo-wide">
+          <img src="https://framerusercontent.com/images/X06UdI07BffqIB4qQnKRplMiYnw.png" alt="Mian Tian Sing logo" width="160" height="40">
         </span>
-        {% if not logo_wide %}<span>{{ business_name }}</span>{% endif %}
-        {% else %}
-        <span>{{ business_name }}</span>
-        {% endif %}
+        
+        
       </a>
       <nav class="nav-desktop">
         <a href="#about" class="nav-link">About</a>
-        {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-        {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#contact" class="nav-link">Contact</a>
-        {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+        <a href="https://www.facebook.com/miantiansinghairsalon/" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span></button>
     </div>
   </header>
   <nav class="nav-mobile" id="navMobile">
     <a href="#about" class="nav-link">About</a>
-    {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-    {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
     <a href="#contact" class="nav-link">Contact</a>
-    {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+    <a href="https://www.facebook.com/miantiansinghairsalon/" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
   </nav>
 
   <main id="top">
     <section class="hero">
       <div class="hero-visual">
-        {% if hero_bg %}<div class="hero-bg"></div>{% endif %}
-        {% if hero_secondary %}<div class="hero-bg-secondary"></div>{% endif %}
+        <div class="hero-bg"></div>
+        <div class="hero-bg-secondary"></div>
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-panel">
-        {% if logo_url %}
+        
         <div class="hero-logo">
-          <span class="logo-badge logo-wide"><img src="{{ logo_url }}" alt="{{ business_name }}" width="240" height="52"></span>
+          <span class="logo-badge logo-wide"><img src="https://framerusercontent.com/images/X06UdI07BffqIB4qQnKRplMiYnw.png" alt="Mian Tian Sing" width="240" height="52"></span>
         </div>
-        {% endif %}
-        {% if category %}<span class="hero-eyebrow">{{ category }}</span>{% endif %}
-        <h1>{{ headline }}</h1>
-        <p class="hero-tagline">{{ tagline }}</p>
+        
+        <span class="hero-eyebrow">Hair Salon &amp; Studio</span>
+        <h1>Mian Tian Sing</h1>
+        <p class="hero-tagline">Follow Miantiansinghairsalon on Instagram.</p>
         <div class="hero-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
-          {% endif %}
+          
+          <a href="https://www.facebook.com/miantiansinghairsalon/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
+          
+          
+          <a href="https://www.instagram.com/miantiansinghairsalon/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
+          
         </div>
       </div>
     </section>
 
-    {% if stats %}
+    
     <div class="stats-float">
       <div class="container">
         <div class="stats-card reveal">
           <div class="stats-grid">
-            {% for stat in stats %}
-            <div><div class="stat-num">{{ stat.value }}</div><div class="stat-label">{{ stat.label }}</div></div>
-            {% endfor %}
+            
+            <div><div class="stat-num">1</div><div class="stat-label">Locations</div></div>
+            
+            <div><div class="stat-num">7+</div><div class="stat-label">Portfolio</div></div>
+            
+            <div><div class="stat-num">@miantiansinghairsalon</div><div class="stat-label">Instagram</div></div>
+            
+            <div><div class="stat-num">4</div><div class="stat-label">Services</div></div>
+            
           </div>
         </div>
       </div>
     </div>
-    {% endif %}
+    
 
-    {% if about_paragraphs %}
+    
     <section class="section" id="about">
       <div class="container">
         <div class="about-grid reveal">
-          {% if about_image %}
+          
           <div class="about-visual">
-            <figure class="about-main"><img src="{{ about_image }}" alt="About {{ business_name }}" loading="lazy"></figure>
-            {% if showcase_images|length > 1 %}
-            <figure class="about-accent"><img src="{{ showcase_images[1].url }}" alt="{{ showcase_images[1].alt }}" loading="lazy"></figure>
-            {% endif %}
+            <figure class="about-main"><img src="https://framerusercontent.com/images/q8JouO0rWTW2vugqvvwcQWKJUt0.png?scale-down-to=1024" alt="About Mian Tian Sing" loading="lazy"></figure>
+            
+            <figure class="about-accent"><img src="https://framerusercontent.com/images/q8JouO0rWTW2vugqvvwcQWKJUt0.png?scale-down-to=1024" alt="Mian Tian Sing — portfolio" loading="lazy"></figure>
+            
           </div>
-          {% endif %}
+          
           <div class="about-text">
             <p class="section-eyebrow">Our Story</p>
-            <h2 class="section-title">About {{ business_name }}</h2>
-            {% for para in about_paragraphs %}
-            <p class="{% if loop.first %}lead{% endif %}">{{ para }}</p>
-            {% endfor %}
-            {% if locations %}
-            <div class="locations-strip">{% for loc in locations %}<span class="location-pill">{{ loc }}</span>{% endfor %}</div>
-            {% endif %}
+            <h2 class="section-title">About Mian Tian Sing</h2>
+            
+            <p class="lead">Mian Tian Sing Hair Salon on Canal St, New York offers expert haircuts, colouring, and treatments.</p>
+            
+            <p class="">Trusted stylists, premium care, and styles tailored to you.</p>
+            
+            
+            <div class="locations-strip"><span class="location-pill">New York</span></div>
+            
           </div>
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if services %}
+    
     <section class="section services-section" id="services">
       <div class="container">
         <div class="section-header reveal">
@@ -325,64 +398,118 @@
           <p class="section-desc">Expert care, tailored to your unique style.</p>
         </div>
         <div class="services-grid">
-          {% for svc in services %}
+          
           <article class="service-card reveal">
-            {% if svc.image %}<div class="service-card-bg" style="background-image:url('{{ svc.image }}')"></div>{% else %}<div class="service-card-bg" style="background:linear-gradient(135deg,var(--primary),var(--primary-dark))"></div>{% endif %}
+            <div class="service-card-bg" style="background-image:url('https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png')"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-body">
-              <div class="service-icon">{{ svc.icon }}</div>
-              <h3>{{ svc.title }}</h3>
-              <p>{{ svc.description }}</p>
+              <div class="service-icon">✦</div>
+              <h3>Hair Color</h3>
+              <p>Professional hair color tailored to your unique style and vision.</p>
             </div>
           </article>
-          {% endfor %}
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://framerusercontent.com/images/q8JouO0rWTW2vugqvvwcQWKJUt0.png?scale-down-to=1024')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◆</div>
+              <h3>Haircuts &amp; Styling</h3>
+              <p>Professional haircuts &amp; styling tailored to your unique style and vision.</p>
+            </div>
+          </article>
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://framerusercontent.com/images/vStrepljQhfqlSz8VhCjMfK0h4.png?scale-down-to=512')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◇</div>
+              <h3>Treatments</h3>
+              <p>Professional treatments tailored to your unique style and vision.</p>
+            </div>
+          </article>
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://framerusercontent.com/images/j6BOJvU7TABQcbOFlMT6HcDekqg.png')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">○</div>
+              <h3>Consultation</h3>
+              <p>Professional consultation tailored to your unique style and vision.</p>
+            </div>
+          </article>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if gallery_bento %}
+    
     <section class="section gallery-section" id="gallery">
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Portfolio</p>
           <h2 class="section-title">Our Work</h2>
-          <p class="section-desc">Real results from {{ business_name }}.</p>
+          <p class="section-desc">Real results from Mian Tian Sing.</p>
         </div>
         <div class="bento" id="galleryGrid">
-          {% for img in gallery_bento %}
-          <figure class="bento-item {{ img.layout }} reveal" data-index="{{ loop.index0 }}">
-            <img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
+          
+          <figure class="bento-item feature reveal" data-index="0">
+            <img src="https://framerusercontent.com/images/v0Y10SjkK2uABJJBhjowX2BqjM.png" alt="Mian Tian Sing — portfolio" loading="lazy">
           </figure>
-          {% endfor %}
+          
+          <figure class="bento-item wide reveal" data-index="1">
+            <img src="https://framerusercontent.com/images/q8JouO0rWTW2vugqvvwcQWKJUt0.png?scale-down-to=1024" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="2">
+            <img src="https://framerusercontent.com/images/vStrepljQhfqlSz8VhCjMfK0h4.png?scale-down-to=512" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="3">
+            <img src="https://framerusercontent.com/images/j6BOJvU7TABQcbOFlMT6HcDekqg.png" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="4">
+            <img src="https://framerusercontent.com/images/v9Y5chkvtSCjtiTGUckyb7bAg.png?scale-down-to=512" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="5">
+            <img src="https://framerusercontent.com/images/E0XxQrmrYkl1vaTrkicIptH3oek.png?scale-down-to=512" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="6">
+            <img src="https://framerusercontent.com/images/Pq8UK71MjXcIJoybm4yt97Frvo4.png" alt="Mian Tian Sing — portfolio" loading="lazy">
+          </figure>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if instagram_url and instagram_handle %}
+    
     <section class="instagram-band reveal">
       <div class="container">
         <h3>Follow us on Instagram</h3>
         <p>See our latest work, behind-the-scenes, and client transformations.</p>
-        <a href="{{ instagram_url }}" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@{{ instagram_handle }}</a>
+        <a href="https://www.instagram.com/miantiansinghairsalon/" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@miantiansinghairsalon</a>
       </div>
     </section>
-    {% endif %}
+    
 
     <section class="cta-section" id="contact">
-      {% if cta_bg or hero_bg %}<div class="cta-bg"></div>{% endif %}
+      <div class="cta-bg"></div>
       <div class="cta-overlay"></div>
       <div class="container reveal">
         <h2>Ready for your transformation?</h2>
-        <p>{{ cta_text }}</p>
+        <p>Follow Miantiansinghairsalon on Instagram.</p>
         <div class="cta-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-          {% endif %}
+          
+          <a href="https://www.facebook.com/miantiansinghairsalon/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
+          
+          
+          <a href="https://www.instagram.com/miantiansinghairsalon/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+          
         </div>
       </div>
     </section>
@@ -392,25 +519,25 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">{{ business_name }}</div>
-          <p class="footer-tagline">{{ tagline[:140] }}{% if tagline|length > 140 %}…{% endif %}</p>
+          <div class="footer-brand">Mian Tian Sing</div>
+          <p class="footer-tagline">Follow Miantiansinghairsalon on Instagram.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <a href="#about">About</a>
-          {% if services %}<a href="#services">Services</a>{% endif %}
-          {% if gallery_bento %}<a href="#gallery">Gallery</a>{% endif %}
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          {% if website_url %}<a href="{{ website_url }}" target="_blank" rel="noopener noreferrer">Website</a>{% endif %}
-          {% if instagram_url %}<a href="{{ instagram_url }}" target="_blank" rel="noopener noreferrer">Instagram</a>{% endif %}
-          {% if booking_url %}<a href="{{ booking_url }}" target="_blank" rel="noopener noreferrer">Book Online</a>{% endif %}
+          <a href="https://www.miantiansingsalon.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://www.instagram.com/miantiansinghairsalon/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/miantiansinghairsalon/" target="_blank" rel="noopener noreferrer">Book Online</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; {{ year }} {{ business_name }}. All rights reserved.</span>
-        {% if instagram_handle %}<span>@{{ instagram_handle }}</span>{% endif %}
+        <span>&copy; 2026 Mian Tian Sing. All rights reserved.</span>
+        <span>@miantiansinghairsalon</span>
       </div>
     </div>
   </footer>

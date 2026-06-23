@@ -1,0 +1,24 @@
+{
+  "slug": "client-slug",
+  "website": "https://their-website.com/",
+  "instagram": "https://www.instagram.com/handle/",
+  "businessName": "Business Name",
+  "tagline": "One-line description shown in hero.",
+  "category": "Hair Salon & Studio",
+  "locations": ["Neighborhood, NYC"],
+  "bookingUrl": "https://their-website.com/book",
+  "about": [
+    "First paragraph about the business.",
+    "Second paragraph with more detail.",
+    "Optional third paragraph."
+  ],
+  "services": [
+    { "title": "Service Name", "description": "What this service includes.", "icon": "✦" }
+  ],
+  "photos": [
+    "https://example.com/photo1.jpg",
+    "https://example.com/photo2.jpg"
+  ],
+  "minPhotos": 8,
+  "excludePhotoKeywords": ["product", "bottle", "shampoo"]
+}

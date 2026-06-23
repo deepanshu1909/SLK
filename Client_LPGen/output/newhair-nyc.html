@@ -1,46 +1,121 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ seo.title }}</title>
-  <meta name="description" content="{{ seo.description }}">
+  <title>NEWHAIR nyc | Hair Salon &amp; Studio</title>
+  <meta name="description" content="Professional hair styling services for men and women.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  {% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}">{% endif %}
-  {% if logo_url %}<link rel="icon" href="{{ logo_url }}" type="image/png">{% endif %}
-  <meta name="theme-color" content="{{ colors.primary }}">
-  <meta name="author" content="{{ business_name }}">
+  <link rel="canonical" href="https://www.newhairsalonnyc.com/">
+  <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/9c15b680-6993-4fda-aa0e-de1a494b9eba/451A677B-448A-40D1-B28B-4BA822632480.jpeg?format=1500w" type="image/png">
+  <meta name="theme-color" content="#b4a398">
+  <meta name="author" content="NEWHAIR nyc">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ seo.site_name }}">
+  <meta property="og:site_name" content="NEWHAIR nyc">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="{{ seo.title }}">
-  <meta property="og:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta property="og:image" content="{{ hero_bg }}">{% endif %}
-  {% if seo.canonical %}<meta property="og:url" content="{{ seo.canonical }}">{% endif %}
+  <meta property="og:title" content="NEWHAIR nyc | Hair Salon &amp; Studio">
+  <meta property="og:description" content="Professional hair styling services for men and women.">
+  <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w">
+  <meta property="og:url" content="https://www.newhairsalonnyc.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ seo.title }}">
-  <meta name="twitter:description" content="{{ seo.description }}">
-  {% if hero_bg %}<meta name="twitter:image" content="{{ hero_bg }}">{% endif %}
-  <script type="application/ld+json">{{ structured_data | safe }}</script>
+  <meta name="twitter:title" content="NEWHAIR nyc | Hair Salon &amp; Studio">
+  <meta name="twitter:description" content="Professional hair styling services for men and women.">
+  <meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.newhairsalonnyc.com/#website",
+      "url": "https://www.newhairsalonnyc.com/",
+      "name": "NEWHAIR nyc",
+      "description": "Professional hair styling services for men and women.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.newhairsalonnyc.com/#organization"
+      }
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "https://www.newhairsalonnyc.com/#organization",
+      "name": "NEWHAIR nyc",
+      "description": "Professional hair styling services for men and women.",
+      "url": "https://www.newhairsalonnyc.com/",
+      "image": "https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/9c15b680-6993-4fda-aa0e-de1a494b9eba/451A677B-448A-40D1-B28B-4BA822632480.jpeg?format=1500w",
+        "caption": "NEWHAIR nyc logo"
+      },
+      "sameAs": [
+        "https://www.instagram.com/newhairnyc/",
+        "https://www.newhairsalonnyc.com/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Nyc"
+        },
+        {
+          "@type": "Place",
+          "name": "New York"
+        },
+        {
+          "@type": "Place",
+          "name": "Midtown"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.newhairsalonnyc.com/#webpage",
+      "url": "https://www.newhairsalonnyc.com/",
+      "name": "NEWHAIR nyc | Hair Salon & Studio",
+      "description": "Professional hair styling services for men and women.",
+      "isPartOf": {
+        "@id": "https://www.newhairsalonnyc.com/#website"
+      },
+      "about": {
+        "@id": "https://www.newhairsalonnyc.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.newhairsalonnyc.com/"
+        }
+      ]
+    }
+  ]
+}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: {{ colors.primary }};
-      --primary-dark: {{ colors.primary_dark }};
-      --accent: {{ colors.accent }};
-      --gold: {{ colors.gold }};
-      --bg: {{ colors.background }};
-      --surface: {{ colors.surface }};
-      --text: {{ colors.text }};
-      --text-muted: {{ colors.text_muted }};
-      --logo-badge-bg: {{ colors.logo_badge_bg }};
-      --logo-badge-border: {{ colors.logo_badge_border }};
-      --hero-overlay: {{ colors.hero_overlay }};
-      --about-overlay: {{ colors.about_overlay }};
-      --cta-overlay: {{ colors.cta_overlay }};
-      --header-scrolled-bg: {{ colors.header_scrolled_bg }};
+      --primary: #b4a398;
+      --primary-dark: #796e66;
+      --accent: #98857a;
+      --gold: #cbb074;
+      --bg: #fbfaf9;
+      --surface: #fdfcfc;
+      --text: #1a1a1a;
+      --text-muted: #554f4b;
+      --logo-badge-bg: #fcfbfb;
+      --logo-badge-border: #f0ebe8;
+      --hero-overlay: linear-gradient(180deg, rgba(121,110,102,0.82) 0%, rgba(180,163,152,0.65) 45%, rgba(121,110,102,0.88) 100%);
+      --about-overlay: rgba(251,250,249,0.93);
+      --cta-overlay: linear-gradient(135deg, rgba(180,163,152,0.90), rgba(121,110,102,0.94));
+      --header-scrolled-bg: rgba(253,252,252,0.97);
       --radius: 20px;
       --radius-sm: 12px;
       --shadow: 0 24px 64px -16px rgba(0,0,0,0.18);
@@ -92,11 +167,11 @@
     @media (min-width: 1024px) { .hero { grid-template-columns: 1.1fr 0.9fr; } }
     .hero-visual { position: relative; min-height: 55vh; }
     @media (min-width: 1024px) { .hero-visual { min-height: 100vh; } }
-    .hero-bg { position: absolute; inset: 0; background-image: url("{{ hero_bg or '' }}"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
-    {% if hero_secondary %}
-    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("{{ hero_secondary }}"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
+    .hero-bg { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w"); background-size: cover; background-position: center; animation: kenburns 22s ease-in-out infinite alternate; }
+    
+    .hero-bg-secondary { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481946995-6TY62XAIAU58ESXGD1QM/DSC05239.JPG?format=1500w"); background-size: cover; background-position: center; opacity: 0; animation: crossfade 16s ease-in-out infinite; }
     @keyframes crossfade { 0%, 45% { opacity: 0; } 55%, 100% { opacity: 1; } }
-    {% endif %}
+    
     @keyframes kenburns { from { transform: scale(1.05); } to { transform: scale(1.14); } }
     .hero-overlay { position: absolute; inset: 0; background: var(--hero-overlay); }
     .hero-panel { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 7rem 6vw 4rem; background: linear-gradient(135deg, var(--primary-dark) 0%, color-mix(in srgb, var(--primary) 88%, black) 100%); }
@@ -137,11 +212,11 @@
     .about-visual { position: relative; }
     .about-main { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; }
     .about-main img { width: 100%; height: 100%; object-fit: cover; }
-    {% if showcase_images|length > 1 %}
+    
     .about-accent { position: absolute; bottom: -1.5rem; right: -1rem; width: 42%; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow); border: 4px solid var(--surface); aspect-ratio: 1; }
     .about-accent img { width: 100%; height: 100%; object-fit: cover; }
     @media (max-width: 899px) { .about-accent { display: none; } }
-    {% endif %}
+    
     .about-text .section-title { text-align: left; }
     .about-text p { color: var(--text-muted); margin-bottom: 1.1rem; font-size: 1.02rem; line-height: 1.8; }
     .about-text p.lead { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--text); }
@@ -187,7 +262,7 @@
 
     /* CTA */
     .cta-section { position: relative; padding: 7rem 0; text-align: center; color: #fff; overflow: hidden; }
-    .cta-bg { position: absolute; inset: 0; background-image: url("{{ cta_bg or hero_bg or '' }}"); background-size: cover; background-position: center; background-attachment: fixed; }
+    .cta-bg { position: absolute; inset: 0; background-image: url("https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481345073-FP7XPG8HOO0LH2AYZ9YO/DSC05238.JPG?format=1500w"); background-size: cover; background-position: center; background-attachment: fixed; }
     .cta-overlay { position: absolute; inset: 0; background: var(--cta-overlay); }
     .cta-section .container { position: relative; z-index: 1; }
     .cta-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 1rem; }
@@ -221,102 +296,106 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        {% if logo_url %}
-        <span class="logo-badge {% if logo_wide %}logo-wide{% else %}logo-round{% endif %}">
-          <img src="{{ logo_url }}" alt="{{ business_name }} logo" width="160" height="40">
+        
+        <span class="logo-badge logo-round">
+          <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/9c15b680-6993-4fda-aa0e-de1a494b9eba/451A677B-448A-40D1-B28B-4BA822632480.jpeg?format=1500w" alt="NEWHAIR nyc logo" width="160" height="40">
         </span>
-        {% if not logo_wide %}<span>{{ business_name }}</span>{% endif %}
-        {% else %}
-        <span>{{ business_name }}</span>
-        {% endif %}
+        <span>NEWHAIR nyc</span>
+        
       </a>
       <nav class="nav-desktop">
         <a href="#about" class="nav-link">About</a>
-        {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-        {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#contact" class="nav-link">Contact</a>
-        {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+        <a href="https://phorest.com/book/salons/newhair" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span></button>
     </div>
   </header>
   <nav class="nav-mobile" id="navMobile">
     <a href="#about" class="nav-link">About</a>
-    {% if services %}<a href="#services" class="nav-link">Services</a>{% endif %}
-    {% if gallery_bento %}<a href="#gallery" class="nav-link">Gallery</a>{% endif %}
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
     <a href="#contact" class="nav-link">Contact</a>
-    {% if primary_cta_url %}<a href="{{ primary_cta_url }}" class="nav-cta" target="_blank" rel="noopener noreferrer">{{ primary_cta_label }}</a>{% endif %}
+    <a href="https://phorest.com/book/salons/newhair" class="nav-cta" target="_blank" rel="noopener noreferrer">Book Now</a>
   </nav>
 
   <main id="top">
     <section class="hero">
       <div class="hero-visual">
-        {% if hero_bg %}<div class="hero-bg"></div>{% endif %}
-        {% if hero_secondary %}<div class="hero-bg-secondary"></div>{% endif %}
+        <div class="hero-bg"></div>
+        <div class="hero-bg-secondary"></div>
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-panel">
-        {% if logo_url %}
+        
         <div class="hero-logo">
-          <span class="logo-badge logo-wide"><img src="{{ logo_url }}" alt="{{ business_name }}" width="240" height="52"></span>
+          <span class="logo-badge logo-wide"><img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/9c15b680-6993-4fda-aa0e-de1a494b9eba/451A677B-448A-40D1-B28B-4BA822632480.jpeg?format=1500w" alt="NEWHAIR nyc" width="240" height="52"></span>
         </div>
-        {% endif %}
-        {% if category %}<span class="hero-eyebrow">{{ category }}</span>{% endif %}
-        <h1>{{ headline }}</h1>
-        <p class="hero-tagline">{{ tagline }}</p>
+        
+        <span class="hero-eyebrow">Hair Salon &amp; Studio</span>
+        <h1>NEWHAIR nyc</h1>
+        <p class="hero-tagline">Professional hair styling services for men and women.</p>
         <div class="hero-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
-          {% endif %}
+          
+          <a href="https://phorest.com/book/salons/newhair" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
+          
+          
+          <a href="https://www.instagram.com/newhairnyc/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Instagram</a>
+          
         </div>
       </div>
     </section>
 
-    {% if stats %}
+    
     <div class="stats-float">
       <div class="container">
         <div class="stats-card reveal">
           <div class="stats-grid">
-            {% for stat in stats %}
-            <div><div class="stat-num">{{ stat.value }}</div><div class="stat-label">{{ stat.label }}</div></div>
-            {% endfor %}
+            
+            <div><div class="stat-num">3</div><div class="stat-label">Locations</div></div>
+            
+            <div><div class="stat-num">18+</div><div class="stat-label">Portfolio</div></div>
+            
+            <div><div class="stat-num">@newhairnyc</div><div class="stat-label">Instagram</div></div>
+            
+            <div><div class="stat-num">3</div><div class="stat-label">Services</div></div>
+            
           </div>
         </div>
       </div>
     </div>
-    {% endif %}
+    
 
-    {% if about_paragraphs %}
+    
     <section class="section" id="about">
       <div class="container">
         <div class="about-grid reveal">
-          {% if about_image %}
+          
           <div class="about-visual">
-            <figure class="about-main"><img src="{{ about_image }}" alt="About {{ business_name }}" loading="lazy"></figure>
-            {% if showcase_images|length > 1 %}
-            <figure class="about-accent"><img src="{{ showcase_images[1].url }}" alt="{{ showcase_images[1].alt }}" loading="lazy"></figure>
-            {% endif %}
+            <figure class="about-main"><img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481946995-6TY62XAIAU58ESXGD1QM/DSC05239.JPG?format=1500w" alt="About NEWHAIR nyc" loading="lazy"></figure>
+            
+            <figure class="about-accent"><img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481946995-6TY62XAIAU58ESXGD1QM/DSC05239.JPG?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy"></figure>
+            
           </div>
-          {% endif %}
+          
           <div class="about-text">
             <p class="section-eyebrow">Our Story</p>
-            <h2 class="section-title">About {{ business_name }}</h2>
-            {% for para in about_paragraphs %}
-            <p class="{% if loop.first %}lead{% endif %}">{{ para }}</p>
-            {% endfor %}
-            {% if locations %}
-            <div class="locations-strip">{% for loc in locations %}<span class="location-pill">{{ loc }}</span>{% endfor %}</div>
-            {% endif %}
+            <h2 class="section-title">About NEWHAIR nyc</h2>
+            
+            <p class="lead">haircuts, coloring, highlights, digital waves perm, straightening perm, hair &amp; scalp treatments, blowout, bts korean hairstyles, korean hairstylists.</p>
+            
+            
+            <div class="locations-strip"><span class="location-pill">Nyc</span><span class="location-pill">New York</span><span class="location-pill">Midtown</span></div>
+            
           </div>
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if services %}
+    
     <section class="section services-section" id="services">
       <div class="container">
         <div class="section-header reveal">
@@ -325,64 +404,152 @@
           <p class="section-desc">Expert care, tailored to your unique style.</p>
         </div>
         <div class="services-grid">
-          {% for svc in services %}
+          
           <article class="service-card reveal">
-            {% if svc.image %}<div class="service-card-bg" style="background-image:url('{{ svc.image }}')"></div>{% else %}<div class="service-card-bg" style="background:linear-gradient(135deg,var(--primary),var(--primary-dark))"></div>{% endif %}
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w')"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-body">
-              <div class="service-icon">{{ svc.icon }}</div>
-              <h3>{{ svc.title }}</h3>
-              <p>{{ svc.description }}</p>
+              <div class="service-icon">✦</div>
+              <h3>Hair Color</h3>
+              <p>Professional hair color tailored to your unique style and vision.</p>
             </div>
           </article>
-          {% endfor %}
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481946995-6TY62XAIAU58ESXGD1QM/DSC05239.JPG?format=1500w')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◆</div>
+              <h3>Haircuts &amp; Styling</h3>
+              <p>Professional haircuts &amp; styling tailored to your unique style and vision.</p>
+            </div>
+          </article>
+          
+          <article class="service-card reveal">
+            <div class="service-card-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/198431c2-2278-4a08-8ecc-0b2872266a49/IMG_5045.jpg?format=1500w')"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-body">
+              <div class="service-icon">◇</div>
+              <h3>Treatments</h3>
+              <p>Professional treatments tailored to your unique style and vision.</p>
+            </div>
+          </article>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if gallery_bento %}
+    
     <section class="section gallery-section" id="gallery">
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Portfolio</p>
           <h2 class="section-title">Our Work</h2>
-          <p class="section-desc">Real results from {{ business_name }}.</p>
+          <p class="section-desc">Real results from NEWHAIR nyc.</p>
         </div>
         <div class="bento" id="galleryGrid">
-          {% for img in gallery_bento %}
-          <figure class="bento-item {{ img.layout }} reveal" data-index="{{ loop.index0 }}">
-            <img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
+          
+          <figure class="bento-item feature reveal" data-index="0">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2e8f50e7-f006-4a00-a7a6-501d15249702/B5597EA1-6B98-4A9A-A5FC-4D9843F096F9.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
           </figure>
-          {% endfor %}
+          
+          <figure class="bento-item wide reveal" data-index="1">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481946995-6TY62XAIAU58ESXGD1QM/DSC05239.JPG?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="2">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/198431c2-2278-4a08-8ecc-0b2872266a49/IMG_5045.jpg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="3">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481345073-FP7XPG8HOO0LH2AYZ9YO/DSC05238.JPG?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="4">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1610481537399-MCWGBK5CTAL0CD6Y03O9/DSC06803.JPG?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="5">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/423c4ab0-d9b8-4720-96c0-c591db74ff56/DSC07478.jpg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="6">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/41b08e4a-b3e7-4f72-9633-bebff139bad5/2BC60EB7-9DC8-4BF1-8E36-5BBAAD61F874.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="7">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/49d65190-95b6-4cb5-9f22-02561abd634f/B31C3FA9-5FC8-4138-B91A-6A0D3E3FC434.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="8">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/695f36c2-90c4-45e7-ae82-52ca31e98f10/D107585C-16D6-453B-A82A-F6C2263A5E9E.jpg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item feature reveal" data-index="9">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/8e4c353f-d4db-49b2-a9a2-2b35984c4711/IMG_4006.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="10">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1607614192107-FP4QFTE9USSQZ0EIV8C7/pexels-lorilee-e-1309737.jpg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="11">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1589916251576-ILFYFHSIPICUAW2M2NAG/IMG_5423.jpg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="12">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/1678ac72-0bf4-4648-9c4e-1c72bdbb112e/5B88023A-6E92-4DFA-8372-A9861E6FA1DB.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="13">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/9c15b680-6993-4fda-aa0e-de1a494b9eba/451A677B-448A-40D1-B28B-4BA822632480.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item tall reveal" data-index="14">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/c626c6cc-1f67-4b7a-bc1c-accbb0d8ba8e/DD16441A-4744-40F8-A117-457FEA6E7EA6.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item wide reveal" data-index="15">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/40aba1b7-dd81-45be-84f9-27fd8b93976e/9F9DBC81-8AE7-462A-95EF-13284B360030.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="16">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/2cc0f301-7e91-4987-89a2-679aeb8d0c33/74AD7B67-3FE1-4584-8FDA-B442FB56DED0.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
+          <figure class="bento-item normal reveal" data-index="17">
+            <img src="https://images.squarespace-cdn.com/content/v1/5de410644d009912ef90d988/5935c2b6-eee6-4cdb-9f6e-13bfd687942c/5488D61C-EA37-407A-B723-3AA8F453B085.jpeg?format=1500w" alt="NEWHAIR nyc — portfolio" loading="lazy">
+          </figure>
+          
         </div>
       </div>
     </section>
-    {% endif %}
+    
 
-    {% if instagram_url and instagram_handle %}
+    
     <section class="instagram-band reveal">
       <div class="container">
         <h3>Follow us on Instagram</h3>
         <p>See our latest work, behind-the-scenes, and client transformations.</p>
-        <a href="{{ instagram_url }}" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@{{ instagram_handle }}</a>
+        <a href="https://www.instagram.com/newhairnyc/" class="btn btn-outline instagram-handle" target="_blank" rel="noopener noreferrer">@newhairnyc</a>
       </div>
     </section>
-    {% endif %}
+    
 
     <section class="cta-section" id="contact">
-      {% if cta_bg or hero_bg %}<div class="cta-bg"></div>{% endif %}
+      <div class="cta-bg"></div>
       <div class="cta-overlay"></div>
       <div class="container reveal">
         <h2>Ready for your transformation?</h2>
-        <p>{{ cta_text }}</p>
+        <p>Professional hair styling services for men and women.</p>
         <div class="cta-actions">
-          {% if booking_url or website_url %}
-          <a href="{{ booking_url or website_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
-          {% endif %}
-          {% if instagram_url %}
-          <a href="{{ instagram_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-          {% endif %}
+          
+          <a href="https://phorest.com/book/salons/newhair" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Appointment</a>
+          
+          
+          <a href="https://www.instagram.com/newhairnyc/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+          
         </div>
       </div>
     </section>
@@ -392,25 +559,25 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">{{ business_name }}</div>
-          <p class="footer-tagline">{{ tagline[:140] }}{% if tagline|length > 140 %}…{% endif %}</p>
+          <div class="footer-brand">NEWHAIR nyc</div>
+          <p class="footer-tagline">Professional hair styling services for men and women.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <a href="#about">About</a>
-          {% if services %}<a href="#services">Services</a>{% endif %}
-          {% if gallery_bento %}<a href="#gallery">Gallery</a>{% endif %}
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          {% if website_url %}<a href="{{ website_url }}" target="_blank" rel="noopener noreferrer">Website</a>{% endif %}
-          {% if instagram_url %}<a href="{{ instagram_url }}" target="_blank" rel="noopener noreferrer">Instagram</a>{% endif %}
-          {% if booking_url %}<a href="{{ booking_url }}" target="_blank" rel="noopener noreferrer">Book Online</a>{% endif %}
+          <a href="https://www.newhairsalonnyc.com/" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://www.instagram.com/newhairnyc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://phorest.com/book/salons/newhair" target="_blank" rel="noopener noreferrer">Book Online</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; {{ year }} {{ business_name }}. All rights reserved.</span>
-        {% if instagram_handle %}<span>@{{ instagram_handle }}</span>{% endif %}
+        <span>&copy; 2026 NEWHAIR nyc. All rights reserved.</span>
+        <span>@newhairnyc</span>
       </div>
     </div>
   </footer>

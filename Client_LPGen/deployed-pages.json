@@ -1,5 +1,65 @@
 [
   {
+    "slug": "class-hair-studio-nyc",
+    "businessName": "Class Hair Studio NYC",
+    "tagline": "Our expert stylists will help you shine!",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://classhairstudionyc.com/",
+    "instagramUrl": "",
+    "liveUrl": "https://zarklo.com/class-hair-studio-nyc",
+    "generatedAt": "2026-06-22T16:45:27.661640+00:00"
+  },
+  {
+    "slug": "dramatics-nyc",
+    "businessName": "Dramatics NYC",
+    "tagline": "Full-service hair artistry on the Upper East Side — cuts, color, treatments, and blowouts.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://dramaticsnyc.com/",
+    "instagramUrl": "https://www.instagram.com/dramaticsnyc/",
+    "liveUrl": "https://zarklo.com/dramatics-nyc",
+    "generatedAt": "2026-06-23T05:38:12.181656+00:00"
+  },
+  {
+    "slug": "fox-and-jane",
+    "businessName": "Fox and Jane",
+    "tagline": "At Fox and Jane, a New York City hair salon, we all have a passion for great hair.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://foxandjanesalon.com/",
+    "instagramUrl": "https://www.instagram.com/foxandjane/",
+    "liveUrl": "https://zarklo.com/fox-and-jane",
+    "generatedAt": "2026-06-22T16:50:22.238534+00:00"
+  },
+  {
+    "slug": "hairkuwayama",
+    "businessName": "Hair Kuwayama",
+    "tagline": "Japanese precision haircuts, color, and styling in the heart of the East Village since 1997.",
+    "category": "Japanese Hair Salon",
+    "websiteUrl": "https://www.hairkuwayama.com/",
+    "instagramUrl": "https://www.instagram.com/hairkuwayama/",
+    "liveUrl": "https://zarklo.com/hairkuwayama",
+    "generatedAt": "2026-06-22T17:28:49.946622+00:00"
+  },
+  {
+    "slug": "hayato-new-york",
+    "businessName": "Hayato New York",
+    "tagline": "An award-winning Japanese hair salon with over 30 years of excellence in New York, Tokyo and London.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://en.hayatosalons.com/page/newyork/",
+    "instagramUrl": "https://www.instagram.com/hayatonewyork/",
+    "liveUrl": "https://zarklo.com/hayato-new-york",
+    "generatedAt": "2026-06-22T16:51:50.417387+00:00"
+  },
+  {
+    "slug": "japanese-salon",
+    "businessName": "Japanese salon",
+    "tagline": "Welcome to our Japanese Salon in the heart of East Village.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.redgesalons.com/",
+    "instagramUrl": "https://www.instagram.com/redgesalons/",
+    "liveUrl": "https://zarklo.com/japanese-salon",
+    "generatedAt": "2026-06-22T16:48:04.420753+00:00"
+  },
+  {
     "slug": "kolor-studio-nyc",
     "businessName": "Kolor Studio NYC",
     "tagline": "Kolor Studio is the latest salon to join the big Kolorbar family.",
@@ -10,6 +70,36 @@
     "generatedAt": "2026-06-21T13:47:23.432Z"
   },
   {
+    "slug": "leeren-salon",
+    "businessName": "Leeren Salon",
+    "tagline": "Effortless cuts, lived-in color, and a calm salon experience in New York City.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "",
+    "instagramUrl": "https://www.instagram.com/leeren.salon/",
+    "liveUrl": "https://zarklo.com/leeren-salon",
+    "generatedAt": "2026-06-22T17:29:04.192958+00:00"
+  },
+  {
+    "slug": "mg-hair-artistic-salon",
+    "businessName": "MG Hair Artistic Salon",
+    "tagline": "MG Hair Artistic is a famous modern hair salon in New York, Boston and Fort Lauderdale.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://mghairartistic.com/",
+    "instagramUrl": "https://www.instagram.com/mghairartistic/",
+    "liveUrl": "https://zarklo.com/mg-hair-artistic-salon",
+    "generatedAt": "2026-06-22T16:56:00.717085+00:00"
+  },
+  {
+    "slug": "mian-tian-sing",
+    "businessName": "Mian Tian Sing",
+    "tagline": "Follow Miantiansinghairsalon on Instagram.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.miantiansingsalon.com/",
+    "instagramUrl": "https://www.instagram.com/miantiansinghairsalon/",
+    "liveUrl": "https://zarklo.com/mian-tian-sing",
+    "generatedAt": "2026-06-22T17:01:02.333162+00:00"
+  },
+  {
     "slug": "mk-hair-salon",
     "businessName": "MK Hair Salon",
     "tagline": "MK Hair Salon, located in Midtown Manhattan, offers expert hairstyling for men and women at affordable prices.",
@@ -18,6 +108,26 @@
     "instagramUrl": "",
     "liveUrl": "https://zarklo.com/mk-hair-salon",
     "generatedAt": "2026-06-21T13:47:23.464Z"
+  },
+  {
+    "slug": "muresalon",
+    "businessName": "Muresalon",
+    "tagline": "Experience the artistry of our stylists in a personalized salon.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://muresalon.com/",
+    "instagramUrl": "https://www.instagram.com/muresalonnyc/",
+    "liveUrl": "https://zarklo.com/muresalon",
+    "generatedAt": "2026-06-22T17:10:12.312465+00:00"
+  },
+  {
+    "slug": "newhair-nyc",
+    "businessName": "NEWHAIR nyc",
+    "tagline": "Professional hair styling services for men and women.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.newhairsalonnyc.com/",
+    "instagramUrl": "https://www.instagram.com/newhairnyc/",
+    "liveUrl": "https://zarklo.com/newhair-nyc",
+    "generatedAt": "2026-06-22T17:07:29.954324+00:00"
   },
   {
     "slug": "one-salon-nyc",
@@ -38,5 +148,65 @@
     "instagramUrl": "",
     "liveUrl": "https://zarklo.com/one-salon",
     "generatedAt": "2026-06-21T13:47:23.469Z"
+  },
+  {
+    "slug": "popular",
+    "businessName": "Popular",
+    "tagline": "NYC hair culture — bold color, sharp cuts, and looks worth sharing.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "",
+    "instagramUrl": "https://www.instagram.com/popular/",
+    "liveUrl": "https://zarklo.com/popular",
+    "generatedAt": "2026-06-22T17:29:21.282448+00:00"
+  },
+  {
+    "slug": "room-salon-ny",
+    "businessName": "ROOM SALON NY",
+    "tagline": "Follow Roomsalonny on Instagram.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.roomsalonny.com/",
+    "instagramUrl": "https://www.instagram.com/roomsalonny/",
+    "liveUrl": "https://zarklo.com/room-salon-ny",
+    "generatedAt": "2026-06-22T17:04:19.764180+00:00"
+  },
+  {
+    "slug": "salon-jatel",
+    "businessName": "Salon Jatel",
+    "tagline": "We are a cozy salon near Union Square in Chelsea offering a full range of hair, nail, and make-up services.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "http://localhost:5173/salon-jatel",
+    "instagramUrl": "https://www.instagram.com/muresalonnyc/",
+    "liveUrl": "https://zarklo.com/salon-jatel",
+    "generatedAt": "2026-06-22T17:07:44.710553+00:00"
+  },
+  {
+    "slug": "sandy-s-hair-nail-salon",
+    "businessName": "Sandy's Hair & Nail Salon",
+    "tagline": "At Sandy's Hair & Nail Salon, we believe in enhancing your natural beauty with a touch of elegance and expertise.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.sandyshairandnailsalon.com/",
+    "instagramUrl": "https://www.instagram.com/sandy_hair_salon21/",
+    "liveUrl": "https://zarklo.com/sandy-s-hair-nail-salon",
+    "generatedAt": "2026-06-22T17:03:50.303931+00:00"
+  },
+  {
+    "slug": "shampoo-avenue-b-salon",
+    "businessName": "Shampoo Avenue B Salon",
+    "tagline": "Our hair services include cuts, coloring, balayage, highlights and more.",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://www.shampooavenueb.com/",
+    "instagramUrl": "https://www.instagram.com/shampooavenueb/",
+    "liveUrl": "https://zarklo.com/shampoo-avenue-b-salon",
+    "generatedAt": "2026-06-22T17:05:39.547545+00:00"
+  },
+  {
+    "slug": "t-gardens-hair-salon",
+    "businessName": "T-gardens Hair Salon",
+    "tagline": "Best Japanese hair salon NYC&HOUSTON/ニューヨーク＆ヒューストンで人気の日系美容院",
+    "category": "Hair Salon & Studio",
+    "websiteUrl": "https://t-gardens.com/",
+    "instagramUrl": "https://www.instagram.com/roomsalonny/",
+    "liveUrl": "https://zarklo.com/t-gardens-hair-salon",
+    "generatedAt": "2026-06-22T17:02:59.465180+00:00"
   }
 ]

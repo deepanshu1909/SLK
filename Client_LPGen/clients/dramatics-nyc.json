@@ -1,0 +1,22 @@
+{
+  "slug": "dramatics-nyc",
+  "website": "https://dramaticsnyc.com/",
+  "instagram": "https://www.instagram.com/dramaticsnyc/",
+  "businessName": "Dramatics NYC",
+  "tagline": "Full-service hair artistry on the Upper East Side — cuts, color, treatments, and blowouts.",
+  "category": "Hair Salon & Studio",
+  "locations": ["Upper East Side, NYC", "Manhattan"],
+  "bookingUrl": "https://dramaticsnyc.com/book-here/",
+  "excludePhotoKeywords": ["shampoo", "conditioner", "spray", "product", "bottle", ".png", "forever-young", "color-protect", "oz-", "white-widow"],
+  "photos": [
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Blow-Dry.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/AdobeStock_101623335DNYC-shampoo-and-cut-service-1.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/dramatics-nyc-updo-DNYC-upods-500x500-2.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Partial-Highlights.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Shampoo-Cut-Style.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Single-Process.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Full-Highlights.jpg",
+    "https://dramaticsnyc.com/wp-content/uploads/2021/09/Dramatics-nyc-dnyc-services-Blow-Dry.jpg"
+  ],
+  "minPhotos": 8
+}

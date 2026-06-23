@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "lp": "node scripts/generate-lp.mjs",
+    "lp:all": "node scripts/generate-lp.mjs --all",
     "lp:sync": "node scripts/sync-client-lps.mjs"
   },
   "dependencies": {

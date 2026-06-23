@@ -1,0 +1,31 @@
+{
+  "slug": "hairkuwayama",
+  "website": "https://www.hairkuwayama.com/",
+  "instagram": "https://www.instagram.com/hairkuwayama/",
+  "businessName": "Hair Kuwayama",
+  "tagline": "Japanese precision haircuts, color, and styling in the heart of the East Village since 1997.",
+  "category": "Japanese Hair Salon",
+  "locations": ["East Village, NYC", "406 E 13th Street"],
+  "about": [
+    "Hair Kuwayama has been a trusted East Village destination for exceptional haircuts, coloring, perms, and styling for over 25 years.",
+    "Our team blends Japanese technique with New York energy — thoughtful consultation, precise craftsmanship, and results that feel effortlessly you.",
+    "Walk-ins welcome. Call (212) 529-6977 to book your appointment."
+  ],
+  "services": [
+    { "title": "Precision Cuts", "description": "Expert cuts tailored to your face shape, texture, and lifestyle.", "icon": "✦" },
+    { "title": "Color & Highlights", "description": "Natural dimension, balayage, and full color with healthy, glossy finish.", "icon": "◆" },
+    { "title": "Perms & Texture", "description": "Soft waves, volume, and texture services customized to your hair.", "icon": "◇" },
+    { "title": "Blowouts & Styling", "description": "Polished everyday looks and special-occasion styling.", "icon": "○" }
+  ],
+  "photos": [
+    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=85",
+    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=85",
+    "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1600&q=85",
+    "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=85",
+    "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=85",
+    "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&q=85",
+    "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1600&q=85",
+    "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1600&q=85"
+  ],
+  "minPhotos": 8
+}

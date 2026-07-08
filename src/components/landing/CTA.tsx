@@ -16,7 +16,7 @@ export function CTA() {
               <span className="italic">Start growing.</span>
             </h2>
             <p className="mt-6 text-white/80 text-lg max-w-xl mx-auto">
-              Spin up your AI team in under 5 minutes. First 14 days are on us.
+              Spin up your AI team in under 5 minutes. Built for salons, clinics, and path labs. First 14 days on us.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/dashboard">
@@ -56,7 +56,7 @@ export function Footer() {
               ZarkloAI
             </div>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              The AI team for modern salons, spas, and barbershops. Built in California.
+              The AI growth team for salons, clinics, and pathology labs. Built in California.
             </p>
           </div>
           {cols.map((c) => (

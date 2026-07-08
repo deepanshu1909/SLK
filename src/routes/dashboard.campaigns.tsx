@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const campaigns = [
-  { name: "Spring Glow-Up", channel: "Email", sent: 1240, opened: "62%", booked: 84, status: "Active" },
-  { name: "Birthday Treat", channel: "SMS", sent: 312, opened: "94%", booked: 41, status: "Active" },
+  { name: "Spring Glow-Up (Salon)", channel: "Email", sent: 1240, opened: "62%", booked: 84, status: "Active" },
+  { name: "Annual Checkup Recall", channel: "SMS", sent: 312, opened: "94%", booked: 41, status: "Active" },
   { name: "Win-back: 60 days inactive", channel: "Email", sent: 480, opened: "48%", booked: 22, status: "Active" },
-  { name: "Summer Hydrafacial Launch", channel: "Social", sent: 0, opened: "—", booked: 0, status: "Draft" },
+  { name: "Home Collection Promo", channel: "Social", sent: 0, opened: "—", booked: 0, status: "Draft" },
 ];
 
 export default function CampaignsPage() {

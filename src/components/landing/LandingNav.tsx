@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { label: "Industries", href: "#verticals" },
   { label: "Services", href: "#features" },
   { label: "Agents", href: "#agents" },
   { label: "Testimonials", href: "#testimonials" },

@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const suggested = [
-  "Why are Saturdays so booked?",
-  "Write a birthday SMS for VIP clients",
-  "Which service has the best margin?",
+  "Why are Saturday slots so full?",
+  "Write a recall SMS for overdue patients",
+  "Which vertical has the best margin?",
   "How can I improve my Google ranking?",
 ];
 
 const initial = [
-  { role: "ai", text: "Hi Camille — your AI business analyst. What would you like to know about your salon today?" },
+  { role: "ai", text: "Hi Ananya — your AI business analyst. What would you like to know about your salon, clinic, or path lab today?" },
 ];
 
 export default function ChatPage() {
@@ -29,7 +29,7 @@ export default function ChatPage() {
     setTimeout(() => {
       setMsgs((m) => [...m, {
         role: "ai",
-        text: "Looking at your last 30 days — bookings are up 24%, with Saturdays at 92% capacity. I'd suggest opening two evening slots on Thursday and Friday to capture overflow demand. Want me to draft the schedule update?",
+        text: "Looking at your last 30 days — appointments are up 24%, with Saturday slots at 92% capacity across clinic and lab collections. I'd suggest opening two evening home-collection windows on Thursday. Want me to draft the schedule update?",
       }]);
     }, 700);
   };
@@ -40,14 +40,14 @@ export default function ChatPage() {
         <h1 className="font-display text-4xl flex items-center gap-2">
           <Sparkles className="w-7 h-7 text-brand" /> AI Business Analyst
         </h1>
-        <p className="text-muted-foreground mt-1 text-sm">Ask anything about your salon. Powered by your real data.</p>
+        <p className="text-muted-foreground mt-1 text-sm">Ask anything about your business. Powered by your real data.</p>
       </div>
 
       <div className="flex-1 overflow-y-auto space-y-4 px-1">
         {msgs.map((m, i) => (
           <div key={i} className={`flex gap-3 ${m.role === "user" ? "flex-row-reverse" : ""}`}>
             <div className={`w-8 h-8 rounded-full grid place-items-center text-xs shrink-0 ${m.role === "user" ? "bg-muted" : "bg-gradient-brand text-white"}`}>
-              {m.role === "user" ? "CV" : <Sparkles className="w-3.5 h-3.5" />}
+              {m.role === "user" ? "AM" : <Sparkles className="w-3.5 h-3.5" />}
             </div>
             <div className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${m.role === "user" ? "bg-gradient-brand text-white" : "bg-card border shadow-card"}`}>
               {m.text}

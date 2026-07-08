@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ArrowUpRight, Calendar, Sparkles, TrendingUp, Users } from "lucide-react";
+import { ArrowUpRight, Calendar, FlaskConical, Scissors, Sparkles, Stethoscope, TrendingUp, Users } from "lucide-react";
 import { revenueData } from "@/lib/mock-data";
 
 export function DashboardPreview() {
   return (
     <div className="relative">
-      {/* Glow */}
       <div aria-hidden className="absolute -inset-8 bg-gradient-brand opacity-20 blur-3xl rounded-[3rem]" />
 
       <motion.div
@@ -15,7 +14,6 @@ export function DashboardPreview() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className="relative rounded-3xl bg-card border shadow-elevated overflow-hidden"
       >
-        {/* Window chrome */}
         <div className="flex items-center gap-2 px-4 h-9 border-b bg-muted/40">
           <div className="flex gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
@@ -26,7 +24,6 @@ export function DashboardPreview() {
         </div>
 
         <div className="grid lg:grid-cols-[200px_1fr] min-h-[440px]">
-          {/* Mini sidebar */}
           <div className="hidden lg:flex flex-col gap-1 p-4 border-r bg-sidebar/50">
             {["Dashboard", "AI Agents", "CRM", "Bookings", "Reviews", "Analytics"].map((l, i) => (
               <div
@@ -38,12 +35,24 @@ export function DashboardPreview() {
             ))}
           </div>
 
-          {/* Main */}
           <div className="p-5 space-y-4">
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: "Salon", icon: Scissors },
+                { label: "Clinic", icon: Stethoscope },
+                { label: "Path Lab", icon: FlaskConical },
+              ].map((v) => (
+                <div key={v.label} className="inline-flex items-center gap-1.5 text-[10px] px-2.5 py-1 rounded-full border border-white/10 bg-muted/40 text-muted-foreground">
+                  <v.icon className="w-3 h-3" />
+                  {v.label}
+                </div>
+              ))}
+            </div>
+
             <div className="grid grid-cols-3 gap-3">
               {[
                 { label: "Revenue", value: "$68.9k", trend: "+24%", icon: TrendingUp },
-                { label: "Bookings", value: "428", trend: "+18%", icon: Calendar },
+                { label: "Appointments", value: "428", trend: "+18%", icon: Calendar },
                 { label: "New clients", value: "92", trend: "+31%", icon: Users },
               ].map((s) => (
                 <div key={s.label} className="rounded-2xl border bg-background/50 p-3">
@@ -95,14 +104,13 @@ export function DashboardPreview() {
               </div>
               <div className="text-xs">
                 <div className="font-medium">Discovery Agent</div>
-                <div className="text-muted-foreground">Published 3 SEO posts. Ranked #2 for "salon near me".</div>
+                <div className="text-muted-foreground">Ranked #2 for "clinic near me" · #1 for "blood test at home".</div>
               </div>
             </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Floating cards */}
       <motion.div
         initial={{ opacity: 0, x: -30, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
@@ -124,8 +132,8 @@ export function DashboardPreview() {
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gradient-brand grid place-items-center text-xs text-white font-medium">AI</div>
           <div className="text-xs">
-            <div className="font-medium">Booked Ava</div>
-            <div className="text-muted-foreground">Sat 10:00 AM</div>
+            <div className="font-medium">Booked Raj — Consult</div>
+            <div className="text-muted-foreground">Today 11:30 AM</div>
           </div>
         </div>
       </motion.div>

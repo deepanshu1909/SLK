@@ -47,7 +47,7 @@ export function AgentsSection() {
               <span className="italic text-white">One team.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Each agent runs autonomously, learns your brand, and reports back daily. No prompts to write. No dashboards to babysit.
+              Each agent runs autonomously for your salon, clinic, or lab — learns your brand, and reports back daily. No prompts. No babysitting.
             </p>
           </div>
         </FadeIn>

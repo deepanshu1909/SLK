@@ -20,11 +20,11 @@ export default function SettingsPage() {
         <div className="text-sm font-medium">Business profile</div>
         <div className="space-y-1.5">
           <Label htmlFor="biz">Business name</Label>
-          <Input id="biz" defaultValue="Maison Lumière Salon" className="rounded-xl" />
+          <Input id="biz" defaultValue="Westside Health & Beauty Group" className="rounded-xl" />
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="email">Contact email</Label>
-          <Input id="email" defaultValue="hello@maisonlumiere.com" className="rounded-xl" />
+          <Input id="email" defaultValue="hello@westsidehealth.com" className="rounded-xl" />
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="addr">Address</Label>

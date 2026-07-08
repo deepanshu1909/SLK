@@ -72,7 +72,7 @@ export default function DashboardLayout() {
             <Bell className="w-4 h-4" />
             <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-brand" />
           </button>
-          <div className="w-9 h-9 rounded-full bg-gradient-brand text-white grid place-items-center text-sm font-medium">CV</div>
+          <div className="w-9 h-9 rounded-full bg-gradient-brand text-white grid place-items-center text-sm font-medium">AM</div>
         </header>
 
         <main className="flex-1 p-4 lg:p-8 overflow-auto">

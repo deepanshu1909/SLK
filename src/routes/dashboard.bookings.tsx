@@ -39,12 +39,12 @@ export default function BookingsPage() {
                 )}
                 {idx === 3 && d === "Wed" && (
                   <div className="absolute inset-1 rounded-lg bg-accent-cyan/30 text-foreground text-[10px] p-1.5">
-                    Noah B. · Beard
+                    Raj P. · Consult
                   </div>
                 )}
                 {idx === 5 && d === "Fri" && (
                   <div className="absolute inset-1 rounded-lg bg-gradient-brand-soft border border-brand/20 text-foreground text-[10px] p-1.5">
-                    Sofia R. · Facial
+                    Sofia R. · CBC Panel
                   </div>
                 )}
               </div>
@@ -63,7 +63,10 @@ export default function BookingsPage() {
                 <div className="text-sm font-medium">{a.client}</div>
                 <div className="text-xs text-muted-foreground">{a.service}</div>
               </div>
-              <div className="text-xs text-muted-foreground">{a.staff}</div>
+              <div className="text-xs text-muted-foreground text-right">
+                <div>{a.staff}</div>
+                {"vertical" in a && <div className="text-brand mt-0.5">{a.vertical}</div>}
+              </div>
               <Badge variant={a.status === "confirmed" ? "default" : "secondary"} className="rounded-full capitalize">{a.status}</Badge>
             </div>
           ))}

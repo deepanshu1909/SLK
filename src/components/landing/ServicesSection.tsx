@@ -19,7 +19,7 @@ export function ServicesSection() {
               <span className="italic text-white">grow locally.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Four core services that work together — visibility, conversion, retention, and bookings on autopilot.
+              Four core services that power growth for salons, clinics, and path labs — visibility, conversion, retention, and bookings on autopilot.
             </p>
           </div>
         </FadeIn>

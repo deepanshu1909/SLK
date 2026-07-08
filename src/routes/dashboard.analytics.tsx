@@ -3,7 +3,7 @@ import {
   Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer,
   Tooltip, XAxis, YAxis,
 } from "recharts";
-import { revenueData, trafficData } from "@/lib/mock-data";
+import { revenueData, trafficData, seoKeywords } from "@/lib/mock-data";
 
 export default function AnalyticsPage() {
   useEffect(() => {
@@ -62,13 +62,7 @@ export default function AnalyticsPage() {
 
         <ChartCard title="SEO rankings" subtitle="Top keywords">
           <div className="p-4 space-y-3">
-            {[
-              { kw: "salon near me", rank: 2, change: "+5" },
-              { kw: "balayage [city]", rank: 1, change: "+3" },
-              { kw: "hydrafacial booking", rank: 4, change: "+8" },
-              { kw: "best barber downtown", rank: 3, change: "+2" },
-              { kw: "lash lift [city]", rank: 6, change: "+12" },
-            ].map((k) => (
+            {seoKeywords.map((k) => (
               <div key={k.kw} className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-brand text-white grid place-items-center text-xs font-medium">#{k.rank}</div>
                 <div className="flex-1 text-sm">{k.kw}</div>

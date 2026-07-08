@@ -32,8 +32,8 @@ export default function Login() {
             ZarkloAI
           </Link>
           <div>
-            <p className="font-display text-4xl leading-tight">"We went from manual scheduling to a 6-figure month in 90 days."</p>
-            <div className="mt-6 text-sm text-white/70">Camille Vasquez — Maison Lumière Salon</div>
+            <p className="font-display text-4xl leading-tight">"Patient no-shows dropped 40%. ZarkloAI fills our calendar while we focus on care."</p>
+            <div className="mt-6 text-sm text-white/70">Dr. Ananya Mehta — Northside Family Clinic</div>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function Login() {
           <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="you@salon.com" className="h-11 rounded-xl" />
+              <Input id="email" type="email" placeholder="you@yourbusiness.com" className="h-11 rounded-xl" />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>

@@ -25,8 +25,8 @@ export default function DashboardHome() {
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-start justify-between flex-wrap gap-3">
         <div>
-          <h1 className="font-display text-4xl tracking-tight">Good morning, Camille</h1>
-          <p className="text-muted-foreground mt-1">Your AI team handled 38 tasks while you slept.</p>
+          <h1 className="font-display text-4xl tracking-tight">Good morning, Ananya</h1>
+          <p className="text-muted-foreground mt-1">Your AI team handled 38 tasks across salon, clinic & lab while you slept.</p>
         </div>
         <Badge variant="outline" className="rounded-full px-3 py-1.5 border-brand/30 bg-brand/5 text-brand-deep">
           <Sparkles className="w-3 h-3 mr-1" /> 6 agents active
@@ -115,7 +115,12 @@ export default function DashboardHome() {
                   <div className="text-sm font-medium truncate">{a.client}</div>
                   <div className="text-xs text-muted-foreground truncate">{a.service} · {a.staff}</div>
                 </div>
-                <div className="text-xs text-muted-foreground">{a.time}</div>
+                <div className="text-right shrink-0">
+                  <div className="text-xs text-muted-foreground">{a.time}</div>
+                  {"vertical" in a && (
+                    <div className="text-[10px] text-brand mt-0.5">{a.vertical}</div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

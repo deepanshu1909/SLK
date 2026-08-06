@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { FlaskConical, Scissors, Stethoscope } from "lucide-react";
 import { verticals } from "@/lib/mock-data";
 import { FadeIn } from "./motion-bits";
@@ -6,69 +7,73 @@ import { FadeIn } from "./motion-bits";
 const iconMap = { Scissors, Stethoscope, FlaskConical };
 
 export function VerticalsSection() {
-  return (
-    <section id="verticals" className="relative py-32 overflow-hidden">
-      <div aria-hidden className="absolute inset-0 bg-mesh opacity-40" />
-      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand/10 blur-3xl" />
+  const [active, setActive] = useState(0);
+  const v = verticals[active];
+  const Icon = iconMap[v.icon as keyof typeof iconMap];
 
-      <div className="relative mx-auto max-w-7xl px-6">
+  return (
+    <section id="verticals" className="zk-section bg-[var(--cream)]">
+      <div className="zk-container">
         <FadeIn>
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="text-xs uppercase tracking-[0.2em] text-brand mb-4">Industries</div>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1] tracking-tight text-foreground">
-              One platform.{" "}
-              <span className="italic text-white">Three verticals.</span>
+          <div className="max-w-2xl mx-auto text-center mb-10 md:mb-12">
+            <div className="zk-kicker mb-4">Built for your industry</div>
+            <h2 className="zk-h2">
+              Same growth system. <span className="italic">Different workflows.</span>
             </h2>
-            <p className="mt-5 text-lg text-muted-foreground">
-              Whether you run a salon, a clinic, or a pathology lab — ZarkloAI agents are trained for your workflows, your customers, and your growth goals.
+            <p className="mt-4 zk-muted">
+              Choose your vertical to see how Zarklo fits — we speak your language, not
+              generic “local business” copy.
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
-          {verticals.map((v, i) => {
-            const Icon = iconMap[v.icon as keyof typeof iconMap];
-            return (
-              <motion.article
-                key={v.key}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ delay: i * 0.1, duration: 0.65 }}
-                whileHover={{ y: -6 }}
-                className={`group relative rounded-3xl bg-card border border-white/10 p-8 shadow-card hover:shadow-elevated transition-all overflow-hidden ${v.border}`}
+        <div className="flex justify-center mb-10">
+          <div className="zk-tabs" role="tablist" aria-label="Industry verticals">
+            {verticals.map((item, i) => (
+              <button
+                key={item.key}
+                type="button"
+                role="tab"
+                aria-selected={active === i}
+                className={`zk-tab ${active === i ? "is-active" : ""}`}
+                onClick={() => setActive(i)}
               >
-                <div
-                  aria-hidden
-                  className={`absolute inset-0 bg-gradient-to-br ${v.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                />
-
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-brand border border-white/10 grid place-items-center shadow-glow">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">
-                      {v.name}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display text-2xl md:text-3xl mb-3 text-foreground">{v.headline}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">{v.desc}</p>
-
-                  <ul className="space-y-2.5">
-                    {v.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-foreground/90">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand shrink-0" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.article>
-            );
-          })}
+                {item.name}
+              </button>
+            ))}
+          </div>
         </div>
+
+        <AnimatePresence mode="wait">
+          <motion.article
+            key={v.key}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.28 }}
+            className="zk-card-white max-w-3xl mx-auto p-8 md:p-10"
+            role="tabpanel"
+          >
+            <div className="flex items-start gap-4 mb-5">
+              <div className="w-11 h-11 rounded-lg bg-[var(--gold-soft)] border border-[var(--hairline)] grid place-items-center shrink-0">
+                <Icon className="w-5 h-5 text-[var(--gold)]" strokeWidth={1.5} />
+              </div>
+              <div>
+                <div className="zk-kicker mb-1">{v.name}</div>
+                <h3 className="zk-h3">{v.headline}</h3>
+              </div>
+            </div>
+            <p className="zk-muted mb-6">{v.desc}</p>
+            <ul className="space-y-3">
+              {v.features.map((f) => (
+                <li key={f} className="flex items-start gap-3 text-[var(--ink)] text-[0.9375rem]">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </motion.article>
+        </AnimatePresence>
       </div>
     </section>
   );

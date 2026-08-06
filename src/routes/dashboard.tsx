@@ -23,7 +23,7 @@ export default function DashboardLayout() {
   const path = location.pathname;
 
   return (
-    <div className="min-h-screen flex w-full bg-muted/30">
+    <div className="dark min-h-screen flex w-full bg-muted/30 text-foreground">
       {/* Sidebar */}
       <aside className="hidden lg:flex w-64 flex-col border-r bg-sidebar shrink-0">
         <Link to="/" className="flex items-center gap-2 font-display text-2xl px-6 h-16 border-b">

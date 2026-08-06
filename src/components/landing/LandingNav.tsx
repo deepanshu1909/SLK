@@ -1,109 +1,77 @@
 import { Link } from "react-router-dom";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { Menu, Sparkles } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Menu } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Industries", href: "#verticals" },
-  { label: "Services", href: "#features" },
-  { label: "Agents", href: "#agents" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Modules", href: "#agents" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "How it works", href: "#how-it-works" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export function LandingNav() {
   const { scrollY } = useScroll();
-
-  const bg = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(5,8,22,0)", "rgba(5,8,22,0.92)"]
-  );
-
-  const border = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(255,255,255,0)", "rgba(255,255,255,0.08)"]
-  );
-
+  const bg = useTransform(scrollY, [0, 60], ["rgba(255,255,255,0)", "rgba(255,255,255,0.96)"]);
+  const border = useTransform(scrollY, [0, 60], ["rgba(217,214,207,0)", "rgba(217,214,207,1)"]);
   const [open, setOpen] = useState(false);
 
   return (
     <motion.header
-      style={{
-        backgroundColor: bg,
-        borderBottomColor: border,
-      }}
-      className="fixed top-0 inset-x-0 z-50 border-b backdrop-blur-xl backdrop-saturate-150"
+      style={{ backgroundColor: bg, borderBottomColor: border }}
+      className="fixed top-0 inset-x-0 z-50 border-b backdrop-blur-md"
     >
-      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <Link
-          to="/"
-          className="flex items-center gap-2 font-display text-2xl tracking-tight text-white transition-colors duration-300"
-        >
-          <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-glow">
-            <Sparkles className="w-4 h-4 text-white" />
+      <div className="zk-container h-16 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2.5 font-display text-2xl text-[var(--navy)] tracking-tight">
+          <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--navy)] text-white text-sm font-sans font-semibold">
+            Z
           </span>
-          <span>ZarkloAI</span>
+          Zarklo
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm text-white/90 transition-colors duration-300">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="transition-colors duration-300 hover:text-white"
-            >
+            <a key={l.label} href={l.href} className="zk-nav-link">
               {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            to="/login"
-            className="text-sm text-white/90 transition-colors duration-300 hover:text-white"
-          >
+        <div className="hidden md:flex items-center gap-4">
+          <Link to="/login" className="text-sm text-[var(--muted-ink)] hover:text-[var(--navy)] transition-colors">
             Login
           </Link>
-
-          <Link to="/dashboard">
-            <Button className="rounded-full bg-gradient-brand text-white shadow-glow hover:opacity-95 border-0 h-10 px-5">
-              Hire AI Team
-            </Button>
-          </Link>
+          <a href="#pricing" className="zk-btn-primary !min-h-10 !px-4 !py-2 text-sm">
+            Book a 15-min demo
+          </a>
         </div>
 
         <button
+          type="button"
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-white transition-colors duration-300"
+          className="md:hidden p-2 min-h-11 min-w-11 text-[var(--navy)]"
+          aria-label="Open menu"
         >
           <Menu className="w-5 h-5" />
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-6 py-4 space-y-3">
+        <div className="md:hidden border-t border-[var(--hairline)] bg-white px-6 py-4 space-y-1">
           {navLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="block text-sm text-white"
+              className="block py-3 text-sm text-[var(--navy)] min-h-11"
               onClick={() => setOpen(false)}
             >
               {l.label}
             </a>
           ))}
-
-          <Link to="/dashboard" className="block">
-            <Button className="w-full rounded-full bg-gradient-brand text-white border-0">
-              Hire AI Team
-            </Button>
-          </Link>
+          <a href="#pricing" className="zk-btn-primary w-full mt-2" onClick={() => setOpen(false)}>
+            Book a 15-min demo
+          </a>
         </div>
       )}
     </motion.header>

@@ -1,10 +1,10 @@
 export const verticals = [
   {
     key: "salons",
-    name: "Salons",
-    headline: "Fill every chair",
-    desc: "AI agents that rank you on Google, book appointments 24/7, and bring clients back before they drift to a competitor.",
-    features: ["24/7 booking & rebooking", "Local SEO for 'salon near me'", "Review & loyalty campaigns"],
+    name: "Salons & Spas",
+    headline: "Missed calls empty chairs",
+    desc: "Missed calls and no-shows quietly empty chairs. Zarklo is built to help you show up in local search, answer new inquiries when you can’t, capture bookings, and nudge clients back before they book elsewhere.",
+    features: ["Catch inquiries when you’re busy", "Local search for salon & spa services", "Rebooking & no-show follow-up"],
     icon: "Scissors",
     accent: "from-rose-500/25 via-fuchsia-500/15 to-transparent",
     border: "group-hover:border-rose-400/40",
@@ -12,19 +12,19 @@ export const verticals = [
   {
     key: "clinics",
     name: "Clinics",
-    headline: "More patients, fewer no-shows",
-    desc: "Automate appointment reminders, follow-ups, and discovery so your practice stays full — without adding front-desk headcount.",
-    features: ["Patient intake & reminders", "Google Maps & health SEO", "Recall & care campaigns"],
+    headline: "Inquiries go cold. Slots go empty.",
+    desc: "Patient inquiries go cold when the front desk is full — and no-shows waste slots you already filled. Zarklo is designed to respond faster, confirm appointments, reduce empty chairs, and keep patients in your care cycle.",
+    features: ["Faster patient inquiry response", "Appointment confirmation & no-show reduction", "Recall & care follow-ups"],
     icon: "Stethoscope",
     accent: "from-sky-500/25 via-cyan-500/15 to-transparent",
     border: "group-hover:border-sky-400/40",
   },
   {
     key: "path-labs",
-    name: "Path Labs",
-    headline: "Book collections. Deliver reports.",
-    desc: "Home sample pickups, test bookings, and report notifications on autopilot — so patients choose you over the lab down the street.",
-    features: ["Home collection booking", "Report-ready SMS alerts", "Diagnostic SEO & listings"],
+    name: "Pathology Labs",
+    headline: "Reports unread. Referrals drift.",
+    desc: "Reports sit unread, repeat tests get delayed, and referring clinics drift to whoever follows up first. Zarklo is built to help with report-delivery follow-up, repeat-test booking, and referral retention — alongside the systems you already use.",
+    features: ["Report-delivery follow-up", "Repeat-test booking nudges", "Referral retention"],
     icon: "FlaskConical",
     accent: "from-emerald-500/25 via-teal-500/15 to-transparent",
     border: "group-hover:border-emerald-400/40",
@@ -95,23 +95,122 @@ export const reviews = [
   { id: "3", author: "Sofia R.", stars: 4, body: "Home sample pickup was on time. Got my report the same evening.", platform: "Yelp" },
 ];
 
-export const testimonials = [
-  { quote: "We went from manual scheduling to a 6-figure month in 90 days. ZarkloAI runs the back office.", author: "Camille Vasquez", role: "Owner, Maison Lumière Salon", growth: "+312% bookings" },
-  { quote: "Patient no-shows dropped 40%. The Win Agent fills our calendar while we focus on care.", author: "Dr. Ananya Mehta", role: "Director, Northside Family Clinic", growth: "−40% no-shows" },
-  { quote: "Home collections doubled after ZarkloAI ranked us for 'blood test near me'. Game changer.", author: "Vikram Shah", role: "Founder, PrecisionPath Labs", growth: "+2× collections" },
-];
+export const caseStudies = [
+  {
+    name: "[Business name]",
+    location: "[City]",
+    vertical: "Salon / Spa",
+    result: "Fewer missed inquiries, steadier weekday bookings",
+    href: "#",
+  },
+  {
+    name: "[Business name]",
+    location: "[City]",
+    vertical: "Clinic",
+    result: "Faster inquiry response, fewer empty appointment slots",
+    href: "#",
+  },
+  {
+    name: "[Business name]",
+    location: "[City]",
+    vertical: "Pathology Lab",
+    result: "Stronger report follow-up and repeat-test bookings",
+    href: "#",
+  },
+] as const;
 
-export const services = [
-  { key: "guaranteed-bookings", name: "Guaranteed appointments", desc: "More bookings across salons, clinics, and path labs — with AI that never sleeps.", icon: "ShieldCheck" },
-  { key: "ai-agents", name: "AI Agents", desc: "Discovery, loyalty, and conversion — three specialists working 24/7 for your business.", icon: "Bot" },
-  { key: "local-domination", name: "Local Domination", desc: "Own the map pack when patients and clients search for services near them.", icon: "MapPin" },
-  { key: "booking-machine", name: "Booking Machine", desc: "Turn your website into a 24/7 engine for cuts, consults, and lab collections.", icon: "Calendar" },
+/** @deprecated Use caseStudies — kept for any leftover imports */
+export const testimonials = caseStudies.map((c) => ({
+  quote: c.result,
+  author: c.name,
+  role: `${c.vertical} · ${c.location}`,
+  growth: "Founding Partner",
+}));
+
+export const howItWorksSteps = [
+  {
+    step: 1,
+    title: "Connect your profile & calendar",
+    desc: "Link your Google Business Profile (or equivalent), calendar, and existing booking, practice, or lab tools where available.",
+  },
+  {
+    step: 2,
+    title: "Zarklo goes live",
+    desc: "Discovery, Conversion, and (on Growth+) Retention start running for your vertical.",
+  },
+  {
+    step: 3,
+    title: "You get bookings and appointments",
+    desc: "Inquiries get answered, slots get filled, follow-ups go out as configured.",
+  },
+  {
+    step: 4,
+    title: "You review results",
+    desc: "See what’s working — visibility, conversions, rebooks — and adjust with us.",
+  },
+] as const;
+
+export const comparisonRows = [
+  {
+    label: "Focus",
+    zarklo: "Growth across discovery, conversion, and retention",
+    booking: "Scheduling and payments",
+    manual: "Staff time and memory",
+  },
+  {
+    label: "Vertical fit",
+    zarklo: "Salons & spas, clinics, and pathology labs",
+    booking: "One-size-fits-most",
+    manual: "Whatever someone remembers to do",
+  },
+  {
+    label: "Works with existing tools",
+    zarklo: "Built to sit alongside booking, EMR, and LIMS systems",
+    booking: "Often is the booking system",
+    manual: "N/A",
+  },
+  {
+    label: "CRM",
+    zarklo: "Included on Advanced — records, history, comms log, segmentation",
+    booking: "Limited or add-on",
+    manual: "Spreadsheets and inboxes",
+  },
+  {
+    label: "Who runs it",
+    zarklo: "End-to-end growth setup and operation",
+    booking: "You configure the product",
+    manual: "You do everything",
+  },
+  {
+    label: "Local visibility",
+    zarklo: "Core Discovery module",
+    booking: "Rarely included",
+    manual: "Ad hoc posts and hope",
+  },
 ] as const;
 
 export const agents = [
-  { key: "discovery", name: "Discovery Agent", desc: "Ranks you on Google for 'salon near me', 'clinic near me', and 'blood test near me'.", metric: "Guaranteed visibility", icon: "Sparkles" },
-  { key: "loyalty", name: "Loyalty Agent", desc: "Brings clients, patients, and test-takers back with smart recall and follow-ups.", metric: "Higher retention", icon: "Heart" },
-  { key: "win", name: "Win Agent", desc: "Turns every enquiry into a confirmed appointment, consult, or collection slot.", metric: "More confirmed bookings", icon: "Target" },
+  {
+    key: "discovery",
+    name: "Discovery",
+    desc: "Built to improve how you show up when people search nearby — “salon near me,” “clinic near me,” “blood test near me,” and related local terms. Profile clarity, listings hygiene, and ranking work so new clients and patients can find you.",
+    metric: "Local SEO & visibility",
+    icon: "Sparkles",
+  },
+  {
+    key: "conversion",
+    name: "Conversion",
+    desc: "When someone inquires, speed matters. Instant responses and booking capture are designed to turn website, Maps, and message inquiries into confirmed appointments, consults, or collection slots — before they move on.",
+    metric: "Lead response & booking capture",
+    icon: "Target",
+  },
+  {
+    key: "retention",
+    name: "Retention",
+    desc: "Rebooking and follow-up nudges, plus review requests after a good visit or report. Built to reduce silent churn: clients who forget, patients who skip recalls, and lab customers who don’t book the next test.",
+    metric: "Rebooking & review requests",
+    icon: "Heart",
+  },
 ] as const;
 
 export const pricingTiers = [
@@ -119,38 +218,76 @@ export const pricingTiers = [
     name: "Starter",
     monthly: 120,
     yearly: 104,
-    blurb: "For single-location salons, clinics, or labs.",
-    features: ["1 location", "Booking Agent", "Review Agent", "Up to 500 clients", "Email support"],
-    cta: "Start free trial",
+    blurb: "Discovery + Conversion for a single location.",
+    features: [
+      "Discovery module — core local SEO & visibility",
+      "Conversion module — lead response & booking capture",
+      "1 location",
+      "Email support",
+    ],
+    note: null as string | null,
+    cta: "Book a 15-min demo",
     popular: false,
   },
   {
     name: "Growth",
     monthly: 199,
     yearly: 159,
-    blurb: "For growing practices and multi-service businesses.",
-    features: ["3 locations", "All 3 AI Agents", "SEO + Social Agent", "Up to 5,000 clients", "Priority support", "Custom integrations"],
-    cta: "Start free trial",
+    blurb: "Adds Retention so growth compounds.",
+    features: [
+      "Everything in Starter",
+      "Retention / rebooking automation",
+      "Review request management",
+      "Up to 3 locations",
+      "Priority support",
+    ],
+    note: null as string | null,
+    cta: "Book a 15-min demo",
     popular: true,
   },
   {
-    name: "Enterprise",
+    name: "Advanced",
     monthly: 499,
     yearly: 399,
-    blurb: "For multi-location groups and diagnostic chains.",
-    features: ["Unlimited locations", "Dedicated AI training", "Multi-brand dashboards", "Unlimited clients", "Dedicated CSM", "API access"],
-    cta: "Talk to sales",
+    blurb: "Full CRM + priority support for teams and multi-location.",
+    features: [
+      "Everything in Growth",
+      "Full CRM — records, booking history, communication log, segmentation",
+      "Multi-location support",
+      "Priority support",
+      "Dedicated success contact",
+    ],
+    note: "Best for businesses managing multiple staff or locations — or wanting a single system for client and patient relationships end to end.",
+    cta: "Talk to us",
     popular: false,
   },
 ];
 
 export const faqs = [
-  { q: "Does ZarkloAI work for salons, clinics, and path labs?", a: "Yes. ZarkloAI is built for all three. Each vertical gets tailored booking flows, SEO keywords, and agent training — whether you're filling chairs, patient slots, or home collection windows." },
-  { q: "How long until I see results?", a: "Most businesses see a 20–40% lift in appointments within the first 30 days as the Discovery and Win agents go live." },
-  { q: "Do I need to change my booking system?", a: "No. ZarkloAI integrates with Square, Vagaro, Practo, Cliniko, Fresha, Google Calendar, and custom lab booking systems out of the box." },
-  { q: "Will the AI sound robotic to my clients?", a: "We train each agent on your brand voice, services, and past conversations. Patients and clients consistently can't tell." },
-  { q: "Is my data safe?", a: "Yes. Bank-grade encryption, SOC 2 in progress, and zero data sold or shared. HIPAA-aware workflows for clinics and labs." },
-  { q: "Can I cancel anytime?", a: "Yes — monthly plans cancel anytime, no contracts. Yearly plans can be paused." },
+  {
+    q: "What does Zarklo do?",
+    a: "Zarklo is an AI growth platform for salons & spas, clinics, and pathology labs. It helps you get found locally, convert inquiries into bookings or appointments, and bring clients and patients back — with modules for Discovery, Conversion, and Retention.",
+  },
+  {
+    q: "Do I need technical experience?",
+    a: "No. You connect your profile and calendar; we help get the system live and keep it running. You review results — you don’t need to learn prompts or build automations yourself.",
+  },
+  {
+    q: "Does the Advanced plan include CRM?",
+    a: "Yes. Advanced includes a full CRM: centralized client/patient records, booking history, communication log, and segmentation for targeted campaigns — plus priority support and multi-location support where needed.",
+  },
+  {
+    q: "How fast will I see results?",
+    a: "It varies by vertical, market, and starting point. Visibility work and lead response can show movement in the first weeks; retention and ranking usually compound over time. We’ll share honest ranges once we have verified data from our Founding Partner cohort.",
+  },
+  {
+    q: "Does it replace my existing booking, POS, EMR, or LIMS system?",
+    a: "No. Zarklo is designed to work alongside the tools you already use for booking, practice management, or lab operations — not rip them out.",
+  },
+  {
+    q: "Is there a contract?",
+    a: "Monthly plans can be canceled anytime. Yearly plans are available at a lower monthly rate; ask us about pause or change options on a call.",
+  },
 ];
 
 export const seoKeywords = [
@@ -161,13 +298,4 @@ export const seoKeywords = [
   { kw: "pathology lab near me", rank: 2, change: "+6" },
 ];
 
-export const partnerLogos = [
-  "Maison Lumière",
-  "Northside Clinic",
-  "PrecisionPath",
-  "Lotus Spa",
-  "CareFirst MD",
-  "Metro Diagnostics",
-  "Bloom Beauty",
-  "Halo Studio",
-];
+export const partnerLogos: string[] = [];

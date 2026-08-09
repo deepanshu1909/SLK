@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { pricingTiers } from "@/lib/mock-data";
 import { FadeIn } from "./motion-bits";
 
@@ -53,7 +54,7 @@ export function Pricing() {
               transition={{ delay: i * 0.06, duration: 0.45 }}
               className={`relative flex flex-col p-7 md:p-8 rounded-xl ${
                 t.popular
-                  ? "bg-white border-2 border-[var(--gold)] shadow-[var(--shadow-elevated)] md:scale-[1.02] z-10"
+                  ? "bg-[var(--card)] border-2 border-[var(--gold)] shadow-[var(--shadow-elevated)] md:scale-[1.02] z-10"
                   : "zk-card-white"
               }`}
             >
@@ -65,16 +66,16 @@ export function Pricing() {
 
               <div className="zk-kicker">{t.name}</div>
               <div className="mt-2 flex items-baseline gap-1">
-                <span className="font-display text-4xl md:text-5xl text-[var(--navy)]">
+                <span className="font-display text-4xl md:text-5xl text-[var(--heading)]">
                   ${yearly ? t.yearly : t.monthly}
                 </span>
                 <span className="text-[var(--muted-ink)] text-sm">/mo</span>
               </div>
               <p className="mt-2 zk-caption">{t.blurb}</p>
 
-              <a href="#pricing" className={`mt-6 ${t.popular ? "zk-btn-primary" : "zk-btn-secondary"}`}>
+              <Link to="/success-demo" className={`mt-6 ${t.popular ? "zk-btn-primary" : "zk-btn-secondary"}`}>
                 {t.cta}
-              </a>
+              </Link>
 
               <ul className="mt-7 space-y-3 flex-1">
                 {t.features.map((f) => (

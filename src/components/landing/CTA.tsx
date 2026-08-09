@@ -1,30 +1,28 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function CTA() {
   return (
-    <section className="zk-section bg-white">
+    <section className="zk-section bg-[var(--background)]">
       <div className="zk-container">
-        <div className="rounded-xl bg-[var(--navy)] px-8 py-14 md:px-16 md:py-20 text-center">
+        <div className="relative overflow-hidden rounded-xl border border-[var(--hairline)] bg-[var(--card)] px-8 py-14 text-center shadow-[var(--shadow-elevated)] md:px-16 md:py-20">
+          <div aria-hidden className="absolute inset-0 bg-mesh opacity-80" />
+          <div className="relative">
           <h2 className="font-display text-4xl md:text-5xl text-white leading-tight tracking-tight">
-            Ready when you are.
+            See what success could look like in your workflow.
           </h2>
-          <p className="mt-5 text-white/75 text-lg max-w-xl mx-auto leading-relaxed">
-            See how Discovery, Conversion, and Retention fit your salon, clinic, or lab —
-            in a short walkthrough.
+          <p className="mt-5 text-[var(--muted-ink)] text-lg max-w-2xl mx-auto leading-relaxed">
+            Your Success Demo covers the growth modules, CRM, follow-up workflows, and
+            how Zarklo can work alongside your current booking, EMR, or LIMS setup.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="#pricing"
-              className="inline-flex items-center justify-center gap-2 min-h-11 px-6 rounded-lg bg-white text-[var(--navy)] font-medium text-[0.9375rem] hover:bg-[var(--cream)] transition-colors"
-            >
-              Book a 15-min demo <ArrowRight className="w-4 h-4" />
+            <Link to="/success-demo" className="zk-btn-primary">
+              Open the Success Demo <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a href="#success-demo" className="zk-btn-secondary">
+              Preview the CRM
             </a>
-            <a
-              href="#how-it-works"
-              className="inline-flex items-center justify-center gap-2 min-h-11 px-6 rounded-lg border border-white/30 text-white font-medium text-[0.9375rem] hover:bg-white/10 transition-colors"
-            >
-              See how it works
-            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -54,7 +52,7 @@ export function Footer() {
     {
       title: "Company",
       links: [
-        { label: "Contact", href: "mailto:hello@zarklo.com" },
+        { label: "Contact", href: "mailto:ceo@zarklo.com" },
         { label: "FAQ", href: "#faq" },
       ],
     },
@@ -69,12 +67,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[var(--navy)] text-white">
+    <footer className="border-t border-[var(--hairline)] bg-[#05020a] text-white">
       <div className="zk-container py-16 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 font-display text-2xl">
-              <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--gold)] text-[var(--navy)] text-sm font-sans font-semibold">
+              <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--primary)] text-white text-sm font-sans font-semibold">
                 Z
               </span>
               Zarklo
@@ -83,10 +81,10 @@ export function Footer() {
               The AI growth platform for salons, clinics, and pathology labs.
             </p>
             <a
-              href="mailto:hello@zarklo.com"
+              href="mailto:ceo@zarklo.com"
               className="mt-4 inline-block text-sm text-[var(--gold)] hover:text-[#d4b57a] transition-colors"
             >
-              hello@zarklo.com
+              ceo@zarklo.com
             </a>
           </div>
           {cols.map((c) => (

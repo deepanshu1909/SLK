@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Heart, Sparkles, Target } from "lucide-react";
+import { ArrowUpRight, Check, Heart, Sparkles, Target } from "lucide-react";
 import { agents } from "@/lib/mock-data";
 import { FadeIn } from "./motion-bits";
 
@@ -7,7 +7,7 @@ const iconMap = { Sparkles, Heart, Target };
 
 export function AgentsSection() {
   return (
-    <section id="agents" className="zk-section bg-white">
+    <section id="agents" className="zk-section bg-[var(--background)]">
       <div className="zk-container">
         <FadeIn>
           <div className="max-w-2xl mb-12 md:mb-14">
@@ -34,14 +34,25 @@ export function AgentsSection() {
                 transition={{ delay: i * 0.06, duration: 0.45 }}
                 className="zk-card p-7 md:p-8"
               >
-                <div className="w-10 h-10 rounded-lg border border-[var(--hairline)] bg-white grid place-items-center mb-5">
+                <div className="w-10 h-10 rounded-lg border border-[var(--hairline)] bg-[var(--brand-soft)] grid place-items-center mb-5">
                   <Icon className="w-5 h-5 text-[var(--gold)]" strokeWidth={1.5} />
                 </div>
                 <h3 className="zk-h3 mb-2">{a.name}</h3>
-                <p className="zk-caption text-[0.9375rem] leading-relaxed line-clamp-4 md:line-clamp-none">
+                <p className="zk-caption text-[0.9375rem] leading-relaxed">
                   {a.desc}
                 </p>
-                <div className="mt-5 pt-4 border-t border-[var(--hairline)] flex items-center gap-1.5 text-sm text-[var(--navy)] font-medium">
+                <ul className="mt-5 space-y-2.5">
+                  {a.details.map((detail) => (
+                    <li
+                      key={detail}
+                      className="flex items-start gap-2 text-xs leading-relaxed text-[var(--muted-ink)]"
+                    >
+                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--gold)]" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 pt-4 border-t border-[var(--hairline)] flex items-center gap-1.5 text-sm text-[var(--heading)] font-medium">
                   {a.metric}
                   <ArrowUpRight className="w-3.5 h-3.5 text-[var(--gold)]" />
                 </div>

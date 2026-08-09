@@ -14,6 +14,8 @@ import DashboardChat from "./routes/dashboard.chat";
 import DashboardCRM from "./routes/dashboard.crm";
 import DashboardReviews from "./routes/dashboard.reviews";
 import DashboardSettings from "./routes/dashboard.settings";
+import SuccessDemoDashboard from "./routes/success-demo";
+import Signup from "./routes/signup";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "success-demo",
+        element: <SuccessDemoDashboard />,
       },
       {
         path: "dashboard",

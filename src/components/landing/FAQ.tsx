@@ -14,7 +14,7 @@ function FaqTrigger({
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         className={cn(
-          "group flex flex-1 items-center justify-between gap-4 py-5 min-h-11 text-left font-display text-lg text-[var(--navy)] transition-colors hover:no-underline",
+          "group flex flex-1 items-center justify-between gap-4 py-5 min-h-11 text-left font-display text-lg text-[var(--heading)] transition-colors hover:no-underline",
           className,
         )}
         {...props}

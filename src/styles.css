@@ -56,65 +56,66 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* ─── Zarklo brand (marketing / light) ─── */
+/* ─── Zarklo brand — full dark purple ─── */
 :root {
   --radius: 0.5rem; /* 8px — professional, not bubbly */
 
-  --navy: #1b2a4a;
-  --gold: #b08d57;
-  --gold-soft: rgba(176, 141, 87, 0.12);
-  --cream: #f2f1ee;
-  --ink: #222222;
-  --muted-ink: #666666;
-  --hairline: #d9d6cf;
+  --navy: #8b5cf6;
+  --gold: #a78bfa;
+  --gold-soft: rgba(167, 139, 250, 0.14);
+  --cream: #110820;
+  --ink: #eee9f8;
+  --muted-ink: #aaa0bd;
+  --hairline: rgba(196, 181, 253, 0.16);
+  --heading: #f7f3ff;
 
-  --background: #ffffff;
-  --foreground: #222222;
+  --background: #08040f;
+  --foreground: #eee9f8;
 
-  --card: #ffffff;
-  --card-foreground: #222222;
-  --popover: #ffffff;
-  --popover-foreground: #222222;
+  --card: #160b27;
+  --card-foreground: #eee9f8;
+  --popover: #160b27;
+  --popover-foreground: #eee9f8;
 
-  --primary: #1b2a4a;
+  --primary: #7c3aed;
   --primary-foreground: #ffffff;
 
-  --secondary: #f2f1ee;
-  --secondary-foreground: #1b2a4a;
+  --secondary: #1d1030;
+  --secondary-foreground: #eee9f8;
 
-  --muted: #f2f1ee;
-  --muted-foreground: #666666;
+  --muted: #110820;
+  --muted-foreground: #aaa0bd;
 
-  --accent: #b08d57;
+  --accent: #8b5cf6;
   --accent-foreground: #ffffff;
 
   --destructive: #8b3a3a;
   --destructive-foreground: #ffffff;
 
-  --border: #d9d6cf;
-  --input: #d9d6cf;
-  --ring: #1b2a4a;
+  --border: rgba(196, 181, 253, 0.16);
+  --input: rgba(196, 181, 253, 0.18);
+  --ring: #8b5cf6;
 
-  --brand: #1b2a4a;
-  --brand-soft: rgba(27, 42, 74, 0.08);
-  --brand-deep: #142038;
-  --surface: #f2f1ee;
-  --accent-cyan: #5a7a8c;
+  --brand: #8b5cf6;
+  --brand-soft: rgba(139, 92, 246, 0.14);
+  --brand-deep: #6d28d9;
+  --surface: #110820;
+  --accent-cyan: #c4b5fd;
 
-  --chart-1: #1b2a4a;
-  --chart-2: #b08d57;
-  --chart-3: #5a7a8c;
-  --chart-4: #4a5d4e;
-  --chart-5: #8b6b4a;
+  --chart-1: #8b5cf6;
+  --chart-2: #c4b5fd;
+  --chart-3: #a78bfa;
+  --chart-4: #7c3aed;
+  --chart-5: #ddd6fe;
 
-  --sidebar: #1b2a4a;
-  --sidebar-foreground: #f2f1ee;
-  --sidebar-primary: #b08d57;
+  --sidebar: #0a0512;
+  --sidebar-foreground: #eee9f8;
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #243556;
+  --sidebar-accent: #1d1030;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #b08d57;
+  --sidebar-ring: #8b5cf6;
 
   /* Type scale */
   --text-h1: clamp(2.5rem, 4vw, 3.5rem); /* 40–56px */
@@ -127,47 +128,19 @@
   --container: 72.5rem; /* 1160px */
   --section-y: clamp(3rem, 8vw, 6.5rem); /* 48–104px */
 
-  --shadow-card: 0 1px 2px rgba(27, 42, 74, 0.04), 0 4px 16px -4px rgba(27, 42, 74, 0.06);
-  --shadow-elevated: 0 8px 28px -8px rgba(27, 42, 74, 0.1);
-  --shadow-glow: none;
-  --gradient-brand: linear-gradient(135deg, #1b2a4a 0%, #142038 100%);
-  --gradient-brand-soft: linear-gradient(180deg, #f2f1ee 0%, #ffffff 100%);
-  --gradient-mesh: none;
+  --shadow-card: 0 14px 36px -24px rgba(139, 92, 246, 0.34);
+  --shadow-elevated: 0 26px 70px -34px rgba(139, 92, 246, 0.48);
+  --shadow-glow: 0 0 40px -16px rgba(139, 92, 246, 0.6);
+  --gradient-brand: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  --gradient-brand-soft: linear-gradient(180deg, #160b27 0%, #0b0514 100%);
+  --gradient-mesh:
+    radial-gradient(circle at 15% 5%, rgba(139, 92, 246, 0.18), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(76, 29, 149, 0.22), transparent 35%);
 }
 
-/* Dashboard / app chrome stays dark */
+/* Dashboard and marketing share the same dark-purple system. */
 .dark {
-  --background: #0c1220;
-  --foreground: #f2f1ee;
-  --card: #142038;
-  --card-foreground: #f2f1ee;
-  --popover: #142038;
-  --popover-foreground: #f2f1ee;
-  --primary: #b08d57;
-  --primary-foreground: #ffffff;
-  --secondary: #1b2a4a;
-  --secondary-foreground: #f2f1ee;
-  --muted: #142038;
-  --muted-foreground: #a3a89e;
-  --accent: #b08d57;
-  --accent-foreground: #ffffff;
-  --border: rgba(217, 214, 207, 0.12);
-  --input: rgba(217, 214, 207, 0.12);
-  --ring: #b08d57;
-  --brand: #b08d57;
-  --brand-soft: rgba(176, 141, 87, 0.16);
-  --brand-deep: #1b2a4a;
-  --sidebar: #0c1220;
-  --sidebar-foreground: #e8e6e1;
-  --sidebar-primary: #b08d57;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1b2a4a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(217, 214, 207, 0.1);
-  --sidebar-ring: #b08d57;
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px -8px rgba(0, 0, 0, 0.35);
-  --shadow-elevated: 0 24px 64px -24px rgba(0, 0, 0, 0.45);
-  --gradient-brand: linear-gradient(135deg, #1b2a4a 0%, #b08d57 160%);
+  color-scheme: dark;
 }
 
 @layer base {
@@ -191,7 +164,7 @@
   h3,
   .font-display {
     font-family: var(--font-display);
-    color: var(--navy);
+    color: var(--heading);
     letter-spacing: -0.02em;
     line-height: 1.15;
   }
@@ -234,7 +207,7 @@
     font-family: var(--font-display);
     font-size: var(--text-h1);
     font-weight: 500;
-    color: var(--navy);
+    color: var(--heading);
     letter-spacing: -0.02em;
     line-height: 1.1;
   }
@@ -243,7 +216,7 @@
     font-family: var(--font-display);
     font-size: var(--text-h2);
     font-weight: 500;
-    color: var(--navy);
+    color: var(--heading);
     letter-spacing: -0.02em;
     line-height: 1.2;
   }
@@ -252,7 +225,7 @@
     font-family: var(--font-display);
     font-size: var(--text-h3);
     font-weight: 500;
-    color: var(--navy);
+    color: var(--heading);
     line-height: 1.3;
   }
 
@@ -275,14 +248,14 @@
   }
 
   .zk-card {
-    background: var(--cream);
+    background: var(--card);
     border: 1px solid var(--hairline);
     border-radius: 0.75rem; /* 12px */
     box-shadow: none;
   }
 
   .zk-card-white {
-    background: #ffffff;
+    background: var(--card);
     border: 1px solid var(--hairline);
     border-radius: 0.75rem;
     box-shadow: var(--shadow-card);
@@ -296,7 +269,7 @@
     min-height: 44px;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    background: var(--navy);
+    background: var(--primary);
     color: #ffffff;
     font-family: var(--font-sans);
     font-size: 0.9375rem;
@@ -318,15 +291,15 @@
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     background: transparent;
-    color: var(--navy);
+    color: var(--heading);
     font-family: var(--font-sans);
     font-size: 0.9375rem;
     font-weight: 500;
-    border: 1px solid var(--navy);
+    border: 1px solid rgba(196, 181, 253, 0.45);
     transition: background-color 0.2s ease, color 0.2s ease;
   }
   .zk-btn-secondary:hover {
-    background: var(--navy);
+    background: rgba(139, 92, 246, 0.16);
     color: #ffffff;
   }
 
@@ -344,7 +317,7 @@
   }
 
   .zk-stat {
-    background: var(--cream);
+    background: var(--card);
     border: 1px solid var(--hairline);
     border-radius: 0.75rem;
     padding: 1.5rem 1.25rem;
@@ -353,7 +326,7 @@
   .zk-stat-value {
     font-family: var(--font-display);
     font-size: clamp(2rem, 3vw, 2.75rem);
-    color: var(--navy);
+    color: var(--heading);
     line-height: 1;
     font-weight: 500;
   }
@@ -372,7 +345,7 @@
     flex-wrap: wrap;
     gap: 0.25rem;
     padding: 0.25rem;
-    background: var(--cream);
+    background: #0e0719;
     border: 1px solid var(--hairline);
     border-radius: 0.625rem;
   }
@@ -389,19 +362,19 @@
     transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   }
   .zk-tab:hover {
-    color: var(--navy);
+    color: var(--heading);
   }
   .zk-tab[aria-selected="true"],
   .zk-tab.is-active {
-    background: #ffffff;
-    color: var(--navy);
+    background: #211137;
+    color: var(--heading);
     box-shadow: inset 0 -2px 0 0 var(--gold), var(--shadow-card);
   }
 
   .zk-nav-link {
     position: relative;
     font-size: 0.875rem;
-    color: var(--navy);
+    color: var(--muted-ink);
     transition: color 0.15s ease;
   }
   .zk-nav-link::after {
@@ -431,7 +404,7 @@
     background-image: var(--gradient-brand-soft);
   }
   .bg-mesh {
-    background-image: none;
+    background-image: var(--gradient-mesh);
   }
   .text-gradient-brand {
     color: var(--gold);
@@ -449,19 +422,19 @@
     box-shadow: var(--shadow-elevated);
   }
   .glass {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(22, 11, 39, 0.85);
     backdrop-filter: blur(12px);
     border: 1px solid var(--hairline);
   }
   .glass-dark {
-    background: rgba(27, 42, 74, 0.92);
+    background: rgba(8, 4, 15, 0.92);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .grid-bg {
     background-image:
-      linear-gradient(rgba(27, 42, 74, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(27, 42, 74, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(196, 181, 253, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(196, 181, 253, 0.035) 1px, transparent 1px);
     background-size: 48px 48px;
   }
 }

@@ -10,7 +10,7 @@ export function DashboardPreview() {
         initial={{ opacity: 0, y: 24, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative rounded-xl bg-white border border-[var(--hairline)] shadow-[var(--shadow-elevated)] overflow-hidden"
+        className="relative rounded-xl bg-[var(--card)] border border-[var(--hairline)] shadow-[var(--shadow-elevated)] overflow-hidden"
       >
         <div className="flex items-center gap-2 px-4 h-10 border-b border-[var(--hairline)] bg-[var(--cream)]">
           <div className="flex gap-1.5">
@@ -28,7 +28,7 @@ export function DashboardPreview() {
                 key={l}
                 className={`text-xs px-3 py-2.5 rounded-md ${
                   i === 0
-                    ? "bg-[var(--navy)] text-white"
+                    ? "bg-[var(--primary)] text-white"
                     : "text-[var(--muted-ink)]"
                 }`}
               >
@@ -56,23 +56,23 @@ export function DashboardPreview() {
 
             <div className="grid grid-cols-3 gap-3">
               {[
-                { label: "Appointments", value: "428", icon: Calendar },
-                { label: "Inquiries", value: "92", icon: Users },
-                { label: "Visibility", value: "Active", icon: TrendingUp },
+                { label: "Appointments", value: "Connected", icon: Calendar },
+                { label: "Inquiries", value: "Responding", icon: Users },
+                { label: "Visibility", value: "Tracking", icon: TrendingUp },
               ].map((s) => (
                 <div key={s.label} className="rounded-lg border border-[var(--hairline)] bg-[var(--cream)] p-3">
                   <div className="flex items-center justify-between text-[10px] text-[var(--muted-ink)] uppercase tracking-wide">
                     <span>{s.label}</span>
                     <s.icon className="w-3 h-3 text-[var(--gold)]" strokeWidth={1.5} />
                   </div>
-                  <div className="mt-1.5 font-display text-xl text-[var(--navy)]">{s.value}</div>
+                  <div className="mt-1.5 font-display text-lg text-[var(--heading)]">{s.value}</div>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-lg border border-[var(--hairline)] p-3 bg-white">
+            <div className="rounded-lg border border-[var(--hairline)] p-3 bg-[var(--card)]">
               <div className="flex items-center justify-between mb-2">
-                <div className="text-xs font-medium text-[var(--navy)]">Activity trend</div>
+                <div className="text-xs font-medium text-[var(--heading)]">Activity trend</div>
                 <div className="text-[10px] text-[var(--muted-ink)]">Illustrative</div>
               </div>
               <div className="h-[150px]">
@@ -80,8 +80,8 @@ export function DashboardPreview() {
                   <AreaChart data={revenueData}>
                     <defs>
                       <linearGradient id="rev" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#B08D57" stopOpacity={0.35} />
-                        <stop offset="100%" stopColor="#B08D57" stopOpacity={0} />
+                        <stop offset="0%" stopColor="#8B5CF6" stopOpacity={0.38} />
+                        <stop offset="100%" stopColor="#8B5CF6" stopOpacity={0} />
                       </linearGradient>
                     </defs>
                     <XAxis
@@ -93,17 +93,17 @@ export function DashboardPreview() {
                     <YAxis hide />
                     <Tooltip
                       contentStyle={{
-                        background: "#FFFFFF",
-                        border: "1px solid #D9D6CF",
+                        background: "#160B27",
+                        border: "1px solid rgba(196,181,253,0.16)",
                         borderRadius: 8,
                         fontSize: 11,
-                        color: "#222222",
+                        color: "#EEE9F8",
                       }}
                     />
                     <Area
                       type="monotone"
                       dataKey="revenue"
-                      stroke="#1B2A4A"
+                      stroke="#A78BFA"
                       strokeWidth={2}
                       fill="url(#rev)"
                     />
@@ -113,11 +113,11 @@ export function DashboardPreview() {
             </div>
 
             <div className="rounded-lg border border-[var(--hairline)] p-3 bg-[var(--cream)] flex items-center gap-3">
-              <div className="w-8 h-8 rounded-md bg-[var(--navy)] grid place-items-center text-[10px] text-white font-medium">
+              <div className="w-8 h-8 rounded-md bg-[var(--primary)] grid place-items-center text-[10px] text-white font-medium">
                 D
               </div>
               <div className="text-xs">
-                <div className="font-medium text-[var(--navy)]">Discovery module</div>
+                <div className="font-medium text-[var(--heading)]">Discovery module</div>
                 <div className="text-[var(--muted-ink)]">
                   Local visibility work running for clinic & lab keywords.
                 </div>

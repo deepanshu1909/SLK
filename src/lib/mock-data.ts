@@ -195,6 +195,11 @@ export const agents = [
     name: "Discovery",
     desc: "Built to improve how you show up when people search nearby — “salon near me,” “clinic near me,” “blood test near me,” and related local terms. Profile clarity, listings hygiene, and ranking work so new clients and patients can find you.",
     metric: "Local SEO & visibility",
+    details: [
+      "Google Business Profile and listing consistency",
+      "Local service and search-intent coverage",
+      "Visibility reporting by location",
+    ],
     icon: "Sparkles",
   },
   {
@@ -202,6 +207,11 @@ export const agents = [
     name: "Conversion",
     desc: "When someone inquires, speed matters. Instant responses and booking capture are designed to turn website, Maps, and message inquiries into confirmed appointments, consults, or collection slots — before they move on.",
     metric: "Lead response & booking capture",
+    details: [
+      "Immediate response to new inquiries",
+      "Booking, consultation, or collection capture",
+      "Configured handoff for questions that need staff",
+    ],
     icon: "Target",
   },
   {
@@ -209,6 +219,11 @@ export const agents = [
     name: "Retention",
     desc: "Rebooking and follow-up nudges, plus review requests after a good visit or report. Built to reduce silent churn: clients who forget, patients who skip recalls, and lab customers who don’t book the next test.",
     metric: "Rebooking & review requests",
+    details: [
+      "Rebooking and recall reminders",
+      "Post-visit or report follow-up",
+      "Review requests and inactive-customer segments",
+    ],
     icon: "Heart",
   },
 ] as const;
@@ -226,7 +241,7 @@ export const pricingTiers = [
       "Email support",
     ],
     note: null as string | null,
-    cta: "Book a 15-min demo",
+    cta: "Success Demo",
     popular: false,
   },
   {
@@ -242,7 +257,7 @@ export const pricingTiers = [
       "Priority support",
     ],
     note: null as string | null,
-    cta: "Book a 15-min demo",
+    cta: "Success Demo",
     popular: true,
   },
   {
@@ -258,7 +273,7 @@ export const pricingTiers = [
       "Dedicated success contact",
     ],
     note: "Best for businesses managing multiple staff or locations — or wanting a single system for client and patient relationships end to end.",
-    cta: "Talk to us",
+    cta: "Success Demo",
     popular: false,
   },
 ];

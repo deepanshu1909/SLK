@@ -4,6 +4,7 @@ import { Hero } from "@/components/landing/Hero";
 import { SocialProof } from "@/components/landing/Testimonials";
 import { VerticalsSection } from "@/components/landing/VerticalsSection";
 import { AgentsSection } from "@/components/landing/AgentsSection";
+import { CRMShowcaseSection } from "@/components/landing/CRMShowcaseSection";
 import { Pricing } from "@/components/landing/Pricing";
 import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { WhyZarkloSection } from "@/components/landing/WhyZarkloSection";
@@ -21,12 +22,13 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <LandingNav />
       <Hero />
       <SocialProof />
       <VerticalsSection />
       <AgentsSection />
+      <CRMShowcaseSection />
       <Pricing />
       <HowItWorksSection />
       <WhyZarkloSection />

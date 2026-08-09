@@ -6,6 +6,7 @@ import { useState } from "react";
 const navLinks = [
   { label: "Industries", href: "#verticals" },
   { label: "Modules", href: "#agents" },
+  { label: "CRM Demo", href: "#success-demo" },
   { label: "Pricing", href: "#pricing" },
   { label: "How it works", href: "#how-it-works" },
   { label: "FAQ", href: "#faq" },
@@ -13,8 +14,8 @@ const navLinks = [
 
 export function LandingNav() {
   const { scrollY } = useScroll();
-  const bg = useTransform(scrollY, [0, 60], ["rgba(255,255,255,0)", "rgba(255,255,255,0.96)"]);
-  const border = useTransform(scrollY, [0, 60], ["rgba(217,214,207,0)", "rgba(217,214,207,1)"]);
+  const bg = useTransform(scrollY, [0, 60], ["rgba(8,4,15,0)", "rgba(8,4,15,0.94)"]);
+  const border = useTransform(scrollY, [0, 60], ["rgba(196,181,253,0)", "rgba(196,181,253,0.16)"]);
   const [open, setOpen] = useState(false);
 
   return (
@@ -23,8 +24,8 @@ export function LandingNav() {
       className="fixed top-0 inset-x-0 z-50 border-b backdrop-blur-md"
     >
       <div className="zk-container h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5 font-display text-2xl text-[var(--navy)] tracking-tight">
-          <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--navy)] text-white text-sm font-sans font-semibold">
+        <Link to="/" className="flex items-center gap-2.5 font-display text-2xl text-[var(--heading)] tracking-tight">
+          <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--primary)] text-white text-sm font-sans font-semibold shadow-glow">
             Z
           </span>
           Zarklo
@@ -39,18 +40,18 @@ export function LandingNav() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link to="/login" className="text-sm text-[var(--muted-ink)] hover:text-[var(--navy)] transition-colors">
+          <Link to="/login" className="text-sm text-[var(--muted-ink)] hover:text-[var(--heading)] transition-colors">
             Login
           </Link>
-          <a href="#pricing" className="zk-btn-primary !min-h-10 !px-4 !py-2 text-sm">
-            Book a 15-min demo
-          </a>
+          <Link to="/success-demo" className="zk-btn-primary !min-h-10 !px-4 !py-2 text-sm">
+            Success Demo
+          </Link>
         </div>
 
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 min-h-11 min-w-11 text-[var(--navy)]"
+          className="md:hidden p-2 min-h-11 min-w-11 text-[var(--heading)]"
           aria-label="Open menu"
         >
           <Menu className="w-5 h-5" />
@@ -58,20 +59,20 @@ export function LandingNav() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-[var(--hairline)] bg-white px-6 py-4 space-y-1">
+        <div className="md:hidden border-t border-[var(--hairline)] bg-[var(--background)] px-6 py-4 space-y-1">
           {navLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="block py-3 text-sm text-[var(--navy)] min-h-11"
+              className="block py-3 text-sm text-[var(--heading)] min-h-11"
               onClick={() => setOpen(false)}
             >
               {l.label}
             </a>
           ))}
-          <a href="#pricing" className="zk-btn-primary w-full mt-2" onClick={() => setOpen(false)}>
-            Book a 15-min demo
-          </a>
+          <Link to="/success-demo" className="zk-btn-primary w-full mt-2" onClick={() => setOpen(false)}>
+            Success Demo
+          </Link>
         </div>
       )}
     </motion.header>

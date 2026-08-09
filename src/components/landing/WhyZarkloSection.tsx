@@ -3,7 +3,7 @@ import { FadeIn } from "./motion-bits";
 
 export function WhyZarkloSection() {
   return (
-    <section id="why-zarklo" className="zk-section bg-white">
+    <section id="why-zarklo" className="zk-section bg-[var(--background)]">
       <div className="zk-container">
         <FadeIn>
           <div className="max-w-2xl mb-10 md:mb-12">
@@ -19,12 +19,12 @@ export function WhyZarkloSection() {
         </FadeIn>
 
         <FadeIn delay={0.08}>
-          <div className="overflow-x-auto rounded-xl border border-[var(--hairline)] bg-white">
+          <div className="overflow-x-auto rounded-xl border border-[var(--hairline)] bg-[var(--card)]">
             <table className="w-full min-w-[720px] text-left text-sm">
               <thead>
                 <tr className="bg-[var(--cream)] border-b border-[var(--hairline)]">
                   <th className="px-5 py-4 font-medium text-[var(--muted-ink)] w-[18%]" />
-                  <th className="px-5 py-4 font-display text-lg text-[var(--navy)] font-medium">
+                  <th className="px-5 py-4 font-display text-lg text-[var(--heading)] font-medium">
                     Zarklo
                   </th>
                   <th className="px-5 py-4 font-medium text-[var(--muted-ink)]">
@@ -38,7 +38,7 @@ export function WhyZarkloSection() {
               <tbody>
                 {comparisonRows.map((row) => (
                   <tr key={row.label} className="border-t border-[var(--hairline)] align-top">
-                    <td className="px-5 py-4 font-medium text-[var(--navy)]">{row.label}</td>
+                    <td className="px-5 py-4 font-medium text-[var(--heading)]">{row.label}</td>
                     <td className="px-5 py-4 text-[var(--ink)]">{row.zarklo}</td>
                     <td className="px-5 py-4 text-[var(--muted-ink)]">{row.booking}</td>
                     <td className="px-5 py-4 text-[var(--muted-ink)]">{row.manual}</td>

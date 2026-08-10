@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { TrustBadges } from "./TrustBadges";
+import { CONTACT_EMAIL, STARTING_PRICE_INR, STARTING_PRICE_USD } from "@/lib/site-content";
 
 export function CTA() {
   return (
@@ -8,21 +10,23 @@ export function CTA() {
         <div className="relative overflow-hidden rounded-xl border border-[var(--hairline)] bg-[var(--card)] px-8 py-14 text-center shadow-[var(--shadow-elevated)] md:px-16 md:py-20">
           <div aria-hidden className="absolute inset-0 bg-mesh opacity-80" />
           <div className="relative">
-          <h2 className="font-display text-4xl md:text-5xl text-white leading-tight tracking-tight">
-            See what success could look like in your workflow.
-          </h2>
-          <p className="mt-5 text-[var(--muted-ink)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Your Success Demo covers the growth modules, CRM, follow-up workflows, and
-            how Zarklo can work alongside your current booking, EMR, or LIMS setup.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link to="/success-demo" className="zk-btn-primary">
-              Open the Success Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a href="#success-demo" className="zk-btn-secondary">
-              Preview the CRM
-            </a>
-          </div>
+            <h2 className="font-display text-4xl leading-tight tracking-tight text-white md:text-5xl">
+              Ready for a demo — or just an estimate?
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted-ink)]">
+              High commitment: Success Demo. Low commitment: free growth estimate or
+              ranking check. Plans start at ${STARTING_PRICE_USD}/mo (≈ ₹
+              {STARTING_PRICE_INR.toLocaleString("en-IN")}/mo).
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link to="/success-demo" className="zk-btn-primary">
+                Book a Success Demo <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href="#growth-calculator" className="zk-btn-secondary">
+                See your free growth estimate
+              </a>
+            </div>
+            <TrustBadges className="mt-6" />
           </div>
         </div>
       </div>
@@ -35,25 +39,27 @@ export function Footer() {
     {
       title: "Product",
       links: [
-        { label: "How it works", href: "#how-it-works" },
-        { label: "Modules", href: "#agents" },
-        { label: "Pricing", href: "#pricing" },
-        { label: "Industries", href: "#verticals" },
+        { label: "How it works", href: "/#how-it-works" },
+        { label: "Growth calculator", href: "/#growth-calculator" },
+        { label: "Ranking check", href: "/#ranking-tool" },
+        { label: "Pricing", href: "/#pricing" },
       ],
     },
     {
-      title: "Agents",
+      title: "Industries",
       links: [
-        { label: "Discovery", href: "#agents" },
-        { label: "Conversion", href: "#agents" },
-        { label: "Retention", href: "#agents" },
+        { label: "Salons & Spas", href: "/salons" },
+        { label: "Clinics", href: "/clinics" },
+        { label: "Pathology Labs", href: "/pathology-labs" },
       ],
     },
     {
       title: "Company",
       links: [
-        { label: "Contact", href: "mailto:ceo@zarklo.com" },
-        { label: "FAQ", href: "#faq" },
+        { label: "Resources", href: "/resources" },
+        { label: "Team", href: "/#team" },
+        { label: "Contact", href: `mailto:${CONTACT_EMAIL}` },
+        { label: "FAQ", href: "/#faq" },
       ],
     },
     {
@@ -69,27 +75,32 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--hairline)] bg-[#05020a] text-white">
       <div className="zk-container py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-6">
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 font-display text-2xl">
-              <span className="grid place-items-center w-8 h-8 rounded-md bg-[var(--primary)] text-white text-sm font-sans font-semibold">
+              <span className="grid h-8 w-8 place-items-center rounded-md bg-[var(--primary)] text-sm font-sans font-semibold text-white">
                 Z
               </span>
               Zarklo
             </div>
-            <p className="mt-4 text-sm text-white/65 max-w-xs leading-relaxed">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/65">
               The AI growth platform for salons, clinics, and pathology labs.
             </p>
+            <p className="mt-3 text-xs text-white/45">
+              Starting at ${STARTING_PRICE_USD}/mo · ≈ ₹
+              {STARTING_PRICE_INR.toLocaleString("en-IN")}/mo
+            </p>
             <a
-              href="mailto:ceo@zarklo.com"
-              className="mt-4 inline-block text-sm text-[var(--gold)] hover:text-[#d4b57a] transition-colors"
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-4 inline-block text-sm text-[var(--gold)] hover:text-[#c4b5fd]"
             >
-              ceo@zarklo.com
+              {CONTACT_EMAIL}
             </a>
+            <TrustBadges className="mt-5 !justify-start" />
           </div>
           {cols.map((c) => (
             <div key={c.title}>
-              <div className="text-[11px] uppercase tracking-[0.08em] text-white/45 mb-3">
+              <div className="mb-3 text-[11px] uppercase tracking-[0.08em] text-white/45">
                 {c.title}
               </div>
               <ul className="space-y-2.5">
@@ -97,7 +108,7 @@ export function Footer() {
                   <li key={l.label}>
                     <a
                       href={l.href}
-                      className="text-sm text-white/70 hover:text-[var(--gold)] transition-colors"
+                      className="text-sm text-white/70 transition-colors hover:text-[var(--gold)]"
                     >
                       {l.label}
                     </a>
@@ -107,11 +118,11 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/45">
+        <div className="mt-14 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/45 md:flex-row">
           <div>© {new Date().getFullYear()} Zarklo. All rights reserved.</div>
           <div className="flex gap-5">
             {["Twitter", "Instagram", "LinkedIn"].map((s) => (
-              <a key={s} href="#" className="hover:text-[var(--gold)] transition-colors">
+              <a key={s} href="#" className="hover:text-[var(--gold)]">
                 {s}
               </a>
             ))}

@@ -16,6 +16,8 @@ import DashboardReviews from "./routes/dashboard.reviews";
 import DashboardSettings from "./routes/dashboard.settings";
 import SuccessDemoDashboard from "./routes/success-demo";
 import Signup from "./routes/signup";
+import { ClinicsPage, PathologyLabsPage, SalonsPage } from "./routes/verticals";
+import ResourceArticlePage, { ResourcesIndexPage } from "./routes/resources";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,26 @@ export const router = createBrowserRouter([
       {
         path: "success-demo",
         element: <SuccessDemoDashboard />,
+      },
+      {
+        path: "salons",
+        element: <SalonsPage />,
+      },
+      {
+        path: "clinics",
+        element: <ClinicsPage />,
+      },
+      {
+        path: "pathology-labs",
+        element: <PathologyLabsPage />,
+      },
+      {
+        path: "resources",
+        element: <ResourcesIndexPage />,
+      },
+      {
+        path: "resources/:slug",
+        element: <ResourceArticlePage />,
       },
       {
         path: "dashboard",

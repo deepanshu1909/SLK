@@ -5,11 +5,17 @@ import { SocialProof } from "@/components/landing/Testimonials";
 import { VerticalsSection } from "@/components/landing/VerticalsSection";
 import { AgentsSection } from "@/components/landing/AgentsSection";
 import { CRMShowcaseSection } from "@/components/landing/CRMShowcaseSection";
+import { GrowthCalculatorSection } from "@/components/landing/GrowthCalculatorSection";
+import { RankingToolSection } from "@/components/landing/RankingToolSection";
 import { Pricing } from "@/components/landing/Pricing";
+import { TeamSection } from "@/components/landing/TeamSection";
 import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { WhyZarkloSection } from "@/components/landing/WhyZarkloSection";
+import { ResourcesTeaser } from "@/components/landing/ResourcesTeaser";
 import { FAQ } from "@/components/landing/FAQ";
 import { CTA, Footer } from "@/components/landing/CTA";
+import { SiteChatWidget } from "@/components/landing/SiteChatWidget";
+import { ExitIntentCTA } from "@/components/landing/ExitIntentCTA";
 
 const PAGE_TITLE = "Zarklo — AI growth for salons, clinics & diagnostic labs";
 const PAGE_DESC =
@@ -29,12 +35,18 @@ export default function Index() {
       <VerticalsSection />
       <AgentsSection />
       <CRMShowcaseSection />
+      <GrowthCalculatorSection />
+      <RankingToolSection />
       <Pricing />
+      <TeamSection />
       <HowItWorksSection />
       <WhyZarkloSection />
+      <ResourcesTeaser />
       <FAQ />
       <CTA />
       <Footer />
+      <SiteChatWidget />
+      <ExitIntentCTA />
     </div>
   );
 }

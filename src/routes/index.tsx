@@ -17,7 +17,7 @@ import { CTA, Footer } from "@/components/landing/CTA";
 import { SiteChatWidget } from "@/components/landing/SiteChatWidget";
 import { ExitIntentCTA } from "@/components/landing/ExitIntentCTA";
 
-const PAGE_TITLE = "Zarklo — AI growth for salons, clinics & diagnostic labs";
+const PAGE_TITLE = "ZarkloAI — AI growth for salons, clinics & diagnostic labs";
 const PAGE_DESC =
   "AI growth platform for salons & spas, clinics, and pathology labs. More bookings and appointments, stronger local search, higher retention.";
 

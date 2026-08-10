@@ -14,7 +14,6 @@ import DashboardChat from "./routes/dashboard.chat";
 import DashboardCRM from "./routes/dashboard.crm";
 import DashboardReviews from "./routes/dashboard.reviews";
 import DashboardSettings from "./routes/dashboard.settings";
-import SuccessDemoDashboard from "./routes/success-demo";
 import Signup from "./routes/signup";
 import { ClinicsPage, PathologyLabsPage, SalonsPage } from "./routes/verticals";
 import ResourceArticlePage, { ResourcesIndexPage } from "./routes/resources";
@@ -38,10 +37,6 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <Signup />,
-      },
-      {
-        path: "success-demo",
-        element: <SuccessDemoDashboard />,
       },
       {
         path: "salons",

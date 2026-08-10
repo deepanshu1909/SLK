@@ -10,7 +10,7 @@ export function SiteChatWidget() {
   const [messages, setMessages] = useState<Msg[]>([
     {
       role: "assistant",
-      text: "Hi — I’m Zarklo’s Conversion agent demo. Ask about pricing, salons, clinics, labs, CRM, or cancel policies.",
+      text: "Hi — I’m ZarkloAI’s Conversion agent demo. Ask about pricing, salons, clinics, labs, CRM, or cancel policies.",
     },
   ]);
   const endRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ export function SiteChatWidget() {
         <div className="flex h-[min(480px,70vh)] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-xl border border-[var(--hairline)] bg-[var(--card)] shadow-[var(--shadow-elevated)]">
           <div className="flex items-center justify-between border-b border-[var(--hairline)] bg-[#0d0617] px-4 py-3">
             <div>
-              <div className="text-sm font-medium text-[var(--heading)]">Zarklo Conversion Agent</div>
+              <div className="text-sm font-medium text-[var(--heading)]">ZarkloAI Conversion Agent</div>
               <div className="text-[10px] text-[var(--muted-ink)]">Live product demo · instant answers</div>
             </div>
             <button
@@ -81,10 +81,10 @@ export function SiteChatWidget() {
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[var(--primary)] px-4 text-sm font-medium text-white shadow-glow"
-        aria-label={open ? "Close chat" : "Open Zarklo chat"}
+        aria-label={open ? "Close chat" : "Open ZarkloAI chat"}
       >
         <MessageCircle className="h-4 w-4" />
-        {open ? "Close" : "Ask Zarklo"}
+        {open ? "Close" : "Ask ZarkloAI"}
       </button>
     </div>
   );

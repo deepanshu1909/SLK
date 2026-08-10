@@ -66,7 +66,7 @@ export function CRMShowcaseSection() {
   const view = crmViews[active];
 
   return (
-    <section id="success-demo" className="zk-section bg-[var(--background)]">
+    <section id="crm-preview" className="zk-section bg-[var(--background)]">
       <div className="zk-container">
         <FadeIn>
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end mb-12">
@@ -78,11 +78,11 @@ export function CRMShowcaseSection() {
             </div>
             <div>
               <p className="zk-muted">
-                Zarklo’s Advanced CRM brings records, booking history, communication,
-                and segmentation into one operating view. Your Success Demo includes a
-                walkthrough tailored to your salon, clinic, or diagnostic lab.
+                ZarkloAI’s Advanced CRM brings records, booking history, communication,
+                and segmentation into one operating view. Open the Success Demo to explore
+                the live Analytics, CRM, and dashboard workspace.
               </p>
-              <Link to="/success-demo" className="zk-btn-primary mt-6">
+              <Link to="/dashboard" className="zk-btn-primary mt-6">
                 Open the Success Demo <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

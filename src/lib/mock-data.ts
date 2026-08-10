@@ -3,7 +3,7 @@ export const verticals = [
     key: "salons",
     name: "Salons & Spas",
     headline: "Missed calls empty chairs",
-    desc: "Missed calls and no-shows quietly empty chairs. Zarklo is built to help you show up in local search, answer new inquiries when you can’t, capture bookings, and nudge clients back before they book elsewhere.",
+    desc: "Missed calls and no-shows quietly empty chairs. ZarkloAI is built to help you show up in local search, answer new inquiries when you can’t, capture bookings, and nudge clients back before they book elsewhere.",
     features: ["Catch inquiries when you’re busy", "Local search for salon & spa services", "Rebooking & no-show follow-up"],
     icon: "Scissors",
     accent: "from-rose-500/25 via-fuchsia-500/15 to-transparent",
@@ -13,7 +13,7 @@ export const verticals = [
     key: "clinics",
     name: "Clinics",
     headline: "Inquiries go cold. Slots go empty.",
-    desc: "Patient inquiries go cold when the front desk is full — and no-shows waste slots you already filled. Zarklo is designed to respond faster, confirm appointments, reduce empty chairs, and keep patients in your care cycle.",
+    desc: "Patient inquiries go cold when the front desk is full — and no-shows waste slots you already filled. ZarkloAI is designed to respond faster, confirm appointments, reduce empty chairs, and keep patients in your care cycle.",
     features: ["Faster patient inquiry response", "Appointment confirmation & no-show reduction", "Recall & care follow-ups"],
     icon: "Stethoscope",
     accent: "from-sky-500/25 via-cyan-500/15 to-transparent",
@@ -23,7 +23,7 @@ export const verticals = [
     key: "path-labs",
     name: "Pathology Labs",
     headline: "Reports unread. Referrals drift.",
-    desc: "Reports sit unread, repeat tests get delayed, and referring clinics drift to whoever follows up first. Zarklo is built to help with report-delivery follow-up, repeat-test booking, and referral retention — alongside the systems you already use.",
+    desc: "Reports sit unread, repeat tests get delayed, and referring clinics drift to whoever follows up first. ZarkloAI is built to help with report-delivery follow-up, repeat-test booking, and referral retention — alongside the systems you already use.",
     features: ["Report-delivery follow-up", "Repeat-test booking nudges", "Referral retention"],
     icon: "FlaskConical",
     accent: "from-emerald-500/25 via-teal-500/15 to-transparent",
@@ -135,7 +135,7 @@ export const howItWorksSteps = [
   },
   {
     step: 2,
-    title: "Zarklo goes live",
+    title: "ZarkloAI goes live",
     desc: "Discovery, Conversion, and (on Growth+) Retention start running for your vertical.",
   },
   {
@@ -280,8 +280,8 @@ export const pricingTiers = [
 
 export const faqs = [
   {
-    q: "What does Zarklo do?",
-    a: "Zarklo is an AI growth platform for salons & spas, clinics, and pathology labs. It helps you get found locally, convert inquiries into bookings or appointments, and bring clients and patients back — with modules for Discovery, Conversion, and Retention.",
+    q: "What does ZarkloAI do?",
+    a: "ZarkloAI is an AI growth platform for salons & spas, clinics, and pathology labs. It helps you get found locally, convert inquiries into bookings or appointments, and bring clients and patients back — with modules for Discovery, Conversion, and Retention.",
   },
   {
     q: "Do I need technical experience?",
@@ -297,7 +297,7 @@ export const faqs = [
   },
   {
     q: "Does it replace my existing booking, POS, EMR, or LIMS system?",
-    a: "No. Zarklo is designed to work alongside the tools you already use for booking, practice management, or lab operations — not rip them out.",
+    a: "No. ZarkloAI is designed to work alongside the tools you already use for booking, practice management, or lab operations — not rip them out.",
   },
   {
     q: "Is there a contract?",

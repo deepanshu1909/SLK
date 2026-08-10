@@ -78,7 +78,7 @@ export function ExitIntentCTA() {
           </a>
         </div>
         <Link
-          to="/success-demo"
+          to="/dashboard"
           className="mt-3 block text-center text-xs text-[var(--gold)] hover:underline"
           onClick={dismiss}
         >

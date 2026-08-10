@@ -19,7 +19,7 @@ export function CTA() {
               {STARTING_PRICE_INR.toLocaleString("en-IN")}/mo).
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link to="/success-demo" className="zk-btn-primary">
+              <Link to="/dashboard" className="zk-btn-primary">
                 Book a Success Demo <ArrowRight className="h-4 w-4" />
               </Link>
               <a href="#growth-calculator" className="zk-btn-secondary">
@@ -81,7 +81,7 @@ export function Footer() {
               <span className="grid h-8 w-8 place-items-center rounded-md bg-[var(--primary)] text-sm font-sans font-semibold text-white">
                 Z
               </span>
-              Zarklo
+              ZarkloAI
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/65">
               The AI growth platform for salons, clinics, and pathology labs.
@@ -119,7 +119,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-14 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/45 md:flex-row">
-          <div>© {new Date().getFullYear()} Zarklo. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} ZarkloAI. All rights reserved.</div>
           <div className="flex gap-5">
             {["Twitter", "Instagram", "LinkedIn"].map((s) => (
               <a key={s} href="#" className="hover:text-[var(--gold)]">

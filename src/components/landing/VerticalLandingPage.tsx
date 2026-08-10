@@ -36,7 +36,7 @@ export function VerticalLandingPage({ pageKey }: { pageKey: VerticalPageKey }) {
             Starting at ${STARTING_PRICE_USD}/mo · ≈ ₹{STARTING_PRICE_INR.toLocaleString("en-IN")}/mo
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link to="/success-demo" className="zk-btn-primary">
+            <Link to="/dashboard" className="zk-btn-primary">
               Book a Success Demo <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/#growth-calculator" className="zk-btn-secondary">
@@ -67,7 +67,7 @@ export function VerticalLandingPage({ pageKey }: { pageKey: VerticalPageKey }) {
           <div className="zk-kicker mb-4">Modules</div>
           <h2 className="zk-h2 mb-4">Discovery · Conversion · Retention</h2>
           <p className="mb-8 max-w-2xl zk-muted">
-            Same three jobs as the rest of Zarklo — tuned to {page.name.toLowerCase()} language
+            Same three jobs as the rest of ZarkloAI — tuned to {page.name.toLowerCase()} language
             and workflows. Designed to sit alongside your existing tools.
           </p>
           <div className="grid gap-4 md:grid-cols-3">
@@ -115,7 +115,7 @@ export function VerticalLandingPage({ pageKey }: { pageKey: VerticalPageKey }) {
             <Link to="/#ranking-tool" className="zk-btn-secondary">
               Check your ranking
             </Link>
-            <Link to="/success-demo" className="zk-btn-primary">
+            <Link to="/dashboard" className="zk-btn-primary">
               Book a Success Demo
             </Link>
           </div>

@@ -13,7 +13,7 @@ export const trustBadges = [
 
 export const teamMembers = [
   {
-    name: "Zarklo founding team",
+    name: "ZarkloAI founding team",
     role: "Product & customer success",
     bio: "We set up and run growth systems for salons, clinics, and labs — so owners aren’t left managing another dashboard alone. Photos and individual bios will be published as the Founding Partner cohort goes live.",
     initials: "ZK",
@@ -42,11 +42,11 @@ export const verticalPages: Record<
     path: "/salons",
     name: "Salons & Spas",
     shortName: "salon",
-    metaTitle: "Zarklo for Salons & Spas — AI growth for bookings & rebooking",
+    metaTitle: "ZarkloAI for Salons & Spas — AI growth for bookings & rebooking",
     metaDesc:
       "Grow salon and spa bookings with local visibility, instant inquiry response, and rebooking follow-ups — alongside your existing booking software.",
     hero: "Fill more chairs — without adding front-desk hours.",
-    sub: "Zarklo is designed to help salons and spas show up in local search, catch missed inquiries, reduce no-shows, and bring clients back before they book elsewhere.",
+    sub: "ZarkloAI is designed to help salons and spas show up in local search, catch missed inquiries, reduce no-shows, and bring clients back before they book elsewhere.",
     pains: [
       {
         title: "Missed calls empty chairs",
@@ -73,11 +73,11 @@ export const verticalPages: Record<
     path: "/clinics",
     name: "Clinics",
     shortName: "clinic",
-    metaTitle: "Zarklo for Clinics — fewer no-shows, faster patient response",
+    metaTitle: "ZarkloAI for Clinics — fewer no-shows, faster patient response",
     metaDesc:
       "Help your clinic respond to inquiries faster, reduce empty appointment slots, and keep patients in the care cycle — alongside your EMR or booking tools.",
     hero: "More confirmed appointments. Fewer empty slots.",
-    sub: "Zarklo is designed for clinics that need faster inquiry response, clearer confirmation, and recall follow-ups — without replacing the systems you already use for care.",
+    sub: "ZarkloAI is designed for clinics that need faster inquiry response, clearer confirmation, and recall follow-ups — without replacing the systems you already use for care.",
     pains: [
       {
         title: "Inquiries go cold",
@@ -104,11 +104,11 @@ export const verticalPages: Record<
     path: "/pathology-labs",
     name: "Pathology Labs",
     shortName: "lab",
-    metaTitle: "Zarklo for Pathology Labs — report follow-up & repeat bookings",
+    metaTitle: "ZarkloAI for Pathology Labs — report follow-up & repeat bookings",
     metaDesc:
       "Improve report-delivery follow-up, repeat-test bookings, and referral retention for diagnostic labs — alongside your LIMS and booking tools.",
     hero: "Reports delivered. Patients retained. Referrals protected.",
-    sub: "Zarklo is built to help pathology and diagnostic labs follow up after reports, book repeat tests, and keep referring clinics close — without ripping out your LIMS.",
+    sub: "ZarkloAI is built to help pathology and diagnostic labs follow up after reports, book repeat tests, and keep referring clinics close — without ripping out your LIMS.",
     pains: [
       {
         title: "Reports sit unread",
@@ -252,7 +252,7 @@ export const chatReplies: { match: RegExp; reply: string }[] = [
   {
     match: /crm|demo|success/i,
     reply:
-      "You can open the interactive Success Demo CRM at /success-demo — pipeline, sample records, and charts. Or book a walkthrough with our team via ceo@zarklo.com.",
+      "Open the Success Demo at /dashboard to explore Analytics, CRM, bookings, and agents — or email ceo@zarklo.com.",
   },
   {
     match: /contract|cancel|setup fee|fee/i,
@@ -262,7 +262,7 @@ export const chatReplies: { match: RegExp; reply: string }[] = [
   {
     match: /replace|emr|lims|booking software|vagaro|fresha/i,
     reply:
-      "Zarklo is designed to work alongside booking, EMR, and LIMS systems — not rip them out. We connect into your calendar and profiles where available.",
+      "ZarkloAI is designed to work alongside booking, EMR, and LIMS systems — not rip them out. We connect into your calendar and profiles where available.",
   },
 ];
 

@@ -82,7 +82,7 @@ export function Pricing() {
               <p className="mt-2 zk-caption">{t.blurb}</p>
 
               <Link
-                to="/success-demo"
+                to="/dashboard"
                 className={`mt-6 ${t.popular ? "zk-btn-primary" : "zk-btn-secondary"}`}
               >
                 {t.cta}

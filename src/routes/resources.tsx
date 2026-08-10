@@ -19,21 +19,21 @@ const bodies: Record<string, string[]> = {
     "Send a confirmation when the appointment is booked, then a reminder 24–48 hours out, and a same-day nudge if that fits your practice. Keep language clinical and respectful — short, clear, one action.",
     "Offer an easy reschedule path. Blocking cancellations without a next step often creates silent no-shows. A simple “need to move this?” link protects both sides.",
     "Watch which appointment types no-show most. First visits and long procedures usually need more context in the reminder than routine follow-ups.",
-    "Zarklo’s Conversion and Retention modules are designed to help with these rhythms alongside your existing booking or EMR tools — not replace them.",
+    "ZarkloAI’s Conversion and Retention modules are designed to help with these rhythms alongside your existing booking or EMR tools — not replace them.",
   ],
   "lab-patient-retention": [
     "Lab retention is different from salon rebooking. Patients often return for timed panels, monitoring, or physician-ordered follow-ups — and referring clinics care about communication quality.",
     "When a report is ready, make the next step obvious: open results, ask a question, or book a repeat draw. Silence after delivery is where patients and referrals drift.",
     "Segment by test type and interval. Thyroid follow-ups and chronic monitoring have different cadences than one-off wellness panels. Generic blasts feel spammy; timed nudges feel useful.",
     "Protect referral relationships with clear status updates and predictable turnaround communication. Clinics send volume to labs that reduce their admin load.",
-    "Zarklo is built to sit beside LIMS and collection booking — focusing on follow-up and retention, not ripping out your lab stack.",
+    "ZarkloAI is built to sit beside LIMS and collection booking — focusing on follow-up and retention, not ripping out your lab stack.",
   ],
   "salon-rebooking-without-pressure": [
     "The best rebooking message feels like a helpful reminder of a cycle the client already chose — not a sales pitch. Colour and cut intervals are predictable; use that.",
     "Time the nudge a few days before the typical revisit window. Mention the last service lightly (“your balayage is usually ready around now”) and offer two concrete slots if you can.",
     "Ask for reviews only after a clearly good visit, once. Stacking review requests with hard sells trains clients to ignore you.",
     "If someone goes quiet, one soft check-in beats three aggressive ones. Preserve the relationship; volume comes back when trust stays intact.",
-    "When you’re ready, try Zarklo’s Growth Calculator for a free estimate, or open the Success Demo to see how Retention workflows look in practice.",
+    "When you’re ready, try ZarkloAI’s Growth Calculator for a free estimate, or open the Success Demo to see how Retention workflows look in practice.",
   ],
 };
 
@@ -44,7 +44,7 @@ export default function ResourceArticlePage() {
 
   useEffect(() => {
     if (!post) return;
-    document.title = `${post.title} — Zarklo Resources`;
+    document.title = `${post.title} — ZarkloAI Resources`;
   }, [post]);
 
   if (!post || !paragraphs) {
@@ -84,7 +84,7 @@ export default function ResourceArticlePage() {
             <Link to="/#growth-calculator" className="zk-btn-primary">
               See your free growth estimate <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/success-demo" className="zk-btn-secondary">
+            <Link to="/dashboard" className="zk-btn-secondary">
               Open Success Demo
             </Link>
           </div>
@@ -98,7 +98,7 @@ export default function ResourceArticlePage() {
 
 export function ResourcesIndexPage() {
   useEffect(() => {
-    document.title = "Resources — Zarklo";
+    document.title = "Resources — ZarkloAI";
   }, []);
 
   return (

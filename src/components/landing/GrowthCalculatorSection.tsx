@@ -123,7 +123,7 @@ export function GrowthCalculatorSection() {
                 {unlocked ? "Refresh estimate" : "See your free growth estimate"}
               </button>
               <p className="text-xs text-[var(--muted-ink)]">
-                We’ll only use your email to send this estimate and relevant Zarklo
+                We’ll only use your email to send this estimate and relevant ZarkloAI
                 updates. No spam.
               </p>
             </form>
@@ -168,7 +168,7 @@ export function GrowthCalculatorSection() {
                   </p>
                   {submitted ? (
                     <div className="mt-6 flex flex-col gap-2 sm:flex-row">
-                      <Link to="/success-demo" className="zk-btn-primary">
+                      <Link to="/dashboard" className="zk-btn-primary">
                         Open Success Demo <ArrowRight className="h-4 w-4" />
                       </Link>
                       <a href="#ranking-tool" className="zk-btn-secondary">

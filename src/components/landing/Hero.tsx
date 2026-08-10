@@ -39,7 +39,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg zk-muted">
-            Zarklo connects local visibility, instant inquiry response, booking
+            ZarkloAI connects local visibility, instant inquiry response, booking
             follow-up, retention, and CRM context into one growth system — tailored to
             salons, clinics, and diagnostic labs.
           </p>
@@ -50,7 +50,7 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link to="/success-demo" className="zk-btn-primary">
+            <Link to="/dashboard" className="zk-btn-primary">
               Book a Success Demo <ArrowRight className="h-4 w-4" />
             </Link>
             <a href="#growth-calculator" className="zk-btn-secondary">

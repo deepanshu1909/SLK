@@ -7,7 +7,7 @@ export function TeamSection() {
       <div className="zk-container">
         <FadeIn>
           <div className="mx-auto mb-10 max-w-2xl text-center">
-            <div className="zk-kicker mb-4">Who’s behind Zarklo</div>
+            <div className="zk-kicker mb-4">Who’s behind ZarkloAI</div>
             <h2 className="zk-h2">
               Built for owners handing over <span className="italic">real access.</span>
             </h2>

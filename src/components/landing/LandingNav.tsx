@@ -31,7 +31,7 @@ export function LandingNav() {
           <span className="grid h-8 w-8 place-items-center rounded-md bg-[var(--primary)] text-sm font-sans font-semibold text-white shadow-glow">
             Z
           </span>
-          Zarklo
+          ZarkloAI
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -58,7 +58,7 @@ export function LandingNav() {
           <Link to="/login" className="text-sm text-[var(--muted-ink)] hover:text-[var(--heading)]">
             Login
           </Link>
-          <Link to="/success-demo" className="zk-btn-primary !min-h-10 !px-4 !py-2 text-sm">
+          <Link to="/dashboard" className="zk-btn-primary !min-h-10 !px-4 !py-2 text-sm">
             Success Demo
           </Link>
         </div>
@@ -100,7 +100,7 @@ export function LandingNav() {
             {CONTACT_EMAIL}
           </a>
           <Link
-            to="/success-demo"
+            to="/dashboard"
             className="zk-btn-primary mt-2 w-full"
             onClick={() => setOpen(false)}
           >

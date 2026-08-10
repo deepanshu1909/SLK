@@ -7,7 +7,7 @@ export function WhyZarkloSection() {
       <div className="zk-container">
         <FadeIn>
           <div className="mb-10 max-w-2xl md:mb-12">
-            <div className="zk-kicker mb-4">Why Zarklo</div>
+            <div className="zk-kicker mb-4">Why ZarkloAI</div>
             <h2 className="zk-h2">
               Not another <span className="italic">booking widget.</span>
             </h2>
@@ -24,7 +24,7 @@ export function WhyZarkloSection() {
             {[
               {
                 title: "vs Manual effort",
-                text: "Staff time and memory don’t scale. Zarklo runs discovery, response, and follow-up as a system.",
+                text: "Staff time and memory don’t scale. ZarkloAI runs discovery, response, and follow-up as a system.",
               },
               {
                 title: "vs Booking software only",
@@ -32,7 +32,7 @@ export function WhyZarkloSection() {
               },
               {
                 title: "vs Rip-and-replace platforms",
-                text: "Zarklo sits alongside booking, EMR, and LIMS tools — it doesn’t force a stack migration.",
+                text: "ZarkloAI sits alongside booking, EMR, and LIMS tools — it doesn’t force a stack migration.",
               },
             ].map((card) => (
               <div key={card.title} className="zk-card p-5">
@@ -50,7 +50,7 @@ export function WhyZarkloSection() {
                 <tr className="border-b border-[var(--hairline)] bg-[var(--cream)]">
                   <th className="w-[18%] px-5 py-4 font-medium text-[var(--muted-ink)]" />
                   <th className="px-5 py-4 font-display text-lg font-medium text-[var(--heading)]">
-                    Zarklo
+                    ZarkloAI
                   </th>
                   <th className="px-5 py-4 font-medium text-[var(--muted-ink)]">
                     Generic booking software

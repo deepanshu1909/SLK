@@ -115,7 +115,7 @@ export function RankingToolSection() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/success-demo" className="zk-btn-secondary mt-6 inline-flex">
+                  <Link to="/dashboard" className="zk-btn-secondary mt-6 inline-flex">
                     See how Discovery improves visibility
                   </Link>
                 </div>

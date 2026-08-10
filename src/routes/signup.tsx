@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
@@ -7,17 +7,22 @@ import { Label } from "@/components/ui/label";
 
 export default function Signup() {
   const navigate = useNavigate();
+  const [googleNote, setGoogleNote] = useState("");
 
   useEffect(() => {
-    document.title = "Create account — Zarklo";
+    document.title = "Create account — ZarkloAI";
     document
       .querySelector("meta[name='description']")
-      ?.setAttribute("content", "Create your Zarklo account.");
+      ?.setAttribute("content", "Create your ZarkloAI account.");
   }, []);
 
-  const completeDemoSignup = (provider: "google" | "email") => {
-    window.localStorage.setItem("zarklo-demo-auth", provider);
+  const handleEmailSignup = (event: React.FormEvent) => {
+    event.preventDefault();
     navigate("/dashboard");
+  };
+
+  const handleGoogleSignup = () => {
+    setGoogleNote("Google sign-up is not connected yet. Use email to create an account for now.");
   };
 
   return (
@@ -29,7 +34,7 @@ export default function Signup() {
             <span className="grid h-8 w-8 place-items-center rounded-md bg-[var(--primary)] text-sm font-semibold text-white shadow-glow">
               Z
             </span>
-            Zarklo
+            ZarkloAI
           </Link>
 
           <div className="max-w-lg">
@@ -51,7 +56,7 @@ export default function Signup() {
             <span className="grid h-8 w-8 place-items-center rounded-md bg-[var(--primary)] text-sm font-semibold text-white">
               Z
             </span>
-            Zarklo
+            ZarkloAI
           </Link>
 
           <h1 className="zk-h2">Create your account</h1>
@@ -62,8 +67,11 @@ export default function Signup() {
           <div className="mt-8">
             <GoogleAuthButton
               label="Sign up with Google"
-              onClick={() => completeDemoSignup("google")}
+              onClick={handleGoogleSignup}
             />
+            {googleNote ? (
+              <p className="mt-2 text-xs text-[var(--muted-ink)]">{googleNote}</p>
+            ) : null}
           </div>
 
           <div className="my-6 flex items-center gap-3">
@@ -74,13 +82,7 @@ export default function Signup() {
             <div className="h-px flex-1 bg-[var(--hairline)]" />
           </div>
 
-          <form
-            className="space-y-4"
-            onSubmit={(event) => {
-              event.preventDefault();
-              completeDemoSignup("email");
-            }}
-          >
+          <form className="space-y-4" onSubmit={handleEmailSignup}>
             <div className="space-y-1.5">
               <Label htmlFor="name">Full name</Label>
               <Input
@@ -146,7 +148,7 @@ export default function Signup() {
           </form>
 
           <p className="mt-5 text-xs leading-relaxed text-[var(--muted-ink)]">
-            By creating an account, you agree to Zarklo’s Terms and Privacy Policy.
+            By creating an account, you agree to ZarkloAI’s Terms and Privacy Policy.
           </p>
 
           <p className="mt-6 text-center text-xs text-[var(--muted-ink)]">
